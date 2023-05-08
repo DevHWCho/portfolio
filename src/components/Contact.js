@@ -1,6 +1,6 @@
 import React, { useRef } from 'react';
 import { FaExclamationTriangle } from 'react-icons/fa';
-import { Link, useNavigate } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import 'styles/Contact.scss';
 
 function Contact(props) {
@@ -18,10 +18,7 @@ function Contact(props) {
   }
 
   const tRef = useRef();
-  const navigate = useNavigate();
   const onContactToggle = () => {
-    // navigate('/project');
-    // tRef.current.classList.add('on');
     props.setOpenContact(false)
   }
 
@@ -46,7 +43,7 @@ function Contact(props) {
             <h3 className='cd_h3'>GITHUB</h3>
             <p className='cd_p'>Responsive Web</p>
             <button type='button' className='cd_button' onClick={gitClick}>DETAIL<span className='cd_btn_span'>← Click</span></button>
-            <span className='cd_text' ref={gitRef}><Link to={'https://github.com/DevHWCho'}>https://github.com/DevHWCho</Link></span>
+            <span className='cd_text' ref={gitRef}><Link target={'_blank'} to={'https://github.com/DevHWCho'}>https://github.com/DevHWCho</Link></span>
           </div>
           <div className='contact_detail'>
             <h3 className='cd_h3'>e-mail</h3>

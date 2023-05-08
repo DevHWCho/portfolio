@@ -25,10 +25,19 @@ function Davich() {
           </div>
         </div>
         <div className='pj_content_container'>
+          <div className='pj_scroll_down'>↓ CLICK & SCROLL DOWN</div>
           <h3 className='pj_h3'># 프로젝트 개요</h3>
-          <p className='pjc_text'>기존 페이지가 반응형으로 제작되어 있지 않아 자체적으로 반응형 웹 페이지로 변경/제작</p>
+          <p className='pjc_text'>기존 페이지가 반응형으로 제작되어 있지 않아 <strong>자체적으로 반응형 웹 페이지로 변경/제작</strong></p>
           <h3 className='pj_h3'># 주요 업무</h3>
-          <p className='pjc_text'></p>
+          <p className='pjc_text'>CSS의 <strong>Flexible Box</strong> 기능을 통한 <strong>자동 변경 레이아웃</strong> 구현</p>
+          <p className='pjc_text'>
+            Flexible Box의 부족한 부분은 <strong>Media Query</strong>를 통해 세부 설정<br/>
+            (해상도가 변경되었을 때 레이아웃이 깨지지 않도록 <strong>부드러운 화면 전환 구현 목표</strong>)
+          </p>
+          <p className='pjc_text'>해상도 변경에 맞는 Header의 <strong>주 메뉴 모양 변경</strong>과 그에 맞는 <strong>별도의 JavaScript 구현</strong></p>
+          <p className='pjc_text'>JavaScript 기능을 활용하여 <strong>메인 배너 영상 길이에 맞춰 자동으로 다음 영상이 재생</strong>되도록 구현</p>
+          <p className='pjc_text'>기존 페이지가 PC페이지와 모바일 페이지를 각각 제작하여 운영하는 반면, <strong>반응형 웹페이지로 제작</strong>하여 별도로 제작/운영하지 않아 리소스 절감 가능</p>
+          <p className='pjc_text'><strong>웹 표준, 웹 접근성 준수</strong>하여 제작, HTML/CSS/W3C 유효성 검사 통과 완료 </p>
         </div>
       </div>
     </div>
