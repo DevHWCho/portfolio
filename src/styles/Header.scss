@@ -1,0 +1,189 @@
+.header_container {
+  position: relative;
+  .header_text {
+    position: absolute;
+    width: 100%;
+    h1 {
+      position: absolute;
+      top: 0;
+      left: 0;
+      padding: 40px;
+      font-size: 100px;
+      font-family: 'League Gothic', sans-serif;
+      color: #fff;
+    }
+    p {
+      position: absolute;
+      top: 160px;
+      left: 40px;
+      font-size: 40px;
+      font-family: 'League Gothic', sans-serif;
+      color: #fff;
+    }
+  }
+  .gnb {
+    z-index: 99;
+    position: fixed;
+    top: -520px;
+    left: 50%;
+    width: 521px;
+    height: 510px;
+    background-color: #F059AB;
+    // background-color: #fff;
+    border-radius: 48px;
+    transform: translateX(-50%);
+    transition: all 1s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    &.on {
+      top: 50px;
+      .hb_01 {
+        opacity: 0;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%) rotate(-30deg);
+      }
+      .hb_02 {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%) rotate(30deg) !important;
+      }
+      .hb_03 {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%) rotate(-30deg);
+      }
+    }
+    .gnb_container {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 70%;
+      transform: translateX(-50%) translateY(-50%);
+      // border: 1px solid red;
+      .gnb_main {
+        position: relative;
+        font-family: 'League Gothic', sans-serif;
+        color: #efefef;
+        h2 {
+          font-size: 36px;
+          letter-spacing: 15px;
+          padding: 10px 0;
+          text-decoration: underline;
+          text-underline-offset: 8px;
+        }
+        .gnb_sub_box {
+          overflow: hidden;
+          // border: 1px solid red;
+          .gnb_sub_container {
+            height: 30px;
+            transition: all .5s ease;
+            &:hover {
+              transform: translateY(-30px);
+            }
+            .gnb_sub {
+              font-size: 24px;
+              text-indent: 30px;
+              line-height: 32px;
+              &:nth-child(2) {
+                font-family: 'Just Another Hand', cursive;
+                // font-weight: 700;
+                letter-spacing: -0.4px;
+              }
+            }
+          }
+        }
+      }
+    }
+    .gnb_bottom {
+      z-index: -1;
+      position: absolute;
+      bottom: -77px;
+      left: 50%;
+      width: 521px;
+      height: 170px;
+      background: url(../images/menu.svg) no-repeat 50% 50%;
+      background-size: 100%;
+      transform: translateX(-50%);
+      content: '';
+      transition: all 1s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+      // border: 1px solid green;
+      .header_btn_container {
+        z-index: 100;
+        position: absolute;
+        bottom: 20px;
+        left: 50%;
+        width: 30px;
+        height: 20px;
+        // background-color: #fff;
+        transform: translateX(-50%);
+         transition: all 1s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+        .header_btn {
+          width: 30px;
+          height: 2px;
+          background-color: #111;
+          transition: transform 1.2s ease-in 0s;
+          cursor: pointer;
+        }
+        .hb_02 {
+          position: absolute;
+          top: 50%;
+          transform: translateY(-50%);
+        }
+        .hb_03 {
+          position: absolute;
+          bottom: 0;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .gnb {
+    width: 400px !important;
+    height: 510px !important;
+    .gnb_bottom {
+      bottom: -55px !important;
+      width: 400px !important;
+      height: 132px !important;
+      background-size: 400px !important;
+      .header_btn_container {
+        bottom: 12px !important;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 560px) {
+  .gnb {
+    width: 300px !important;
+    height: 506px !important;
+    border-radius: 25px !important;
+    .gnb_container {
+      .gnb_main {
+        h2 {
+          font-size: 25px !important;
+          letter-spacing: 15px;
+          padding: 10px 0;
+        }
+        .gnb_sub {
+          font-size: 20px !important;
+          text-indent: 30px;
+          line-height: 32px;
+        }
+      }
+    }
+    .gnb_bottom {
+      width: 300px !important;
+      height: 102px !important;
+      background-size: 300px !important;
+      .header_btn_container {
+        bottom: 14px !important;
+        width: 25px !important;
+        height: 15px !important;
+        .header_btn {
+          width: 25px !important;
+        }
+      }
+    }
+  }
+}

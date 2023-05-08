@@ -1,0 +1,228 @@
+.work_container {
+  position: absolute;
+  right: 40px;
+  top: 80px;
+  width: 75.5%;
+  height: 88%;
+  border: 2px solid #fff;
+  border-radius: 20px;
+  box-sizing: border-box;
+  background-color: #111;
+  color: #fff;
+  .work_header {
+    .header_sub {
+      display: flex;
+      justify-content: space-between;
+      p.headline {
+      flex: 1;
+      padding: 5.5%;
+      padding-bottom: 0;
+      font-size: 30px;
+      font-family: 'League Gothic', sans-serif;
+      }
+      div.barcode_container {
+        position: relative;
+        top: 50px;
+        width: 250px;
+        height: 50px;
+        margin-right: 5.5%;
+        background-color: #ccc;
+        p.left_caution {
+          position: absolute;
+          top: 50%;
+          left: 10px;
+          font-size: 35px;
+          color: #000;
+          transform: translateY(-50%);
+        }
+     
+        p.barcode {
+          position: relative;
+          width: 200px;
+          height: 30px;
+          margin-left: 50px;
+          background: url(../images/barcode-14626.png) no-repeat 0 -5%;
+          background-size: cover;
+          &::after {
+            position: absolute;
+            bottom: -15px;
+            left: 10px;
+            font-size: 12px;
+            color: #000;
+            content: '880907 1 010 4229 8897 0524 0';
+          }
+        }
+      }
+    }
+    h2.work_title {
+      width: 435px;
+      padding: 2.1% 0.05% 2.1% 5.5%;
+      font-size: 80px;
+      font-family: 'League Gothic', sans-serif;
+      font-weight: 400;
+    }
+    .work_cont_container {
+      position: absolute;
+      left: 50%;
+      width: 89%;
+      height: 55%;
+      border: 2px solid #fff;
+      transform: translateX(-50%);
+      .work_detail {
+        height: 50%;
+        background-color: #555;
+        font-family: 'Black Han Sans', sans-serif;
+        border: 1px solid red;
+        box-sizing: border-box;
+        &:nth-of-type(1) {
+          display: inline-block;
+          width: 33.333%;
+        }
+        &:nth-of-type(2) {
+          display: inline-block;
+          width: 33.333%;
+        }
+        &:nth-of-type(3) {
+          display: inline-block;
+          width: 33.333%;
+        }
+        &:nth-of-type(4) {
+          display: inline-block;
+          width: 50%;
+        }
+        &:nth-of-type(5) {
+          display: inline-block;
+          width: 50%;
+        }
+        h3 {
+          padding: 40px;
+          padding-bottom: 10px;
+          // font-size: 50px;
+          font-size: calc(20px + 1.5vw);
+          font-weight: 400;
+          word-break: keep-all;
+        }
+        p {
+          padding: 0 40px 10px 40px;
+          // font-size: 30px;
+          font-size: calc(12px + 1vw);
+          font-weight: 400;
+        }
+        .btn_contact {
+          width: 200px;
+          height: 50px;
+          margin: 20px 0 0 40px;
+          border: 0;
+          border-radius: 20px;
+          background-color: #333;
+          font-size: 30px;
+          font-family: 'League Gothic', sans-serif;
+          color: #fff;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1850px) {
+  .work_cont_container {
+    height: 58% !important;
+  }
+}
+
+@media screen and (max-width: 1500px) {
+  .work_cont_container {
+    height: 62% !important;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  div.barcode_container {
+    top: 35px !important;
+    right: -30px !important;
+    transform: scale(0.8);
+  }
+  .work_cont_container {
+    height: 65% !important;
+  }
+}
+
+@media screen and (max-width: 960px) {
+  div.barcode_container {
+    top: 30px !important;
+    right: -30px !important;
+    transform: scale(0.8);
+  }
+  .work_cont_container {
+    height: 68% !important;
+  }
+}
+
+@media screen and (max-width: 860px) {
+  div.barcode_container {
+    top: 25px !important;
+    right: -30px !important;
+    transform: scale(0.8);
+  }
+}
+
+@media screen and (max-width: 760px) {
+  .work_cont_container {
+    height: 70% !important;
+  }
+  div.barcode_container {
+    top: 20px !important;
+    right: -30px !important;
+    transform: scale(0.8);
+  }
+}
+
+@media screen and (max-width: 660px) {
+  h2.work_title {
+    font-size: 60px !important;
+  }
+}
+
+@media screen and (max-width: 610px) {
+  p.headline {
+    padding-right: 0 !important;
+  }
+  .work_cont_container {
+    display: flex;
+    flex-direction: column;
+    height: 75% !important;
+    .work_detail {
+      width: 100% !important;
+      height: 20% !important;
+      border-left: 2px solid #fff;
+    }
+  }
+  div.barcode_container {
+    top: 15px !important;
+    right: -30px !important;
+    transform: scale(0.6);
+  }
+}
+
+@media screen and (max-width: 560px) {
+  p.headline {
+    padding-right: 0 !important;
+    font-size: 18px !important;
+  }
+  h2.work_title  {
+    width: 230px !important;
+    font-size: 30px !important;
+  }
+  .work_cont_container {
+    height: 83% !important;
+    .work_detail {
+      height: 20% !important;
+    }
+  }
+  div.barcode_container {
+    top: 8px !important;
+    right: -50px !important;
+    width: 250px !important;
+    transform: scale(0.6);
+  }
+}
