@@ -1,0 +1,1173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>도라에몽</title>
+<style>
+* {margin: 0;padding: 0;}
+
+
+/* 도라에몽 외부 */
+
+.container {
+  margin: 0 auto;
+  position: absolute;
+  left: 50%; top: 50px;
+  width: 0px; height: 0px;
+  /* background: red; */
+  border-radius: 50px 50px 0 0;
+  animation: doraemon-move 8s ease-in-out 0s infinite;
+}
+
+@keyframes doraemon-move {
+  0% {transform: translate(0px)}
+  10% {transform: translate(20px)}
+  20% {transform: translate(100px)}
+  30% {transform: translate(50px)}
+  40% {transform: translate(-30px)}
+  50% {transform: translate(0px)}
+  60% {transform: translate(-70px)}
+  70% {transform: translate(20px)}
+  80% {transform: translate(50px)}
+  90% {transform: translate(150px)}
+  100% {transform: translate(0px)}
+}
+
+.container::after {
+  content: "";
+  position: absolute;
+  left: calc(50% - 40px); top: 50px;
+  width: 80px; height: 60px;
+  border-radius: 40px 40px 0 0;
+  background: #e6b243;
+  box-sizing: border-box;
+  border: 5px solid #000;
+}
+.container:before {
+  content: "";
+  position: absolute;
+  left: calc(50% - 10px);
+  width: 20px; height: 80px;
+  box-sizing: border-box;
+  border: 5px solid #000;
+  background: #e6b243;
+}
+
+.container > .bamboocopter {
+  width: 200px; height: 20px;
+  background-color: #e6b243;
+  position: absolute;
+  border: 5px solid #000;
+  box-sizing: border-box;
+  left: calc(50% - 100px);
+  animation: bamboocopter 0.03s linear 0s infinite;
+}
+
+@keyframes bamboocopter {
+  0% {transform: rotateY(0deg);}
+  50% {transform: rotateY(45deg);}
+  100% {transform: rotateY(90deg);}
+}
+
+.container > .bamboocopter::after {
+  z-index: 10;
+  content: "";
+  position: absolute;
+  left: calc(50% - 15px); top: 12px;
+  width: 30px; height: 10px;
+  box-sizing: border-box;
+  border: 3px solid #000;
+  background: #e6b243;
+}
+
+body, .doraemon {
+  position: absolute;
+  top: 0%;
+  width: 100%; height: 920px;
+  margin-top: 50px;
+  /* border: 1px solid red; */
+  box-sizing: border-box;
+  animation: doraemon-fly 5s linear infinite alternate;
+  background-color: #fee;
+  background-image: radial-gradient(closest-side, transparent 98%, pink 100%), radial-gradient(closest-side, transparent 98%, pink 100%);
+  background-position: 0 0, 15px 15px;
+  background-size: 30px 30px;
+}
+
+
+@keyframes doraemon-fly {
+  0% {transform: rotate(5deg)}
+  20% {transform: rotate(-5deg);}
+  40% {transform: rotate(0deg);}
+  70% {transform: rotate(5deg);}
+  80% {transform: rotate(0deg);}
+  90% {transform: rotate(-5deg);}
+  100% {transform: rotate(0deg);}
+}
+
+.doraemon:hover > div [class^="inside-"] {
+  opacity: 1;
+}
+
+
+/* 도라에몽 머리 */
+.doraemon-head {
+  z-index: 10;
+  position: absolute;
+  left: calc(50% - 205px); top: 50px;
+  width: 400px; height: 370px;
+  background: #20abf2;
+  border: 5px solid #000;
+  border-radius: 48% 48% 30% 30% / 50% 50% 50% 50%;
+}
+
+/* 도라에몽 얼굴 */
+.doraemon-face {
+  position: absolute;
+  left: calc(50% - 173px); top: 85px;
+  width: 340px; height: 280px;
+  background: #FFF;
+  border: 5px solid #000;
+  border-radius: 48% 48% 30% 30% / 50% 50% 50% 50%;
+}
+
+/* 도라에몽 눈 */
+.doraemon-left-eye {
+  position: absolute;
+  left: 124px; top: -45px;
+  transform: translate3d(-50%,0,0) rotate(-173deg);
+  width: 80px; height: 100px;
+  border: 4px solid #000;
+  background: #fff;
+  border-radius: 65px 65px 60px 70px / 60px 80px 80px 100px;
+}
+
+.doraemon-left-iris {
+  position: absolute;
+  left: 22px; top: 35px;
+  transform: rotate(-8deg);
+  width: 5px; height: 16px;
+  background-color: #fff;
+  box-shadow: 0 0 0 8px #000;
+  border-radius: 50%;
+}
+
+.doraemon-right-eye {
+  position: absolute;
+  left: 209px; top: -45px;
+  transform: translate3d(-50%,0,0) rotate(-166deg);;
+  width: 80px; height: 100px;
+  border: 4px solid #000;
+  background: #fff;
+  border-radius: 70px 65px 56px 80px / 65px 85px 70px 100px;
+}
+
+.doraemon-right-iris {
+  position: absolute;
+  left: 51px; top: 30px;
+  transform: rotate(-15deg);
+  width: 5px; height: 16px;
+  background-color: #fff;
+  box-shadow: 0 0 0 8px #000;
+  border-radius: 50%;
+}
+
+/* 도라에몽 코 */
+.doraemon-nose {
+  position: absolute;
+  left: calc(50% - 29px); top: 48px;
+  width: 40px; height: 40px;
+  background: #fd0c0a;
+  border: 5px solid #000;
+  border-radius: 50%;
+}
+.doraemon-nose:after {
+  position: absolute;
+  left: 7px; top: 5px;
+  content: "";
+  width: 15px; height: 15px;
+  background: #fff;
+  border-radius: 50%;
+}
+
+/* 도라에몽 입 */
+.doraemon-mouth-1 {
+  position: absolute;
+  left: calc(50% - 6px); top: 34%;
+  width: 5px; height: 90px;
+  background: #000;
+}
+
+.doraemon-mouth-2 {
+  position: absolute;
+  left: 12px; top: -120px;
+  width: 300px; height: 300px;
+  border: 5px solid #000;
+  border-radius: 50%;
+  border-top-color: transparent;
+  border-left-color: transparent;
+  border-right-color: transparent;
+}
+
+/* 도라에몽 수염 */
+.doraemon-beard-1 {
+  position: absolute;
+  left: calc(50% - 49px); top: 30%;
+  width: 90px; height: 5px;
+  /* background: blue; */
+}
+.doraemon-beard-1::before {
+  content: "";
+  position: absolute;
+  left: -95px; top: -9px;
+  transform: rotate(10deg);
+  width: 96px; height: 5px;
+  border-radius: 5px;
+  background: #000;
+}
+
+.doraemon-beard-1::after {
+  content: "";
+  position: absolute;
+  left: 95px; top: -9px;
+  transform: rotate(-10deg);
+  width: 96px; height: 5px;
+  border-radius: 5px;
+  background: #000;
+}
+
+.doraemon-beard-2 {
+  position: absolute;
+  left: calc(50% - 49px); top: 35%;
+  width: 90px; height: 5px;
+  /* background: blue; */
+}
+
+.doraemon-beard-2::before {
+  content: "";
+  position: absolute;
+  left: -102px; top: 1px;
+  transform: rotate(-2deg);
+  width: 102px; height: 5px;
+  border-radius: 5px;
+  background: #000;
+}
+
+.doraemon-beard-2::after {
+  content: "";
+  position: absolute;
+  left: 95px; top: 1px;
+  transform: rotate(2deg);
+  width: 102px; height: 5px;
+  border-radius: 5px;
+  background: #000;
+}
+
+.doraemon-beard-3 {
+  position: absolute;
+  left: calc(50% - 49px); top: 42%;
+  width: 90px; height: 5px;
+  /* background: blue; */
+}
+
+.doraemon-beard-3::before {
+  content: "";
+  position: absolute;
+  left: -96px; top: 9px;
+  transform: rotate(-10deg);
+  width: 96px; height: 5px;
+  border-radius: 5px;
+  background: #000;
+}
+
+.doraemon-beard-3::after {
+  content: "";
+  position: absolute;
+  left: 95px; top: 9px;
+  transform: rotate(10deg);
+  width: 96px; height: 5px;
+  border-radius: 5px;
+  background: #000;
+}
+
+/* 도라에몽 목걸이 */
+.doraemon-necklace {
+  z-index: 11;
+  position: absolute;
+  left: 50%; top: 50%;
+  transform: translate3d(-50%,-60px,0);
+  width: 310px; height: 26px;
+  border: 5px solid #000;
+  border-radius: 26px;
+  background: #fd0c0a;
+}
+
+.doraemon-bell-1 {
+  position: absolute;
+  left: calc(50% - 33px); top: 12px;
+  width: 65px; height: 65px;
+  background: #f4c111;
+  border: 5px solid #000;
+  box-sizing: border-box;
+  border-radius: 50%;
+  animation: bell-movement 1s linear 0s infinite alternate;
+}
+
+@keyframes bell-movement {
+  0% {transform: rotate(-30deg)}
+  20% {transform: rotate(30deg);}
+  40% {transform: rotate(0deg);}
+  70% {transform: rotate(-25deg);}
+  80% {transform: rotate(0deg);}
+  90% {transform: rotate(25deg);}
+  100% {transform: rotate(0deg);}
+}
+
+.doraemon-bell-1::before {
+  position: absolute;
+  left: calc(50% - 6.5px); top: 40px;
+  content: "";
+  width: 13px; height: 13px;
+  background: #000;
+  border-radius: 50%;
+}
+.doraemon-bell-1:after {
+  position: absolute;
+  left: calc(50% - 3px); top: 43px;
+  content: "";
+  width: 6px; height: 15px;
+  background: #000;
+}
+
+.doraemon-bell-2 {
+  position: absolute;
+  left: calc(50% - 40px); top: 28%;
+  width: 80px; height: 23px;
+  background: #f4c111;
+  border: 5px solid #000;
+  box-sizing: border-box;
+  border-radius: 25px;
+}
+
+/* 도라에몽 몸통 */
+.doraemon-body {
+  z-index: 1;
+  position: absolute;
+  left:calc(50% - 170px); top: 420px;
+  width: 340px; height: 295px;
+  background: #20abf2;
+  border: 5px solid #000;
+  box-sizing: border-box;
+  border-radius: 10% 10% 10% 10% / 40% 40% 50% 50%;
+}
+.doraemon-body::before {
+  position: absolute;
+  left: 3px;
+  content: "";
+  width: 38px; height: 60px;
+  background: #20abf2;
+  transform: skew(-20deg);
+} /* 겨드랑이 왼쪽 */
+
+.doraemon-body::after {
+  position: absolute;
+  left: 289px;
+  content: "";
+  width: 38px; height: 60px;
+  background: #20abf2;
+  transform: skew(20deg);
+} /* 겨드랑이 오른쪽 */
+
+.doraemon-space-between-legs {
+  z-index: 2;
+  content: "";
+  position: absolute;
+  left: calc(50% - 25px); top: 690px;
+  background-color: inherit;
+  width: 50px; height: 45px;
+  border: 5px solid #000;
+  box-sizing: border-box;
+  border-radius: 50%;
+  border-bottom-color: transparent;
+} /* 다리 사이 공간용 */
+
+.doraemon-chest {
+  position: absolute;
+  left: calc(50% - 140px); top: -30px;
+  width: 280px; height: 250px;
+  border-radius: 50%;
+  background: #fff;
+  border: 5px solid #000;
+  box-sizing: border-box;
+}
+.doraemon-chest::before {
+  position: absolute;
+  left: calc(50% - 100px); top: 137px;
+  content: "";
+  width: 200px; height: 80px;
+  border-radius: 0 0 100px 100px / 0 0 80px 80px;
+  background: #fff;
+  border: 5px solid #000;
+  box-sizing: border-box;
+}
+
+/* 도라에몽 팔 */
+.doraemon-left-arm {
+  position: absolute;
+  left: calc(50% - 222px); top: calc(50% - 39px);
+  transform: rotate(17deg); /* 기본값 17deg */
+  width: 100px; height: 180px;
+  border: 5px solid #000;
+  background: #20abf2;
+  border-radius: 50% 40% 40% 40%;
+  animation: left-arm-movement 0.5s ease-in-out 0s infinite alternate;
+}
+
+@keyframes left-arm-movement {
+  0% {transform: rotate(10deg);transform-origin: 60% 32%}
+  100% {transform: rotate(130deg);transform-origin: 61% 32%}
+}
+
+.doraemon-left-hand {
+  position: absolute;
+  left: -12px; top: 130px;
+  width: 88px; height: 88px;
+  background: #fff;
+  border: 5px solid #000;
+  box-sizing: border-box;
+  border-radius: 50%;
+}
+
+.doraemon-right-arm {
+  position: absolute;
+  left: calc(50% + 115px); top: calc(50% - 39px);
+  transform: rotate(-17deg);
+  width: 100px; height: 180px;
+  border: 5px solid #000;
+  background: #20abf2;
+  border-radius: 40% 50% 40% 40%;
+  animation: right-arm-movement 0.5s ease-in-out 0s infinite alternate;
+}
+
+@keyframes right-arm-movement {
+  0% {transform: rotate(-10deg);transform-origin: 38% 32%}
+  100% {transform: rotate(-130deg);transform-origin: 35% 32%}
+}
+
+.doraemon-right-hand {
+  position: absolute;
+  left: 22px; top: 130px;
+  width: 88px; height: 88px;
+  background: #fff;
+  border: 5px solid #000;
+  box-sizing: border-box;
+  border-radius: 50%;
+}
+
+/* 도라에몽 발 */
+.doraemon-left-foot {
+  z-index: 2;
+  position: absolute;
+  left: calc(50% - 168px); top: 705px;
+  width: 160px; height: 50px;
+  border: 5px solid #000;
+  border-radius: 20% 20% 30% 30% / 60% 60% 60% 60%; 
+  box-sizing: border-box;
+  background: #fff;
+}
+
+.doraemon-right-foot {
+  z-index: 2;
+  position: absolute;
+  left: calc(50% + 8px); top: 705px;
+  width: 160px; height: 50px;
+  border: 5px solid #000;
+  border-radius: 20% 20% 30% 30% / 60% 60% 60% 60%; 
+  box-sizing: border-box;
+  background: #fff;
+}
+
+/* 도라에몽 내부 */
+
+div [class^="inside-"] {
+  opacity: 0;
+  transition: all 2s ease-in 0s;
+}
+
+.inside-face {
+  position: absolute;
+  left: calc(50% - 2px); top: -95px;
+  width: 200px; height: 370px;
+  background: silver;
+  border: 5px solid #ccc;
+  border-radius: 0 200px 140px 0 / 50% 50% 50% 50%;
+  border-left-color: transparent;
+  box-shadow: 2px 3px 0 0 #000;
+}
+
+.inside-outline {
+  position: absolute;
+  left: -5px;
+  width: 190px; height: 360px;
+  background: silver;
+  border: 10px solid #000;
+  border-radius: 0 190px 160px 0 / 50% 50% 50% 50%;
+  border-left: none;
+  background-image: linear-gradient(30deg, #444 12%, transparent 12.5%, transparent 87%, #444 87.5%, #444), linear-gradient(150deg, #444 12%, transparent 12.5%, transparent 87%, #444 87.5%, #444), linear-gradient(30deg, #444 12%, transparent 12.5%, transparent 87%, #444 87.5%, #444), linear-gradient(150deg, #444 12%, transparent 12.5%, transparent 87%, #444 87.5%, #444), linear-gradient(60deg, #888 25%, transparent 25.5%, transparent 75%, #888 75%, #888), linear-gradient(60deg, #888 25%, transparent 25.5%, transparent 75%, #888 75%, #888);
+  background-position: 0 0, 0 0, 25px 50px, 25px 50px, 0 0, 25px 50px;
+  background-size: 50px 100px;
+}
+.inside-outline::before {
+  z-index: 11;
+  content: "";
+  position: absolute;
+  transform: rotate(-120deg);
+  left: 115px; top: 210px;
+  width: 30px; height: 25px;
+  clip-path: polygon(20% 0%, 80% 0%, 100% 100%, 0% 100%);
+  background: red;
+  background: repeating-linear-gradient(90deg, #ddd, #888 4px, #ccc 10px, #bbb 20px);
+  /* border-bottom: 32px solid red;
+  border-left: 2px solid transparent;
+  border-right: 2px solid transparent; */
+}
+.inside-outline::after {
+  z-index: 11;
+  content: "";
+  position: absolute;
+  transform: rotate(0deg);
+  left: 133px; top: 185px;
+  width: 30px; height: 35px;
+  background: blue;
+  background: linear-gradient(-95deg, #ccc 0%, #fff 10%, #ddd 80%, #333 100%);
+  border-radius: 15px 15px 30px 30px ;
+}
+
+.inside-eye {
+  z-index: 10;
+  position: absolute;
+  left: 39px; top: 42px;
+  transform: translate3d(-50%,0,0) rotate(-166deg);
+  width: 80px; height: 100px;
+  border: 4px solid #ccc;
+  box-shadow: -4px 3px 5px 0 #000, inset 2px -1px 0 3px #000;
+  background: silver;
+  background: radial-gradient(at center, #fff 10px, #eee 20px, #ccc 30px, #fff 70px);
+  border-radius: 70px 65px 56px 80px / 65px 85px 70px 100px;
+  overflow: hidden;
+}
+
+.inside-eye::before {
+  content: "";
+  position: absolute;
+  left: -12px; top: 40px;
+  width: 105px; height: 120px;
+  border: 5px double #444;
+  border-radius: 50%;
+  border-right-color: transparent;
+  border-bottom-color: transparent;
+  border-left-color: transparent;
+}
+
+.inside-iris {
+  position: absolute;
+  left: 21px; top: 12px;
+  width: 50px; height: 50px;
+  background: repeating-linear-gradient(76deg, #555, #ddd 3px, #ccc 4px, #aaa 3px);
+  border-radius: 50%;
+  border: 1px solid #000;
+}
+.inside-iris::before {
+  content: "";
+  position: absolute;
+  left: calc(50% - 19px); top: calc(50% - 21px);
+  width: 38px; height: 38px;
+  background: rgba(100,60,60,0.5);
+  border-radius: 50%;
+  border: 1px solid #000;
+}
+.inside-iris::after {
+  content: "";
+  position: absolute;
+  left: calc(50% - 5px); top: calc(50% - 7px);
+  width: 10px; height: 10px;
+  /* background: blue; */
+  border-radius: 50%;
+  border: 1px solid #000;
+  background: #fff;
+}
+
+.inside-iris-1 {
+  position: absolute;
+  left: 12px; top: 10px;
+  width: 25px; height: 25px;
+  background: #000;
+  border-radius: 50%;
+  border: 1px solid #000;
+}
+
+.inside-detail-1 {
+  z-index: 9;
+  position: absolute;
+  left: 51px; top: 165px;
+  width: 30px; height: 46px;
+  background: green;
+  background: repeating-linear-gradient(90deg,#fff, #888 0px, #000 20px, #ddd 1px,#333 20px);
+  clip-path: polygon(0 0, 100% 0, 100% 70%, 73% 89%, 0 72%);
+}
+.inside-detail-2 {
+  z-index: 10;
+  position: absolute;
+  left: 70px; top: 170px;
+  width: 60px; height: 72px;
+  transform: rotate(-60deg);
+  background: orange;
+  background: repeating-linear-gradient(90deg, #ddd, #999 4px, #ddd 20px,#ddd 10px, #bbb 20px);
+  clip-path: polygon(76% 0, 91% 50%, 75% 100%, 38% 100%, 54% 52%, 43% 14%);
+}
+
+.inside-detail-3 {
+  z-index: 8;
+  position: absolute;
+  left: -5px; top: 189px;
+  width: 120px; height: 30px;
+  background: repeating-linear-gradient(90deg, #555, #ddd 3px, #ccc 4px, #aaa 3px);
+  box-shadow: inset 1px 1px 7px 5px #222;
+}
+
+.inside-detail-4 {
+  z-index: 9;
+  position: absolute;
+  left: 120px; top: 165px;
+  width: 30px; height: 52px;
+  background: #333;
+  background: repeating-linear-gradient(0deg, #ddd, #888 10px, #ccc 10px, #bbb 20px);
+  clip-path: polygon(12% 0, 87% 0, 100% 50%, 100% 100%, 0 100%, 0% 50%);
+}
+
+.inside-detail-5 {
+  z-index: 10;
+  position: absolute;
+  left: -5px; top: 165px;
+  width: 55px; height: 50px;
+  background: yellow;
+  background: repeating-linear-gradient(-90deg,#fff, #888 0px, #333 20px, #f6f999 26px,#f4c111 60px);
+  clip-path: polygon(0% 0%, 100% 0%, 100% 60%, 50% 100%, 0% 100%);
+} 
+
+.inside-detail-6 {
+  z-index: 11;
+  left: 120px; top: 218px;
+  position: absolute;
+  transform: rotate(56deg);
+  width: 35px; height: 10px;
+  border-radius: 20%;
+  background: violet;
+  box-shadow: inset 1px 1px 5px 0 #fff;
+}
+
+.inside-detail-6:before {
+  content: "";
+  position: absolute;
+  left: 4px; top: -25px;
+  transform: rotate(32deg);
+  width: 15px; height: 20px;
+  background: #000;
+  box-shadow: inset 0 2px 3px 0 #fff;
+  clip-path: polygon(92% 0, 75% 50%, 94% 100%, 58% 100%, 42% 54%, 58% 0);
+}
+
+.inside-detail-7 {
+  z-index: 10;
+  position: absolute;
+  left: 11px; top: 150px;
+  transform: rotate(-30deg);
+  width: 100px; height: 100px;
+  /* background: gold; */
+  border: 5px solid #fd0c0a;
+  border-radius: 50%;
+  border-right-color: transparent;
+  border-bottom-color: transparent;
+  border-left-color: transparent;
+}
+
+.inside-detail-8 {
+  z-index: 1;
+  position: absolute;
+  left: -5px; top: 140px;
+  width: 192px; height: 50px;
+  background: gold;
+  background: repeating-linear-gradient(-180deg, #fff 10px, #333, #fff 10px, #333, #fff 10px, #333, #fff, #333);
+  border-radius: 0 6% 0 0 / 0 90% 0 0;
+}
+
+.inside-detail-8::before {
+  content: "";
+  z-index: 1;
+  position: absolute;
+  left: 0px; top: -50px;
+  width: 175px; height: 50px;
+  background: gold;
+  background: repeating-linear-gradient(0deg, #fff 10px, #333, #fff 10px, #333, #fff 10px, #333, #fff, #333);
+  border-radius: 0 20% 0 0 / 0 100% 0 0;
+}
+
+/* 내부 얼굴 패턴 */
+.inside-detail-9 {
+  position: absolute;
+  left: 15px; top: 60px;
+  width: 140px; height: 250px;
+  transform: scale(1.28);
+  background: gold;
+  background: repeating-radial-gradient(closest-side at 5% 2%, #fff, #333, #fff, #333, #fff, #333, #fff, #333, #666, #333, #333, #333, #fff, #fff);
+  border-radius: 0 160px 120px 0 / 50% 50% 50% 50%;
+}
+
+/* 내부 얼굴 트랜지스터 */
+#inside > .inside-detail-9::before {
+  z-index: 20;
+  content: "";
+  position: absolute;
+  transform: rotate(-45deg);
+  left: 98px; top: 215px;
+  width: 15px; height: 32px;
+  border-radius: 20%;
+  background: gold;
+  background: repeating-linear-gradient(90deg,#333,#444,#ff8800,#ff9500,#ffaa00,#ffbb00,#ffcc00,#ffaa00,#ff9900,#ff7700,#ddd);
+}
+
+#inside > .inside-detail-9::after {
+  z-index: 20;
+  content: "";
+  position: absolute;
+  transform: rotate(-50deg);
+  left: 108px; top: 203px;
+  width: 15px; height: 32px;
+  border-radius: 20%;
+  background: gold;
+  background: repeating-linear-gradient(90deg,#333,#444,#ff8800,#ff9500,#ffaa00,#ffbb00,#ffcc00,#ffaa00,#ff9900,#ff7700,#ddd);
+}
+
+.inside-nose {
+  z-index: 11;
+  position: absolute;
+  left: -5px; top: 137px;
+  width: 20px; height: 40px;
+  background: #000;
+  border: 5px solid #ccc;
+  border-radius: 0 40px 40px 0;
+  border-left-color: transparent;
+  box-shadow: 1px 1px 1px 1px #444;
+  background-color: #555;
+}
+.inside-nose::before {
+  z-index: 11;
+  content: "";
+  position: absolute;
+  left: -5px; top: 7px;
+  width: 18px; height: 25px;
+  background: repeating-linear-gradient(0deg, #555 1px, #ddd 4px, #ccc 1px, #aaa 1px);
+  border-left-color: transparent;
+  box-shadow: 1px 1px 1px 1px #444;
+  background-color: #555;
+}
+
+.inside-mouth {
+  position: absolute;
+  left:-5px; top: 230px;
+  width: 130px; height: 100px;
+  background: linear-gradient(110deg, #ddd 0%, #ddd 66%, #888 73%, #999 80%, #ddd 88%);
+  border: 6px solid #38518b;
+  box-shadow: 7px 0 0 7px #fff, 11px 0 0 11px #38518b, 12px 1px 5px 12px #333;
+  box-sizing: border-box;
+  border-radius: 0 0 150px 0;
+  border-left: none;
+  border-left-color: transparent;
+  border-bottom-color: transparent;
+  overflow: hidden;
+}
+.inside-mouth-1 {
+  position: absolute;
+  left: -20px; top: 15px;
+  width: 130px; height: 100px;
+  background: linear-gradient(120deg, #ddd 0%, #ddd 60%, #888 65%, #999 70%, #ddd 78%);
+  border: 1px solid #fff;
+  border-left: none;
+  border-radius: 0 15%;
+  box-shadow: 1px -1px 0 0 #888;
+}
+
+.inside-mouth-2 {
+  position: absolute;
+  left: -30px; top: 32px;
+  width: 130px; height: 100px;
+  background: linear-gradient(120deg, #ddd 0%, #ddd 60%, #888 65%, #999 70%, #ddd 78%);
+  border: 1px solid #fff;
+  border-left: none;
+  border-radius: 0 10%;
+  box-shadow: 1px -1px 0 0 #888;
+}
+.inside-mouth-3 {
+  position: absolute;
+  left: -40px; top: 45px;
+  width: 130px; height: 100px;
+  background: linear-gradient(120deg, #ddd 0%, #ddd 60%, #888 65%, #999 70%, #ddd 78%);
+  border: 1px solid #fff;
+  border-left: none;
+  border-radius: 0 10%;
+  box-shadow: 1px -1px 0 0 #888;
+}
+.inside-mouth-4 {
+  position: absolute;
+  left: -45px; top: 55px;
+  width: 130px; height: 100px;
+  background: linear-gradient(120deg, #ddd 0%, #ddd 60%, #888 65%, #999 70%, #ddd 78%);
+  border: 1px solid #fff;
+  border-left: none;
+  border-radius: 0 10%;
+  box-shadow: 1px -1px 0 0 #888;
+}
+.inside-mouth-5 {
+  position: absolute;
+  left: -50px; top: 60px;
+  width: 130px; height: 100px;
+  background: linear-gradient(120deg, #ddd 0%, #ddd 60%, #888 65%, #999 70%, #ddd 78%);
+  border: 1px solid #fff;
+  border-left: none;
+  border-radius: 0 10%;
+  box-shadow: 1px -1px 0 0 #888;
+}
+
+.inside-mouth-6 {
+  position: absolute;
+  left: -70px; top: 50px;
+  width: 170px; height: 100px;
+  border: 0px solid #333;
+  box-shadow: -2px -1px 1px 0 #999;
+  border-left: none;
+  border-radius: 0 50%;
+  background: linear-gradient(90deg, #fee 0%, #fee 50%, #f77 100%);
+}
+
+.inside-necklace {
+  z-index: 20;
+  position: absolute;
+  left: 237px; top: 55px;
+  transform: translate3d(-50%,-60px,0);
+  width: 155px; height: 26px;
+  border: 5px solid #ccc;
+  border-radius: 0 26px 26px 0;
+  background: repeating-linear-gradient(90deg, #555, #ddd 3px, #ccc 4px, #aaa 3px);
+  border-left-color: transparent;
+  box-shadow: 2px 3px 0 0 #000;
+}
+
+.inside-necklace:after {
+  z-index: -1;
+  position: absolute;
+  left: -4px; top: 28px;
+  content: "";
+  width: 172px; height: 60px;
+  background: silver;
+  background: repeating-radial-gradient(closest-side at 10% 7%, #fff, #333, #fff, #333, #fff, #333, #fff, #333, #666, #333, #333, #333, #fff, #fff);
+}
+
+/* 4차원 주머니 */
+.inside-necklace::before {
+  z-index: 1;
+  content: "";
+  position: absolute;
+  left: -3px; top: 40px;
+  width: 120px; height: 180px;
+  background: gold;
+  box-shadow: 0px 1px 5px 1px #000;
+  background: repeating-radial-gradient(closest-side at 20% 10%, #fff, #333, #fff, #999, #fff, #999, #aaa, #bbb, #ccc, #aaa, #999, #aaa, #ccc, #aaa);
+  border-radius: 0 200px 200px 0;
+}
+
+.inside-shoulder {
+  position: absolute;
+  width: 70px; height: 120px;
+  left:80px; top: 0;
+  transform: rotate(-150deg);
+  background: salmon;
+  background: repeating-linear-gradient(90deg,#444,#ccc, #ddd, #f55, #f66, #f55,#f55,#f55,#f44,#f44,#f44, #f55, #f66, #ddd,#aaa,#999);
+  box-shadow: 0 0 1px 3px #000;
+  border-radius: 20%;
+  clip-path: polygon(20% 0%, 80% 0%, 100% 100%, 0% 100%);
+}
+
+/* 내부 방울 */
+.inside-bell-1 {
+  z-index: 2;
+  position: absolute;
+  left: calc(50% - 82px); top: 13px;
+  width: 32.5px; height: 65px;
+  background: #000;
+  border: 5px solid #ccc;
+  box-sizing: border-box;
+  border-radius: 0 32.5px 32.5px 0;
+  border-left-color: transparent;
+  box-shadow: 2px 3px 0 #000;
+}
+
+/* 내부 방울 2 */
+.inside-bell-1::before {
+  content: "";
+  position: absolute;
+  left: -5px; top: 7px;
+  width: 20px; height: 40px;
+  background: linear-gradient(120deg, #ddd 0%, #ccc 30%, #333 100%);
+  box-sizing: border-box;
+  border-radius: 0 20px 20px 0;
+  border-left-color: transparent;
+}
+
+/* 4차원 주머니 자석 부품 */
+.inside-bell-1::after {
+  content: "";
+  position: absolute;
+  left: 5px; top: 65px;
+  width: 100px; height: 65px;
+  transform: rotate(-10deg);
+  background: green;
+  background: repeating-linear-gradient(#fd0c0a,#33cc33,gold,#fff,#aaa,#999,#aaa,#bbb,#ccc,#aaa,#777,gold,#33cc33,#fd0c0a);
+  clip-path: polygon(51% 0, 85% 30%, 84% 75%, 57% 100%, 19% 100%, 56% 68%, 57% 34%, 16% 0);
+}
+
+/* 4차원 주머니 부품 */
+.inside-bell-2 {
+  z-index: 1;
+  position: absolute;
+  left: -25px; top: 75px;
+  width: 100px; height: 100px;
+  transform: rotate(-125deg);
+  background: brown;
+  background: repeating-linear-gradient(45deg,#fff,#777,#fff,#777,#fff,#777,#fff,#777);
+  clip-path: polygon(31% 1%, 100% 50%, 75% 100%, 61% 93%, 80% 56%, 21% 14%);
+}
+
+
+/* 방울 옆 부품 1 */
+.inside-bell-3 {
+  position: absolute;
+  left: 30px; top: -15px;
+  width: 40px; height: 100px;
+  background: wheat;
+  background: repeating-linear-gradient(90deg,#fff,#999,#fff,#999,#fff,#999);
+  transform: rotate(-90deg);
+  clip-path: polygon(20% 0%, 80% 0%, 100% 100%, 0% 100%);
+}
+
+/* 방울 옆 부품 2 */
+.inside-bell-4 {
+  position: absolute;
+  top: 10px; left: 70px;
+  width: 50px; height: 50px;
+  background: #33cc33;
+  background: radial-gradient(farthest-side at 30% 30%,#fff,#999);
+  border-radius: 50%;
+}
+
+.inside-bell-5 {
+  position: absolute;
+  left: 15px; top: 315px;
+  width: 110px; height: 30px;
+  transform: rotate(10deg);
+  border-radius: 30%;
+  background: #ff7700;
+  background: repeating-linear-gradient(0deg,#fff,#999);
+  box-shadow: 15px -10px 0 #999, 20px -20px 0 #aaa;
+}
+
+/* 내부 다리 뼈대 */
+.inside-bell-6 {
+  position: absolute;
+  left: 55px; top: 150px;
+  width: 70px; height: 155px;
+  background: teal;
+  background: repeating-radial-gradient(closest-side at 10% 50%, #fff, #333, #fff, #333, #fff, #333, #fff, #333, #666, #333, #333, #333, #fff, #fff);
+  clip-path: polygon(67% 0, 100% 50%, 75% 100%, 0% 100%, 25% 50%, 0% 0%);
+}
+
+/* 내부 무릎 관절 */
+.inside-bell-7 {
+  position: absolute;
+  width: 90px; height: 100px;
+  transform: rotate(80deg);
+  left: 58px; top: 210px;
+  background: slateblue;
+  background: repeating-linear-gradient(-90deg,#fff,#999,#fff,#999,#fff,#999,#fff);
+  clip-path: polygon(47% 0, 42% 47%, 51% 100%, 14% 100%, 0 26%, 20% 0);
+}
+
+/* 내부 무릎 관절 아래 */
+.inside-bell-8 {
+  z-index: 1;
+  position: absolute;
+  top: 228px; left: 43px;
+  transform: rotate(-90deg);
+  background: #38518b;
+  background: linear-gradient(180deg, #ddd 0%, #ddd 60%, #888 65%, #999 70%, #ddd 78%);
+  width: 100px; height: 90px;
+  clip-path: polygon(47% 0, 41% 41%, 51% 100%, 22% 100%, 7% 66%, 20% 0);
+}
+
+/* 바디 내부 패턴 */
+.inside-bell-9 {
+  z-index: -1;
+  position: absolute;
+  left:-2px; top: 40px;
+  width: 150px; height: 245px;
+  background:olive;
+  background: repeating-radial-gradient(closest-side at 15% 15%, #fff, #333, #fff, #333, #fff, #333, #fff, #333, #666, #333, #333, #333, #fff, #fff);
+  box-sizing: border-box;
+  border-radius: 0 10% 10% 0 / 40% 40% 50% 50%;
+}
+
+.inside-body {
+  position: absolute;
+  left:calc(50% + 1px); top: 0px;
+  width: 170px; height: 295px;
+  background: silver;
+  border: 5px solid #ccc;
+  box-sizing: border-box;
+  border-radius: 0 10% 10% 0 / 40% 40% 50% 50%;
+  border-left-color: transparent;
+  box-shadow: 2px 3px 0 0 #000;
+  background: repeating-radial-gradient(closest-side at 5% 5%, #fff, #333, #fff, #333, #fff, #333, #fff, #333, #666, #333, #333, #333, #fff, #fff);
+  background-size: 50px 100px;
+}
+
+.inside-arm {
+  position: absolute;
+  left: 0; top: -16px;
+  transform: rotate(-10deg);
+  width: 100px; height: 180px;
+  border: 5px solid #ccc;
+  background: silver;
+  border-radius: 40% 50% 40% 40%;
+  position: absolute;
+  box-shadow: 2px 3px 0 0 #000;
+  background: repeating-radial-gradient(closest-side at 10% 15%, #fff, #333, #fff, #333, #fff, #333, #fff, #333, #666, #333, #333, #333, #fff, #fff);
+}
+
+.inside-arm:after {
+  position: absolute;
+  left: 1px; top: 143px;
+  content: "";
+  width: 88px; height: 88px;
+  box-sizing: border-box;
+  border: 5px solid #ccc;
+  transform: rotate(20deg);
+  border-radius: 50%;
+  border-top-color: transparent;
+  background: silver;
+  box-shadow: 2px 3px 0 0 #000;
+  background: repeating-radial-gradient(closest-side at 30% 30%, #fff, #333, #fff, #333, #fff, #333, #fff, #333, #666, #333, #333, #333, #fff, #fff);
+}
+
+.inside-foot {
+  z-index: -1;
+  position: absolute;
+  top: 298px;
+  width: 160px; height: 50px;
+  border-top: none;
+  border-right: 5px solid #ccc;
+  border-bottom: 5px solid #ccc;
+  border-left: 5px solid #ccc;
+  border-radius: 20% 20% 30% 30% / 60% 60% 60% 60%; 
+  box-sizing: border-box;
+  background: silver;
+  box-shadow: 2px 3px 0 0 #000;
+  background: repeating-radial-gradient(closest-side at 10% 90%, #fff, #333, #fff, #333, #fff, #333, #fff, #333, #666, #333, #333, #333, #fff, #fff);
+}
+
+</style>
+</head>
+<body>
+<div class="container">
+  <div class="bamboocopter"></div>
+  <div class="doraemon">
+    <div class="doraemon-head">
+      <div class="doraemon-face">
+        <div class="doraemon-left-eye">
+          <div class="doraemon-left-iris"></div>
+        </div>
+        <div class="doraemon-right-eye">
+          <div class="doraemon-right-iris"></div>
+        </div>
+        <div class="doraemon-nose"></div>
+        <div class="doraemon-mouth-1"></div>
+        <div class="doraemon-mouth-2"></div>
+        <div class="doraemon-beard-1"></div>
+        <div class="doraemon-beard-2"></div>
+        <div class="doraemon-beard-3"></div>
+        <div id="inside" class="inside-face">
+          <div class="inside-outline"></div>
+          <div class="inside-eye">
+            <div class="inside-iris">
+              <div class="inside-iris-1"></div>
+            </div>
+          </div>
+          <div class="inside-nose">
+            <div class="inside-nose-detail"></div>
+          </div>
+          <div class="inside-detail-1"></div>
+          <div class="inside-detail-2"></div>
+          <div class="inside-detail-3"></div>
+          <div class="inside-detail-4"></div>
+          <div class="inside-detail-5"></div>
+          <div class="inside-detail-6"></div>
+          <div class="inside-detail-7"></div>
+          <div class="inside-detail-8"></div>
+          <div class="inside-detail-9"></div>
+          <div class="inside-mouth">
+            <div class="inside-mouth-1"></div>
+            <div class="inside-mouth-2"></div>
+            <div class="inside-mouth-3"></div>
+            <div class="inside-mouth-4"></div>
+            <div class="inside-mouth-5"></div>
+            <div class="inside-mouth-6"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="doraemon-necklace">
+      <div class="doraemon-bell-1">
+        <div class="doraemon-bell-2"></div>
+      </div>
+      <div class="inside-necklace">
+        <div class="inside-shoulder"></div>
+        <div class="inside-bell-1"></div>
+        <div class="inside-bell-2"></div>
+        <div class="inside-bell-3"></div>
+        <div class="inside-bell-4"></div>
+        <div class="inside-bell-5"></div>
+        <div class="inside-bell-6"></div>
+        <div class="inside-bell-7"></div>
+        <div class="inside-bell-8"></div>
+        <div class="inside-bell-9"></div>
+        <div class="inside-foot"></div>
+      </div>
+    </div>
+    <div class="doraemon-space-between-legs"></div>
+    <div class="doraemon-body">
+      <div class="doraemon-chest"></div>
+      <div class="inside-body"></div>
+    </div>
+    <div class="doraemon-left-arm">
+      <div class="doraemon-left-hand"></div>
+    </div>
+    <div class="doraemon-right-arm">
+      <div class="doraemon-right-hand"></div>
+      <div class="inside-arm"></div>
+    </div>
+    <div class="doraemon-left-foot"></div>
+    <div class="doraemon-right-foot"></div>
+  </div>
+</div>
+</body>
+</html>
