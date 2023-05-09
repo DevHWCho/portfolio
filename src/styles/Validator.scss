@@ -1,0 +1,95 @@
+.validator_container {
+  z-index: 10;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0,0,0,0.5);
+  transform: translateX(-50%);
+  border: 1px solid #fff;
+  .validator_inner {
+    position: relative;
+    width: 100vw;
+    height: 100%;
+    padding-top: 100px;
+    background-color: rgba(0,0,0,0.5);
+    box-sizing: border-box;
+    .valid_img {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      padding: 20px;
+      box-sizing: border-box;
+      perspective: 1000px;
+      & img {
+        padding: 10px;
+        box-sizing: border-box;
+        object-fit: cover;
+        transform: scale(1);
+        transition: transform .5s ease;
+        background-color: #fff;
+        box-shadow: 1px 1px 5px rgba(0,0,0,0.5);
+        cursor: pointer;
+        &:nth-child(1) {
+          width: 50%; 
+          height: 50%;
+          &:hover {
+            transform: translate3d(100px,20px,150px);
+          }
+        }
+        &:nth-child(2) {
+          width: 50%; 
+          height: 50%;
+          &:hover {
+            transform: translate3d(-100px,20px,150px);
+          }
+        }
+        &:nth-child(3) {
+          width: 100; 
+          height: 50%;
+          &:hover {
+            transform: translate3d(0px,-60px,150px);
+          }
+        }
+      }
+    }
+    .valid_close_btn {
+      position: absolute;
+      top: 50px;
+      right: 30px;
+      font-size: 40px;
+      color: #eee;
+      cursor: pointer;
+      transition: color .5s ease;
+      &:hover {
+        color: #D61C4E;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .validator_container {
+    overflow-x: hidden !important;
+  }
+  .valid_img {
+    & img {
+      &:nth-child(1) {
+        width: 100% !important;
+        &:hover {
+          transform: translate3d(0px,20px,200px) !important;
+        }
+      }
+      &:nth-child(2) {
+        width: 100% !important;
+        &:hover {
+          transform: translate3d(0px,0px,200px) !important;
+        }
+      }
+      &:nth-child(3) {
+        width: 100% !important;
+      }
+    }
+  }
+}

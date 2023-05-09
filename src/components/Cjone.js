@@ -1,15 +1,30 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
+import Validator from './Validator'
 
 function Cjone() {
+  const [openValidator, setOpenValidator] = useState(false);
+
+  const body = document.querySelector('body');
+  const onValidClick = () => {
+    setOpenValidator(true);
+    body.style.overflowY = `hidden`;
+  }
+
+  const valid_cjone = "valid_cjone";
+
   return (
     <div className='projects_container'>
+      {openValidator && (
+        <Validator setOpenValidator={setOpenValidator} className={valid_cjone} />
+      )}
+
       <div className='projects_background bg_cjone'></div>
       <div className='projects_video'></div>
       <div className='projects_inner'>
         <div className='pj_inner_header'>
           <ul>
-            <li>유효성 검사</li>
+          <li onClick={onValidClick}>유효성 검사</li>
             <li><Link target={'_blank'} to={'https://devhwcho.github.io/cjone/'}>GitHub Page</Link></li>
           </ul>
         </div>

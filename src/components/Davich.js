@@ -1,16 +1,31 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import 'styles/Project_common.scss';
+import Validator from './Validator';
 
 function Davich() {
+  const [openValidator, setOpenValidator] = useState(false);
+
+  const body = document.querySelector('body');
+  const onValidClick = () => {
+    setOpenValidator(true);
+    body.style.overflowY = `hidden`;
+  }
+
+  const valid_davich = "valid_davich";
+
   return (
     <div className='projects_container'>
+      {openValidator && (
+        <Validator setOpenValidator={setOpenValidator} className={valid_davich} />
+      )}
+
       <div className='projects_background bg_davich'></div>
       <div className='projects_video'></div>
       <div className='projects_inner'>
         <div className='pj_inner_header'>
           <ul>
-            <li>유효성 검사</li>
+            <li onClick={onValidClick}>유효성 검사</li>
             <li><Link target={'_blank'} to={'https://devhwcho.github.io/davich/'}>GitHub Page</Link></li>
           </ul>
         </div>

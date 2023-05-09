@@ -1,16 +1,29 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import 'styles/Project_common.scss';
+import Validator from './Validator';
 
 function SamsungEm() {
+  const [openValidator, setOpenValidator] = useState(false);
+
+  const body = document.querySelector('body');
+  const onValidClick = () => {
+    setOpenValidator(true);
+    body.style.overflowY = `hidden`;
+  }
+
+  const valid_sem = "valid_sem";
   return (
     <div className='projects_container'>
+      {openValidator && (
+        <Validator setOpenValidator={setOpenValidator} className={valid_sem} />
+      )}
       <div className='projects_background bg_sem'></div>
       <div className='projects_video'></div>
       <div className='projects_inner'>
         <div className='pj_inner_header'>
           <ul>
-            <li>유효성 검사</li>
+            <li onClick={onValidClick}>유효성 검사</li>
             <li><Link target={'_blank'} to={'https://devhwcho.github.io/samsung_electric_renewal/'}>GitHub Page</Link></li>
           </ul>
         </div>

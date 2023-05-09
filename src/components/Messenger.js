@@ -9,7 +9,6 @@ function Messenger() {
       <div className='projects_inner'>
         <div className='pj_inner_header'>
           <ul>
-            <li>유효성 검사</li>
             <li><Link target={'_blank'} to={'https://devhwcho.github.io/kakao_2023/'}>GitHub Page</Link></li>
           </ul>
         </div>

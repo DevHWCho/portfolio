@@ -1,3 +1,8 @@
+$spanColor: #00c7FF;
+$strongColor: #F059AB;
+$h3Color: #333;
+$textColor: #333;
+
 .projects_container {
   z-index: 1;
   position: relative;
@@ -73,7 +78,7 @@
           cursor: pointer;
           transition: background .5s ease 0s;
           &:hover {
-            background-color: rgba(0,0,0,0.5);
+            background-color: rgba(255, 255, 255, 0.2);
           }
         }
       }
@@ -89,9 +94,6 @@
         justify-content: center;
         align-items: center;
         position: absolute;
-        // width: 180px;
-        // height: 60px;
-        // width: 230px;
         padding: 5px;
         border: 3px solid;
         border-image-slice: 1;
@@ -109,7 +111,6 @@
         }
 
         &.pj_2row_icons {
-          // height: 120px;
           height: 160px;
         }
         p {
@@ -121,8 +122,6 @@
           letter-spacing: 1px;
         }
         img {
-          // width: 50px;
-          // height: 50px;
           width: 70px;
           height: 70px;
           object-fit: contain;
@@ -152,11 +151,12 @@
         display: flex;
         flex-direction: row-reverse;
         font-family: 'IBM Plex Sans KR', sans-serif;
-        text-shadow: 1px 1px 1px rgba(0,0,0,0.8);
+        text-shadow: 1px 1px 2px rgba(0,0,0,1);
         text-align: right;
         line-height: 1.5;
         .pj_span {
-          color: #D8B6A4;
+          font-weight: 800;
+          color: $spanColor;
         }
       }
     }
@@ -196,7 +196,7 @@
         font-size: calc(12px + 0.8vw);
         font-family: 'IBM Plex Sans KR', sans-serif;
         font-weight: 800;
-        color: #333;
+        color: $h3Color;
         &:nth-of-type(2) {
           margin-top: 20px;
         }
@@ -205,10 +205,10 @@
         padding-left: calc(10px + 0.5vw);
         font-size: calc(10px + 0.5vw);
         font-family: 'IBM Plex Sans KR', sans-serif;
-        color: #333;
+        color: $textColor;
         word-break: keep-all;
         strong {
-          color: #F059AB;
+          color: $strongColor;
         }
       }
     }
@@ -259,6 +259,11 @@
       .pj_items {
         top: 70px !important;
         font-size: 12px !important;
+      }
+      .pj_2row_icons {
+        img {
+          filter: brightness(0.6);
+        }
       }
     }
   }
