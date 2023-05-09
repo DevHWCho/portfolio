@@ -2,6 +2,7 @@ import { FaExclamationTriangle } from "react-icons/fa";
 import React, { useState } from 'react';
 import 'styles/AboutMe.scss';
 import Contact from "components/Contact";
+import TypingText from "components/TypingText";
 
 function AboutMe() {
   const [openContact, setOpenContact] = useState(false);
@@ -26,7 +27,7 @@ function AboutMe() {
         <div className='about_cont_container'>
           <div className='about_picture'></div>
           <div className='about_detail'>
-            <h3 className="ad_h3">안녕하세요! 조현웅입니다.</h3>
+            <h3 className="ad_h3"><TypingText /></h3>
             <p className="ad_p">
               <strong>F</strong>의 감성으로 공감하고 소통하는 미래의 <strong>F</strong>ront-End 개발자 조현웅입니다. 함께 좋은 시너지를 이끌어낼 수 있도록 누구보다 노력하고, 공부하고, 준비하는 개발자를 꿈꾸고 있습니다. 집을 지을 때도 어렷이 함께 협력해 짓는 것처럼 프로젝트 개발에 있어서도 모든 이들과 함께 소통하고 공감하고 성실하게 일할 준비가 되어있습니다. 디테일을 살리는 꼼꼼함으로 프로젝트의 퀄리티를 한층 업그레이드 하겠습니다.
             </p>
