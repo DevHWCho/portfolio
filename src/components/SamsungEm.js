@@ -1,13 +1,22 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import 'styles/Project_common.scss';
 
 function SamsungEm() {
   return (
     <div className='projects_container'>
+      <div className='projects_background bg_sem'></div>
       <div className='projects_video'></div>
       <div className='projects_inner'>
+        <div className='pj_inner_header'>
+          <ul>
+            <li>유효성 검사</li>
+            <li><Link target={'_blank'} to={'https://devhwcho.github.io/samsung_electric_renewal/'}>GitHub Page</Link></li>
+          </ul>
+        </div>
         <div className='pj_top'>
           <div className='pj_icons'>
+            <p>My skills</p>
             <img src={require('../images/icon_html5.png')} className='pj_img' alt='' />
             <img src={require('../images/icon_css3.png')} className='pj_img' alt='' />
             <img src={require('../images/icon_js.png')} className='pj_img' alt='' />

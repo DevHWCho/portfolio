@@ -31,6 +31,7 @@
     background-color: #F059AB;
     // background-color: #fff;
     border-radius: 48px;
+    box-shadow: 2px 2px 10px rgba(0,0,0,0.3), inset 2px 2px 5px rgba(0,0,0,0.3);
     transform: translateX(-50%);
     transition: all 1s cubic-bezier(0.68, -0.55, 0.265, 1.55);
     &.on {
@@ -67,7 +68,12 @@
           font-size: 36px;
           letter-spacing: 15px;
           padding: 10px 0;
+          background-image: linear-gradient(to right, #F9ED69, #ABEDD8, #FFC4C4, #A4EBF3, #FF165D, #892CDC, #DEEDF0);
+          background-clip: text;
+          -webkit-background-clip: text;
+          color: transparent;
           text-decoration: underline;
+          text-decoration-color: #fff;
           text-underline-offset: 8px;
         }
         .gnb_sub_box {
@@ -147,7 +153,12 @@
       height: 132px !important;
       background-size: 400px !important;
       .header_btn_container {
-        bottom: 12px !important;
+        bottom: 15px !important;
+        width: 25px !important;
+        height: 14px !important;
+        .header_btn {
+          width: 25px !important;
+        }
       }
     }
   }
@@ -178,11 +189,6 @@
       background-size: 300px !important;
       .header_btn_container {
         bottom: 14px !important;
-        width: 25px !important;
-        height: 15px !important;
-        .header_btn {
-          width: 25px !important;
-        }
       }
     }
   }

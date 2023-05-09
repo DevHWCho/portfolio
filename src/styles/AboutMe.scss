@@ -227,6 +227,7 @@
   .about_cont_container {
     display: flex;
     flex-direction: column;
+    height: 75% !important;
     .about_picture {
       width: 100% !important;
       box-sizing: border-box !important;

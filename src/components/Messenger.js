@@ -1,12 +1,21 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 function Messenger() {
   return (
     <div className='projects_container'>
+      <div className='projects_background bg_messenger'></div>
       <div className='projects_video'></div>
       <div className='projects_inner'>
+        <div className='pj_inner_header'>
+          <ul>
+            <li>유효성 검사</li>
+            <li><Link target={'_blank'} to={'https://devhwcho.github.io/kakao_2023/'}>GitHub Page</Link></li>
+          </ul>
+        </div>
         <div className='pj_top'>
-          <div className='pj_icons'>
+          <div className='pj_icons pj_2row_icons'>
+            <p>My skills</p>
             <img src={require('../images/icon_html5.png')} className='pj_img' alt='' />
             <img src={require('../images/icon_sass.png')} className='pj_img' alt='' />
             <img src={require('../images/icon_react.png')} className='pj_img' alt='' />
@@ -21,7 +30,7 @@ function Messenger() {
             <ul>
               <li>작업기간 : <span className='pj_span'>2023-00 → 2023-00</span></li>
               <li>기여도 : <span className='pj_span'>100%</span></li>
-              <li>사용언어 : <span className='pj_span'>HTML5(JSX), Sass, React, Firebase, Axios, Gihub Pages</span></li>
+              <li>사용기술 : <span className='pj_span'>HTML5(JSX), Sass, React, Firebase, Axios, Gihub Pages</span></li>
             </ul>
           </div>
         </div>
