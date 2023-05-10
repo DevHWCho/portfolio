@@ -1,5 +1,5 @@
 .contact_container {
-  z-index: 3;
+  z-index: 5;
   position: absolute;
   right: 40px;
   top: 80px;
@@ -11,7 +11,7 @@
   background-color: #111;
   color: #efefef;
   &::after {
-    z-index: 2;
+    z-index: 4;
     position: absolute;
     top: 0;
     left: 0;
@@ -26,7 +26,7 @@
       display: flex;
       justify-content: space-between;
       p.headline {
-        z-index: 4;
+        z-index: 6;
         position: relative;
         flex: 1;
         padding: 5.5%;
@@ -36,7 +36,7 @@
         text-decoration: underline;
       }
       div.barcode_container {
-        z-index: 4;
+        z-index: 6;
         position: relative;
         top: 50px;
         width: 250px;
@@ -124,7 +124,7 @@
       }
     }
     h2.contact_title {
-      z-index: 4;
+      z-index: 6;
       position: relative;
       width: 435px;
       padding: 2.1% 0.05% 2.1% 5.5%;
@@ -133,7 +133,7 @@
       font-weight: 400;
     }
     .contact_cont_container {
-      z-index: 4;
+      z-index: 6;
       display: flex;
       flex-wrap: wrap;
       position: absolute;

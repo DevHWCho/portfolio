@@ -5,7 +5,10 @@ import 'styles/Header.scss';
 function Header() {
   const headerBtnRef = useRef();
   const onHdBtnClick = () => {
-    headerBtnRef.current.classList.toggle('on')
+    headerBtnRef.current.classList.toggle('on');
+  }
+  const onMenuClick = () => {
+    headerBtnRef.current.classList.remove('on');
   }
 
   return (
@@ -21,13 +24,13 @@ function Header() {
               <div className='gnb_sub_box'>
                 <ul className='gnb_sub_container'>
                   <li className='gnb_sub'>COVER</li>
-                  <li className='gnb_sub'>COVER</li>
+                  <li className='gnb_sub'><Link to={'/portfolio'} onClick={onMenuClick}>COVER</Link></li>
                 </ul>
               </div>
               <div className='gnb_sub_box'>
                 <ul className='gnb_sub_container'>
                   <li className='gnb_sub'>INTRODUCTION</li>
-                  <li className='gnb_sub'><Link to={'/about_me'}>INTRODUCTION</Link></li>
+                  <li className='gnb_sub'><Link to={'/about_me'} onClick={onMenuClick}>INTRODUCTION</Link></li>
                 </ul>
               </div>
             </li>
@@ -67,13 +70,13 @@ function Header() {
               <div className='gnb_sub_box'>
                 <ul className='gnb_sub_container'>
                   <li className='gnb_sub'>ANIMATION</li>
-                  <li className='gnb_sub'><Link to={'/other'}>ANIMATION</Link></li>
+                  <li className='gnb_sub'><Link to={'/other'} onClick={onMenuClick}>ANIMATION</Link></li>
                 </ul>
               </div>
               <div className='gnb_sub_box'>
                 <ul className='gnb_sub_container'>
                   <li className='gnb_sub'>EMOJI</li>
-                  <li className='gnb_sub'><Link to={'/other'}>EMOJI</Link></li>
+                  <li className='gnb_sub'><Link to={'/other'} onClick={onMenuClick}>EMOJI</Link></li>
                 </ul>
               </div>
             </li>

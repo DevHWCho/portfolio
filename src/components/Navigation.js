@@ -7,6 +7,7 @@ function Navigation() {
   const aboutRef = useRef(null);
   const projectRef = useRef(null);
   const otherRef = useRef(null);
+  console.log("pathname",location)
 
   useEffect(() => {
     const pathname = location.pathname;

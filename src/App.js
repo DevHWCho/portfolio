@@ -6,6 +6,7 @@ import AboutMe from 'routes/AboutMe';
 import Project from 'routes/Project';
 import Other from 'routes/Other';
 import 'styles/App.css';
+import Cover from 'routes/Cover';
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
       <Navigation />
       <Routes>
         <>
+          <Route path='/portfolio' element={<Cover />} />
           <Route path='/' element={<Main />} />
           <Route path='/about_me' element={<AboutMe />} />
           <Route path='/project' element={<Project />} />
