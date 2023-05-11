@@ -1,14 +1,19 @@
 import { FaExclamationTriangle } from "react-icons/fa";
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import 'styles/AboutMe.scss';
 import Contact from "components/Contact";
 import TypingText from "components/TypingText";
 
-function AboutMe() {
+function AboutMe(props) {
   const [openContact, setOpenContact] = useState(false);
   const contactClick = () => {
     setOpenContact(true);
   }
+
+  useEffect(() => {
+    const visibleNav = props.visibleNav;
+    visibleNav();
+  })
 
   return (
     <>

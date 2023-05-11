@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import 'styles/Project_common.scss';
 import Validator from './Validator';
+import { FaPowerOff } from 'react-icons/fa';
 
 function Davich() {
   const [openValidator, setOpenValidator] = useState(false);
@@ -14,8 +15,17 @@ function Davich() {
 
   const valid_davich = "valid_davich";
 
+  const navigate = useNavigate();
+  const onCloseClick = () => {
+    navigate('/project');
+  }
+
   return (
     <div className='projects_container'>
+      <div className='pc_close_btn' onClick={onCloseClick}>
+        <FaPowerOff />
+        <span>Power Off</span>
+      </div>
       {openValidator && (
         <Validator setOpenValidator={setOpenValidator} className={valid_davich} />
       )}

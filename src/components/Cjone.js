@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import Validator from './Validator'
+import { FaPowerOff } from 'react-icons/fa';
 
 function Cjone() {
   const [openValidator, setOpenValidator] = useState(false);
@@ -13,8 +14,18 @@ function Cjone() {
 
   const valid_cjone = "valid_cjone";
 
+  const navigate = useNavigate();
+  const onCloseClick = () => {
+    navigate('/project');
+  }
+
   return (
     <div className='projects_container'>
+      <div className='pc_close_btn' onClick={onCloseClick}>
+        <FaPowerOff />
+        <span>Power Off</span>
+      </div>
+
       {openValidator && (
         <Validator setOpenValidator={setOpenValidator} className={valid_cjone} />
       )}

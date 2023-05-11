@@ -1,9 +1,14 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { FaExclamationTriangle } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
 import 'styles/Other.scss';
 
-function Other() {
+function Other(props) {
+  useEffect(() => {
+    const visibleNav = props.visibleNav;
+    visibleNav();
+  })
+
   return (
     <div className='other_container'>
       <div className='other_header'>

@@ -4,7 +4,7 @@ $h3Color: #333;
 $textColor: #333;
 
 .projects_container {
-  z-index: 1;
+  z-index: 6;
   position: relative;
   display: flex;
   width: 100vw;
@@ -12,6 +12,36 @@ $textColor: #333;
   padding: 20px;
   background: #222;
   box-sizing: border-box;
+  .pc_close_btn {
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    font-size: 30px;
+    color: #fff;
+    text-shadow: 0px 0px 10px rgba(255,255,255,0.8);
+    filter: brightness(1.5);
+    cursor: pointer;
+    transition: all .5s ease;
+    &:hover {
+      color: #EA047E;
+    }
+    span {
+      font-family: 'Noto Sans', sans-serif;
+      font-size: 12px;
+      font-weight: 900;
+      // color: #FED049;
+      letter-spacing: -1px;
+      animation: text_ani 1s ease 0s infinite alternate-reverse;
+    }
+    @keyframes text_ani {
+      from{opacity: 0;}
+      to{opacity: 1;}
+    }
+  }
+
   .projects_background {
     top: 0;
     left: 0;

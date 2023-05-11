@@ -197,6 +197,12 @@
           text-shadow: -1px -1px 0 #aaa;
           cursor: pointer;
           transition: all .25s ease 0s;
+          a {
+            color: #111;
+            &:hover {
+              color: #fff;
+            }
+          }
           &:hover {
             margin-top: 14px;
             color: #fff;

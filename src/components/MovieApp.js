@@ -1,10 +1,20 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { FaPowerOff } from 'react-icons/fa';
+import { Link, useNavigate } from 'react-router-dom';
 import 'styles/Project_common.scss';
 
 function MovieApp() {
+  const navigate = useNavigate();
+  const onCloseClick = () => {
+    navigate('/project');
+  }
+
   return (
     <div className='projects_container'>
+      <div className='pc_close_btn' onClick={onCloseClick}>
+        <FaPowerOff />
+        <span>Power Off</span>
+      </div>
       <div className='projects_background bg_movie'></div>
       <div className='projects_video'></div>
       <div className='projects_inner'>
