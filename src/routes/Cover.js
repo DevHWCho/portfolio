@@ -19,7 +19,7 @@ function Cover() {
       if (coverRef.current) {
         if (e.deltaY > 0) {
           coverRef.current.style.transform = `translateY(-100vh)`;
-          // navigate('/about_me');
+          
         } else if (e.deltaY < 0) {
           coverRef.current.style.transform = `translateY(0)`;
         }

@@ -1,5 +1,5 @@
 import React, { useRef, useState } from 'react';
-import { Link, Navigate, useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import 'styles/Project_common.scss';
 import Validator from './Validator';
 import { FaPowerOff } from 'react-icons/fa';
