@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import 'styles/Project_common.scss';
 import Validator from './Validator';
@@ -16,12 +16,17 @@ function Davich() {
   const valid_davich = "valid_davich";
 
   const navigate = useNavigate();
+  const pcRef = useRef();
   const onCloseClick = () => {
+    pcRef.current.style.animationName = `frame_ani2`;
+    pcRef.current.style.animationDuration = `1s`;
+    pcRef.current.style.animationTimingFunction = `ease`;
+    pcRef.current.style.animationDelay = `0s`;
     navigate('/project');
   }
 
   return (
-    <div className='projects_container'>
+    <div className='projects_container' ref={pcRef}>
       <div className='pc_close_btn' onClick={onCloseClick}>
         <FaPowerOff />
         <span>Power Off</span>

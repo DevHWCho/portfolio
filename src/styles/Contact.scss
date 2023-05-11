@@ -10,6 +10,18 @@
   box-sizing: border-box;
   background-color: #111;
   color: #efefef;
+  animation: contactFade 1s ease 0s;
+
+  @keyframes contactFade {
+    0%{right: -100vw;}
+    100%{right: 40px;}
+  }
+
+  @keyframes contactFade2 {
+    0%{right: 40;}
+    100%{right: -100vw;}
+  }
+
   &::after {
     z-index: 4;
     position: absolute;
@@ -111,11 +123,11 @@
             transform: translateY(-50%);
             transition: all .5s ease 0s;
           }
-          &:hover {
+          &.on {
             background-color: #111;
             box-shadow: inset -1px 1px 2px rgba(200,200,200,0.5);
           }
-          &:hover::after {
+          &.on::after {
             left: 0;
             box-shadow: 2px 1px 3px rgba(255,255,255,0.8);
             background-image: linear-gradient(#efefef, #efefef), linear-gradient(to right, #743ad5, #d53a9d)

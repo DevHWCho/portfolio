@@ -1,16 +1,21 @@
-import React from 'react';
+import React, { useRef } from 'react';
 import { FaPowerOff } from 'react-icons/fa';
 import { Link, useNavigate } from 'react-router-dom';
 import 'styles/Project_common.scss';
 
 function MovieApp() {
   const navigate = useNavigate();
+  const pcRef = useRef();
   const onCloseClick = () => {
+    pcRef.current.style.animationName = `frame_ani2`;
+    pcRef.current.style.animationDuration = `1s`;
+    pcRef.current.style.animationTimingFunction = `ease`;
+    pcRef.current.style.animationDelay = `0s`;
     navigate('/project');
   }
 
   return (
-    <div className='projects_container'>
+    <div className='projects_container' ref={pcRef}>
       <div className='pc_close_btn' onClick={onCloseClick}>
         <FaPowerOff />
         <span>Power Off</span>
@@ -40,7 +45,7 @@ function MovieApp() {
             <ul>
               <li>작업기간 : <span className='pj_span'>2023-00 → 2023-00</span></li>
               <li>기여도 : <span className='pj_span'>100%</span></li>
-              <li>사용기술 : <span className='pj_span'>HTML5(JSX), Sass, Styled Components, React-Redux, Firebase,  Gihub Pages, Axios</span></li>
+              <li>사용기술 : <span className='pj_span'>HTML5(JSX), Sass, Styled Components, React, Firebase,  Gihub Pages, Axios</span></li>
             </ul>
           </div>
         </div>

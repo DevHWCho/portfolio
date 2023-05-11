@@ -72,7 +72,7 @@ function Cover() {
       <div className='cover_inner'>
         <div className='cover_title'>CHO
           <p className='cover_p'>
-            공감과 소통, 새로운 도전이 함께하는<br />
+            공감과 소통, 새로운 도전과 함께하는<br />
             개발자 조현웅입니다.
           </p>
           <div className='circle_icon'>

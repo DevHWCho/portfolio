@@ -12,6 +12,16 @@ $textColor: #333;
   padding: 20px;
   background: #222;
   box-sizing: border-box;
+  animation: frame_ani 1s ease 0s normal;
+  
+  @keyframes frame_ani {
+    0%{transform: translateX(100vw);}
+    100%{transform: translateX(0);}
+  }
+  @keyframes frame_ani2 {
+    0%{transform: translateX(0);}
+    100%{transform: translateX(100vw);}
+  }
   .pc_close_btn {
     z-index: 1;
     display: flex;
@@ -21,17 +31,17 @@ $textColor: #333;
     position: absolute;
     font-size: 30px;
     color: #fff;
-    text-shadow: 0px 0px 10px rgba(255,255,255,0.8);
-    filter: brightness(1.5);
+    filter: blur(0.4px) brightness(1.5);
     cursor: pointer;
     transition: all .5s ease;
     &:hover {
-      color: #EA047E;
+      color: #EB1D36;
     }
     span {
       font-family: 'Noto Sans', sans-serif;
       font-size: 12px;
       font-weight: 900;
+      color: #fff;
       // color: #FED049;
       letter-spacing: -1px;
       animation: text_ani 1s ease 0s infinite alternate-reverse;

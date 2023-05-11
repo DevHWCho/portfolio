@@ -5,24 +5,32 @@ import MovieApp from 'components/MovieApp';
 import SamsungEm from 'components/SamsungEm';
 import React, { useEffect } from 'react';
 import { FaExclamationTriangle } from 'react-icons/fa';
-import { Link, Route, Routes } from 'react-router-dom';
+import { Link, Route, Routes, useLocation } from 'react-router-dom';
+import { CSSTransition, TransitionGroup } from 'react-transition-group';
 import 'styles/Project.scss';
 
 function Project(props) {
   useEffect(() => {
     const visibleNav = props.visibleNav;
     visibleNav();
-  })
+  });
+
+  const location = useLocation();
 
   return (
     <>
-    <Routes>
-      <Route path='/davich' element={<Davich />}></Route>
-      <Route path='/sem' element={<SamsungEm />}></Route>
-      <Route path='/cjone' element={<Cjone />}></Route>
-      <Route path='/messenger' element={<Messenger />}></Route>
-      <Route path='/movie' element={<MovieApp />}></Route>
-    </Routes>
+    <TransitionGroup className='transition-group'>
+      <CSSTransition key={location.pathname} classNames='fade' timeout={900}>
+        <Routes location={location}>
+          <Route path='/davich' element={<Davich />}></Route>
+          <Route path='/sem' element={<SamsungEm />}></Route>
+          <Route path='/cjone' element={<Cjone />}></Route>
+          <Route path='/messenger' element={<Messenger />}></Route>
+          <Route path='/movie' element={<MovieApp />}></Route>
+        </Routes>
+      </CSSTransition>
+    </TransitionGroup>
+    
     <div className='project_container'>
       <div className='project_header'>
         <div className='header_sub'>

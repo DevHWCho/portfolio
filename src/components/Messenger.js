@@ -1,15 +1,20 @@
-import React from 'react'
+import React, { useRef } from 'react'
 import { FaPowerOff } from 'react-icons/fa';
 import { Link, useNavigate } from 'react-router-dom'
 
 function Messenger() {
   const navigate = useNavigate();
+  const pcRef = useRef();
   const onCloseClick = () => {
+    pcRef.current.style.animationName = `frame_ani2`;
+    pcRef.current.style.animationDuration = `1s`;
+    pcRef.current.style.animationTimingFunction = `ease`;
+    pcRef.current.style.animationDelay = `0s`;
     navigate('/project');
   }
 
   return (
-    <div className='projects_container'>
+    <div className='projects_container' ref={pcRef}>
       <div className='pc_close_btn' onClick={onCloseClick}>
         <FaPowerOff />
         <span>Power Off</span>

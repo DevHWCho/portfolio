@@ -18,12 +18,20 @@ function Contact(props) {
   }
 
   const tRef = useRef();
+  const contactConRef = useRef();
   const onContactToggle = () => {
-    props.setOpenContact(false)
+    contactConRef.current.style.animationName = `contactFade2`;
+    contactConRef.current.style.animationDuration = `1s`;
+    contactConRef.current.style.animationTimingFunction = `ease`;
+    contactConRef.current.style.animationDelay = `0.5s`;
+    tRef.current.classList.add('on');
+    setTimeout(function() {
+      props.setOpenContact(false);
+    }, 1400);
   }
 
   return (
-    <div className='contact_container'>
+    <div className='contact_container' ref={contactConRef}>
       <div className='contact_header'>
         <div className='header_sub'>
           <p className='headline'>Developer CHO</p>

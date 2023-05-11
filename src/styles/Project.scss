@@ -1,3 +1,5 @@
+$btnHoverColor: #A27B5C;
+
 .project_container {
   position: absolute;
   right: 40px;
@@ -206,7 +208,10 @@
           &:hover {
             margin-top: 14px;
             color: #fff;
-            background-color: #A27B5C;
+            background-color: $btnHoverColor;
+            a {
+              color: #fff;
+            }
           }
         }
 
