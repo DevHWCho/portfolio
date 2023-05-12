@@ -4,6 +4,51 @@ $ca02color: #FFB400;
 $ca03color: #FF7315;
 $ca04color: #DC3535;
 
+.ca_char_container {
+  z-index: 32;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  // background-color: green;
+  .cover_char {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    height: calc(250px + 18vw);
+    box-sizing: border-box;
+    transform: translateY(-50%);
+    // border: 10px solid red;
+    .cc_unit {
+      overflow: hidden;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      box-sizing: border-box;
+      // border: 10px solid green;
+      animation: char_ani 1s ease 0.5s;
+      .unit_char {
+        display: none;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        font-family: 'League Gothic', sans-serif;
+        font-size: calc(250px + 18vw);
+        color: #fff;
+        letter-spacing: -10px;
+        transform: translateX(-50%) translateY(-50%);
+      }
+      @keyframes char_ani {
+        0%{bottom: 0; height: 0;}
+        100%{top: 0; height: auto;}
+      }
+    }
+  }
+}
+
 .ca_container {
   z-index: 31;
   position: absolute;
@@ -19,17 +64,20 @@ $ca04color: #DC3535;
     height: 100%;
     &:nth-of-type(1) {
       background-color: $ca01color;
-      animation: cover_ani 0.8s ease 0s;
+      animation: cover_ani2 2s ease 0s;
     }
     &:nth-of-type(2) {
+      transform: translateY(100vh);
       background-color: $ca02color;
       animation: cover_ani 0.8s ease 0.2s;
     }
     &:nth-of-type(3) {
+      transform: translateY(100vh);
       background-color: $ca03color;
       animation: cover_ani 0.8s ease 0.4s;
     }
     &:nth-of-type(4) {
+      transform: translateY(100vh);
       background-color: $ca04color;
       animation: cover_ani 0.8s ease 0.6s;
     }
@@ -47,7 +95,7 @@ $ca04color: #DC3535;
   width: 100vw;
   height: 100vh;
   background-color: $coverBgColor;
-  transition: all 2s ease;
+  transition: transfrom 2s ease;
 
   .cover_inner {
     width: 100%;
@@ -121,6 +169,9 @@ $ca04color: #DC3535;
 
 @media screen and (max-height: 800px) {
   .cover_container {
+    min-height: 800px;
+  }
+  .ca_char_container {
     min-height: 800px;
   }
 }

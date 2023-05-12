@@ -41,17 +41,17 @@ function Main(props) {
           <article>
             <h2>Introduction</h2>
             <span className='art_arrow'><FaExternalLinkSquareAlt /></span>
-            <span className='art_text'><Link>CLICK</Link></span>
+            <span className='art_text'><Link to={'/about_me'}>CLICK</Link></span>
           </article>
           <article>
             <h2>Project</h2>
             <span className='art_arrow'><FaExternalLinkSquareAlt /></span>
-            <span className='art_text'><Link>CLICK</Link></span>
+            <span className='art_text'><Link to={'/project'}>CLICK</Link></span>
           </article>
           <article>
             <h2>Other</h2>
             <span className='art_arrow'><FaExternalLinkSquareAlt /></span>
-            <span className='art_text'><Link>CLICK</Link></span>
+            <span className='art_text'><Link to={'/other'}>CLICK</Link></span>
           </article>
         </div> 
       </div>
