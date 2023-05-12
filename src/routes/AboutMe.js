@@ -13,7 +13,7 @@ function AboutMe(props) {
   useEffect(() => {
     const visibleNav = props.visibleNav;
     visibleNav();
-  })
+  },[])
 
   return (
     <>

@@ -57,7 +57,7 @@ function Contact(props) {
             <h3 className='cd_h3'>e-mail</h3>
             <p className='cd_p'>Web Accessibillity & Standard</p>
             <button type='button' className='cd_button' onClick={eClick}>DETAIL<span className='cd_btn_span'>← Click</span></button>
-            <span className='cd_text' ref={eRef}>whgusdnd97@gmail.com</span>
+            <span className='cd_text' ref={eRef}><Link to={'mailto:whgusdnd97@gmail.com'}>whgusdnd97@gmail.com</Link></span>
           </div>
           <div className='contact_detail'>
             <h3 className='cd_h3'>Phone Number</h3>

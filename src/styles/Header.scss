@@ -145,6 +145,18 @@
   }
 }
 
+@media screen and (max-width: 979px) {
+  .header_text {
+    h1 {
+      font-size: 60px !important;
+    }
+    p {
+      top: 100px !important;
+      font-size: 30px !important;
+    }
+  }
+}
+
 @media screen and (max-width: 900px) {
   .gnb {
     width: 400px !important;

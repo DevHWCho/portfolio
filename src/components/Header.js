@@ -22,7 +22,7 @@ function Header(props) {
   return (
     <div className='header_container'> 
       <div className='header_text'>
-        <Link to={'/'}><h1>PORTFOLIO</h1></Link>
+        <Link to={'/'} onClick={onMenuClick}><h1>PORTFOLIO</h1></Link>
         <p>BY HYUNWOONG CHO</p>
       </div>
       <div className='gnb' ref={headerBtnRef}>

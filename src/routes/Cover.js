@@ -4,11 +4,8 @@ import 'styles/Cover.scss';
 
 function Cover() {
   const navigate = useNavigate(null);
-
   const coverRef = useRef();
-  console.log(coverRef)
   const ca01Ref = useRef();
-  console.log(ca01Ref)
   const ca02Ref = useRef();
   const ca03Ref = useRef();
   const ca04Ref = useRef();
@@ -19,6 +16,9 @@ function Cover() {
       if (coverRef.current) {
         if (e.deltaY > 0) {
           coverRef.current.style.transform = `translateY(-100vh)`;
+          setTimeout(function() {
+            navigate('/about_me');
+          }, 2000);
           
         } else if (e.deltaY < 0) {
           coverRef.current.style.transform = `translateY(0)`;

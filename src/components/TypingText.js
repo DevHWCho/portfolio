@@ -14,7 +14,7 @@ const TypingText = () => {
         clearInterval(interval); 
     }
     return () => clearInterval(interval); 
-})
+  })
   
   return (
   	<p className="text" >{ Text }</p>

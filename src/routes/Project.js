@@ -13,7 +13,7 @@ function Project(props) {
   useEffect(() => {
     const visibleNav = props.visibleNav;
     visibleNav();
-  });
+  },[]);
 
   const location = useLocation();
 

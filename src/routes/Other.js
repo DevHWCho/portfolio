@@ -7,7 +7,7 @@ function Other(props) {
   useEffect(() => {
     const visibleNav = props.visibleNav;
     visibleNav();
-  })
+  },[])
 
   return (
     <div className='other_container'>
