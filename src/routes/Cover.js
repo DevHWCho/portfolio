@@ -24,9 +24,9 @@ function Cover() {
       if (coverRef.current) {
         if (e.deltaY > 0) {
           coverRef.current.style.transform = `translateY(-100vh)`;
-          // setTimeout(function() {
-          //   navigate('/about_me');
-          // }, 2000);
+          setTimeout(function() {
+            navigate('/about_me');
+          }, 2000);
           
         } else if (e.deltaY < 0) {
           coverRef.current.style.transform = `translateY(0)`;
