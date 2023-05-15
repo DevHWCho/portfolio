@@ -123,8 +123,9 @@
           padding: 30px;
           padding-bottom: 10px;
           // font-size: 50px;
+          font-family: 'IBM Plex Sans KR', sans-serif;
           font-size: calc(14px + 1.5vw);
-          font-weight: 400;
+          font-weight: 700;
           word-break: keep-all;
           &::after {
             position: absolute;
