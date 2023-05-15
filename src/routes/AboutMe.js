@@ -21,7 +21,9 @@ function AboutMe(props) {
       <div className='about_header'>
         <div className='header_sub'>
           <p className='headline'>Developer who</p>
-          <div className='barcode_container'>
+          <p className="contact_btn"></p>
+          <div className='barcode_container' onClick={contactClick}>
+            <p className="barcode_click">CONTACT →</p>
             <p className='left_caution'>
               <FaExclamationTriangle />
             </p>

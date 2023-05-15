@@ -57,6 +57,7 @@ function MovieApp() {
           <p className='pjc_text'>React의 Router-Dom 기능을 활용한 <strong>SPA(Single Page Application)</strong> 제작</p>
           <p className='pjc_text'>React의 <strong>JSX 문법 및 SCSS(SASS) 기능</strong>을 활용한 메신져 어플리케이션 디자인</p>
           <p className='pjc_text'>React의 <strong>Axios 라이브러리</strong>를 활용하여 TMDB의 API 불러오기</p>
+          <p className='pjc_text'>React의 <strong>Swipe 라이브러리</strong>를 활용하여 이미지 배너에 Swipe 기능 추가</p>
           <p className='pjc_text'><strong>Firebase 인증 서비스</strong>를 활용한 <strong>이메일 및 소셜 로그인 기능</strong> 구현</p>
           <p className='pjc_text'><strong>Hook 함수</strong>(useEffect/useState/useLocation/useNavigate 등) 를 사용해 <strong>데이터 전달 및 관리</strong></p>
         </div>
