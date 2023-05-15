@@ -67,7 +67,7 @@ function Cover() {
         caChar03Ref.current.style.display = `none`;
         caChar04Ref.current.style.display = `none`;
       }
-    },4000)
+    },5000)
 
     const timeoutId04 = setTimeout(() => {
       if (ca04Ref.current) {
@@ -115,13 +115,25 @@ function Cover() {
           <span className='unit_char' ref={caChar01Ref}>CHO</span>
         </div>
         <div className='cc_unit caChar02'>
-          <span className='unit_char' ref={caChar02Ref}>03</span>
+          <span className='unit_char' ref={caChar02Ref}>
+            <ul className='char_inner'>
+              <li>D</li>
+              <li>E</li>
+              <li>V</li>
+              <li>E</li>
+              <li>L</li>
+              <li>O</li>
+              <li>P</li>
+              <li>E</li>
+              <li>R</li>
+            </ul>
+          </span>
         </div>
         <div className='cc_unit caChar03'>
-          <span className='unit_char' ref={caChar03Ref}>02</span>
+          <span className='unit_char' ref={caChar03Ref}>END</span>
         </div>
         <div className='cc_unit caChar04'>
-          <span className='unit_char' ref={caChar04Ref}>01</span>
+          <span className='unit_char' ref={caChar04Ref}>FRONT</span>
         </div>
       </div>
     </div>

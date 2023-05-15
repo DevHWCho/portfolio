@@ -40,6 +40,51 @@ $ca04color: #DC3535;
         color: #fff;
         letter-spacing: -10px;
         transform: translateX(-50%) translateY(-50%);
+        .char_inner {
+          display: flex;
+          li {
+            &:nth-of-type(1) {
+              transform: translateY(0);
+              animation: char_movement 0.5s linear 0.5s;
+            }
+            &:nth-of-type(2) {
+              transform: translateY(0);
+              animation: char_movement 0.5s linear 0.6s;
+            }
+            &:nth-of-type(3) {
+              transform: translateY(0);
+              animation: char_movement 0.5s linear 0.7s;
+            }
+            &:nth-of-type(4) {
+              transform: translateY(0);
+              animation: char_movement 0.5s linear 0.8s;
+            }
+            &:nth-of-type(5) {
+              transform: translateY(0);
+              animation: char_movement 0.5s linear 0.9s;
+            }
+            &:nth-of-type(6) {
+              transform: translateY(0);
+              animation: char_movement 0.5s linear 1.0s;
+            }
+            &:nth-of-type(7) {
+              transform: translateY(0);
+              animation: char_movement 0.5s linear 1.1s;
+            }
+            &:nth-of-type(8) {
+              transform: translateY(0);
+              animation: char_movement 0.5s linear 1.2s;
+            }
+            &:nth-of-type(9) {
+              transform: translateY(0);
+              animation: char_movement 0.5s linear 1.3s;
+            }
+          }
+          @keyframes char_movement {
+            0% {transform: translateY(0);}
+            100% {transform: translateY(-100%);}
+          }
+        }
       }
       @keyframes char_ani {
         0%{bottom: 0; height: 0;}
@@ -117,7 +162,7 @@ $ca04color: #DC3535;
         width: 100%;
         font-family: 'IBM Plex Sans KR', sans-serif;
         font-size: 20px;
-        font-weight: 500;
+        font-weight: 400;
         text-align: center;
         letter-spacing: 0px;
         transform: translateX(-50%);

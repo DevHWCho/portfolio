@@ -25,7 +25,7 @@ function MovieApp() {
       <div className='projects_inner'>
         <div className='pj_inner_header'>
           <ul>
-            <li><Link target={'_blank'} to={'https://devhwcho.github.io/netflix_app_2023/'}>GitHub Page</Link></li>
+            <li><Link target={'_blank'} to={'https://devhwcho.github.io/mv_app/'}>GitHub Page</Link></li>
           </ul>
         </div>
         <div className='pj_top'>

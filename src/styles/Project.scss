@@ -5,12 +5,13 @@ $btnHoverColor: #A27B5C;
   right: 40px;
   top: 80px;
   width: 75.5%;
-  height: 88%;
+  height: 85%;
   border: 2px solid #fff;
   border-radius: 20px;
   box-sizing: border-box;
   background-color: #111;
   color: #efefef;
+  box-shadow: -10px 0px 10px #111;
   &::after {
     z-index: 4;
     position: absolute;
@@ -356,8 +357,8 @@ $btnHoverColor: #A27B5C;
   }
 }
 
-@media screen and (max-height: 760px) {
-  .project_container {
-    min-height: 700px !important;
+@media screen and (max-height: 800px) {
+  .about_container {
+    min-height: 710px !important;
   }
 }

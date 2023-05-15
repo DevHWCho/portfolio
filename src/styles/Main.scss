@@ -81,3 +81,9 @@ $backgroundColor: yellowgreen;
     }
   }
 }
+
+@media screen and (max-height: 800px) {
+  .main_inner {
+    min-height: 710px !important;
+  }
+}

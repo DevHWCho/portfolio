@@ -36,7 +36,11 @@ function Davich() {
       )}
 
       <div className='projects_background bg_davich'></div>
-      <div className='projects_video'></div>
+      <div className='projects_video'>
+        <video autoplay loop muted preload>
+          
+        </video>
+      </div>
       <div className='projects_inner'>
         <div className='pj_inner_header'>
           <ul>
