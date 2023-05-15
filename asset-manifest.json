@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/portfolio/static/css/main.b7d0bf6a.css",
-    "main.js": "/portfolio/static/js/main.4d34b901.js",
+    "main.css": "/portfolio/static/css/main.5e4cee01.css",
+    "main.js": "/portfolio/static/js/main.55154755.js",
     "static/media/back_davich.png": "/portfolio/static/media/back_davich.28ff2ed81d9943fd06e6.png",
     "static/media/back_movie.png": "/portfolio/static/media/back_movie.0a7ce3384f79db50d1bf.png",
     "static/media/back_cjone.png": "/portfolio/static/media/back_cjone.daa74049e5c3b49bcc0d.png",
@@ -21,16 +21,17 @@
     "static/media/cjone_html_test.png": "/portfolio/static/media/cjone_html_test.60e7ded37dc30700c29b.png",
     "static/media/davich_html_test.png": "/portfolio/static/media/davich_html_test.41170196ecbb379a8181.png",
     "static/media/cjone_W3C-CSS-test.png": "/portfolio/static/media/cjone_W3C-CSS-test.f379ec4df778daaae8f8.png",
+    "static/media/iMac_black.png": "/portfolio/static/media/iMac_black.3dc21bf6cb99bcaefd67.png",
     "static/media/sem_web_accessibility_test.png": "/portfolio/static/media/sem_web_accessibility_test.5a324b7d1c175874dec6.png",
     "static/media/davich_web_accessibility_test.png": "/portfolio/static/media/davich_web_accessibility_test.c6c012eb5ef0546fed82.png",
     "static/media/cjone_web_accessibility_test.png": "/portfolio/static/media/cjone_web_accessibility_test.98810d16da4f6682eaf1.png",
     "index.html": "/portfolio/index.html",
     "static/media/menu.svg": "/portfolio/static/media/menu.6fc022ef74b588ecf753.svg",
-    "main.b7d0bf6a.css.map": "/portfolio/static/css/main.b7d0bf6a.css.map",
-    "main.4d34b901.js.map": "/portfolio/static/js/main.4d34b901.js.map"
+    "main.5e4cee01.css.map": "/portfolio/static/css/main.5e4cee01.css.map",
+    "main.55154755.js.map": "/portfolio/static/js/main.55154755.js.map"
   },
   "entrypoints": [
-    "static/css/main.b7d0bf6a.css",
-    "static/js/main.4d34b901.js"
+    "static/css/main.5e4cee01.css",
+    "static/js/main.55154755.js"
   ]
 }
