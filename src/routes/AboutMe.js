@@ -13,7 +13,7 @@ function AboutMe(props) {
   useEffect(() => {
     const visibleNav = props.visibleNav;
     visibleNav();
-  },[])
+  },[]);
 
   return (
     <>
@@ -30,14 +30,14 @@ function AboutMe(props) {
             <p className='barcode'></p>
           </div>
         </div>
-        <h2 className="about_title">노력하고 소통하는 Front-End 개발자</h2>
+        <h2 className="about_title">성장하고 소통하는 Front-End 개발자</h2>
         <div className='about_cont_container'>
           {/* <button className="btn_contact" onClick={contactClick}>Contact</button> */}
           <div className='about_picture'></div>
           <div className='about_detail'>
             <h3 className="ad_h3"><TypingText /></h3>
             <p className="ad_p">
-              Front와 End 사이에서 서로 공감하고 소통할 수 있는 미래의 <strong>Front-End</strong> 개발자 조현웅입니다. 함께 좋은 시너지를 이끌어낼 수 있도록 누구보다 노력하고, 공부하고, 준비하는 개발자를 꿈꾸고 있습니다. 집을 지을 때도 어렷이 함께 협력해 짓는 것처럼 프로젝트 개발에 있어서도 모든 이들과 함께 소통하고 공감하고 성실하게 일할 준비가 되어있습니다. 디테일을 살리는 꼼꼼함으로 프로젝트의 퀄리티를 한층 업그레이드 하겠습니다.
+              Front와 End 사이에서 함께 성장하고 소통하는 미래의 <strong>Front-End</strong> 개발자 조현웅입니다. 좋은 시너지를 이끌어낼 수 있도록 누구보다 노력하고, 공부하고, 준비하는 개발자를 꿈꾸고 있습니다.&nbsp;&nbsp;#디테일 #성장 #커뮤니케이션
               <div className="ad_skills">
               <h3 className="ability_title">My Abilities</h3>
               <img src={require('../images/icon_html5.png')} alt="" />

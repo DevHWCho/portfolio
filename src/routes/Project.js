@@ -48,35 +48,35 @@ function Project(props) {
             <h3 className='pd_h3'>DAVICH 안경</h3>
             <p className='pd_p'>Responsive Web</p>
             <button type='button' className='pd_button'><Link to={'davich'}>DETAIL</Link></button>
-            <span className='pd_period'>2023-00 → 2023-00</span>
+            <span className='pd_period'>2023-03 → 2023-04</span>
             <div className='pd_background'></div>
           </div>
           <div className='project_detail'>
             <h3 className='pd_h3'>SAMSUNG EM</h3>
             <p className='pd_p'>Web Accessibillity & Standard</p>
             <button type='button' className='pd_button'><Link to={'sem'}>DETAIL</Link></button>
-            <span className='pd_period'>2023-00 → 2023-00</span>
+            <span className='pd_period'>2023-03 → 2023-04</span>
             <div className='pd_background'></div>
           </div>
           <div className='project_detail'>
             <h3 className='pd_h3'>CJ ONE</h3>
             <p className='pd_p'>Responsive Web</p>
             <button type='button' className='pd_button'><Link to={'cjone'}>DETAIL</Link></button>
-            <span className='pd_period'>2023-00 → 2023-00</span>
+            <span className='pd_period'>2023-03 → 2023-04</span>
             <div className='pd_background'></div>
           </div>
           <div className='project_detail'>
             <h3 className='pd_h3'>MESSENGER</h3>
             <p className='pd_p'>React Project</p>
             <button type='button' className='pd_button'><Link to={'messenger'}>DETAIL</Link></button>
-            <span className='pd_period'>2023-00 → 2023-00</span>
+            <span className='pd_period'>2023-03 → 2023-04</span>
             <div className='pd_background'></div>
           </div>
           <div className='project_detail'>
             <h3 className='pd_h3'>MOVIE APP</h3>
             <p className='pd_p'>React Project</p>
             <button type='button' className='pd_button'><Link to={'movie'}>DETAIL</Link></button>
-            <span className='pd_period'>2023-00 → 2023-00</span>
+            <span className='pd_period'>2023-04 → 2023-05</span>
             <div className='pd_background'></div>
           </div>
         </div>

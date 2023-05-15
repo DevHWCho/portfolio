@@ -29,7 +29,6 @@ function Messenger() {
         </div>
         <div className='pj_top'>
           <div className='pj_icons pj_2row_icons'>
-            <p>My skills</p>
             <img src={require('../images/icon_html5.png')} className='pj_img' alt='' />
             <img src={require('../images/icon_sass.png')} className='pj_img' alt='' />
             <img src={require('../images/icon_react.png')} className='pj_img' alt='' />
@@ -42,14 +41,13 @@ function Messenger() {
           </div>
           <div className='pj_items'>
             <ul>
-              <li>작업기간 : <span className='pj_span'>2023-00 → 2023-00</span></li>
+              <li>작업기간 : <span className='pj_span'>2023-03 → 2023-04</span></li>
               <li>기여도 : <span className='pj_span'>100%</span></li>
-              <li>사용기술 : <span className='pj_span'>HTML5(JSX), Sass, React, Firebase, Axios, Gihub Pages</span></li>
+              <li>사용기술 : <span className='pj_span'>HTML5(JSX)</span>, <span className='pj_span'>Sass</span>, <span className='pj_span'>React</span>, <span className='pj_span'>Firebase</span>, <span className='pj_span'>Axios</span>, <span className='pj_span'>Gihub Pages</span></li>
             </ul>
           </div>
         </div>
         <div className='pj_content_container'>
-          <div className='pj_scroll_down'>↓ CLICK & SCROLL DOWN</div>
           <h3 className='pj_h3'># 프로젝트 개요</h3>
           <p className='pjc_text'><strong>React 및 Firebase</strong>를 통해 각 페이지 구현 및 CRUD 가능한 <strong>서버리스 시스템</strong> 구축</p>
           <h3 className='pj_h3'># 주요 업무</h3>

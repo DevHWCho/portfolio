@@ -1,4 +1,4 @@
-$btnHoverColor: #A27B5C;
+$btnHoverColor: #FF165D;
 
 .project_container {
   position: absolute;
@@ -153,7 +153,9 @@ $btnHoverColor: #A27B5C;
             text-shadow: -1px -1.5px 0px #999;
           }
           .pd_p {
-            color: #F9D949;
+            font-weight: 600;
+            color: #ffdc6b;
+            text-shadow: 0px 0px 1px #000, 1px 1px 3px #000, 2px 2px 5px #000;
           }
           .pd_background {
             filter: brightness(1);
@@ -202,7 +204,7 @@ $btnHoverColor: #A27B5C;
         p.pd_p {
           padding: 0 1.65vw 10px 1.65vw;
           // font-size: 30px;
-          font-size: calc(12px + 0.1vw);
+          font-size: calc(14px + 0.1vw);
           font-weight: 400;
           text-shadow: 1px 1px 1px rgba(0,0,0,0.8);
           letter-spacing: -0.5px;
@@ -305,7 +307,7 @@ $btnHoverColor: #A27B5C;
     transform: scale(0.8);
   }
   .pd_h3 {
-    font-size: calc(14px + 0.5vw) !important;
+    font-size: calc(16px + 0.5vw) !important;
   }
 }
 
