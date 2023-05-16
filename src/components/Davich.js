@@ -3,10 +3,7 @@ import { Link, useNavigate } from 'react-router-dom';
 import Validator from './Validator';
 import { FaPowerOff } from 'react-icons/fa';
 import 'styles/Project_common.scss';
-<<<<<<< HEAD
 import video from '../videos/davich_pc.mp4';
-=======
->>>>>>> 4bfbd931d9fca2f85587761bb3fc7363f37da022
 
 function Davich() {
   const [openValidator, setOpenValidator] = useState(false);
@@ -41,7 +38,6 @@ function Davich() {
 
       <div className='projects_background bg_davich'></div>
       <div className='projects_video'>
-<<<<<<< HEAD
         <div className='video_mockup'>
           <img src={require('../images/mockup/iMac.png')} alt=''></img>
           <div className='video_screen'>
@@ -50,11 +46,6 @@ function Davich() {
             </video>
           </div>
         </div>
-=======
-        <video autoplay loop muted preload>
-          
-        </video>
->>>>>>> 4bfbd931d9fca2f85587761bb3fc7363f37da022
       </div>
       <div className='projects_inner'>
         <div className='pj_inner_header'>

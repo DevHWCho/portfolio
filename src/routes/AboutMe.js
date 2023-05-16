@@ -34,7 +34,6 @@ function AboutMe(props) {
             <h3 className="ad_h3"><TypingText /></h3>
             <p className="ad_p">
               Front와 End 사이에서 함께 성장하고 소통하는 미래의 <strong>Front-End</strong> 개발자 조현웅입니다. 좋은 시너지를 이끌어낼 수 있도록 누구보다 노력하고, 공부하고, 준비하는 개발자를 꿈꾸고 있습니다.&nbsp;&nbsp;#디테일 #성장 #커뮤니케이션
-<<<<<<< HEAD
               <div className="ad_education">
                 <h3 className="edu_title">EDUCATION</h3>
                 <h4>이젠아카데미평생교육원</h4>
@@ -53,21 +52,6 @@ function AboutMe(props) {
                 <img src={require('../images/icon_ps.png')} alt="" />
                 <img src={require('../images/icon_ai.png')} alt="" />
               </div>
-=======
-              <div className="ad_skills">
-              <h3 className="ability_title">My Abilities</h3>
-              <img src={require('../images/icon_html5.png')} alt="" />
-              <img src={require('../images/icon_css3.png')} alt="" />
-              <img src={require('../images/icon_js.png')} alt="" />
-              <img src={require('../images/icon_sass.png')} alt="" />
-              <img src={require('../images/icon_react.png')} alt="" />
-              <img src={require('../images/icon_firebase.png')} alt="" />
-              <img src={require('../images/icon_github_white.png')} alt="" />
-              <img src={require('../images/icon_figma.png')} alt="" />
-              <img src={require('../images/icon_ps.png')} alt="" />
-              <img src={require('../images/icon_ai.png')} alt="" />
-            </div>
->>>>>>> 4bfbd931d9fca2f85587761bb3fc7363f37da022
             </p>
             
           </div>

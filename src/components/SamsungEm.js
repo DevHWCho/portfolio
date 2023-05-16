@@ -3,10 +3,7 @@ import { Link, useNavigate } from 'react-router-dom';
 import 'styles/Project_common.scss';
 import Validator from './Validator';
 import { FaPowerOff } from 'react-icons/fa';
-<<<<<<< HEAD
 import video from '../videos/sem_pc.mp4';
-=======
->>>>>>> 4bfbd931d9fca2f85587761bb3fc7363f37da022
 
 function SamsungEm() {
   const [openValidator, setOpenValidator] = useState(false);
@@ -40,7 +37,6 @@ function SamsungEm() {
         <Validator setOpenValidator={setOpenValidator} className={valid_sem} />
       )}
       <div className='projects_background bg_sem'></div>
-<<<<<<< HEAD
       <div className='projects_video'>
         <div className='video_mockup'>
           <img src={require('../images/mockup/iMac.png')} alt=''></img>
@@ -51,9 +47,6 @@ function SamsungEm() {
           </div>
         </div>
       </div>
-=======
-      <div className='projects_video'></div>
->>>>>>> 4bfbd931d9fca2f85587761bb3fc7363f37da022
       <div className='projects_inner'>
         <div className='pj_inner_header'>
           <ul>

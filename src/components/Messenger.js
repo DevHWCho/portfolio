@@ -43,11 +43,7 @@ function Messenger() {
             <ul>
               <li>작업기간 : <span className='pj_span'>2023-03 → 2023-04</span></li>
               <li>기여도 : <span className='pj_span'>100%</span></li>
-<<<<<<< HEAD
               <li>사용기술 : <span className='pj_span'>JSX</span>, <span className='pj_span'>Sass</span>, <span className='pj_span'>React</span>, <span className='pj_span'>Firebase</span>, <span className='pj_span'>Axios</span>, <span className='pj_span'>Gihub Pages</span></li>
-=======
-              <li>사용기술 : <span className='pj_span'>HTML5(JSX)</span>, <span className='pj_span'>Sass</span>, <span className='pj_span'>React</span>, <span className='pj_span'>Firebase</span>, <span className='pj_span'>Axios</span>, <span className='pj_span'>Gihub Pages</span></li>
->>>>>>> 4bfbd931d9fca2f85587761bb3fc7363f37da022
             </ul>
           </div>
         </div>

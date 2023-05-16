@@ -5,7 +5,6 @@ import 'styles/Header.scss';
 function Header(props) {
   console.log("hpppppp",props)
   const headerBtnRef = useRef();
-<<<<<<< HEAD
   const headerOutRef = useRef();
 
   const onHdBtnClick = () => {
@@ -18,11 +17,6 @@ function Header(props) {
     headerOutRef.current.classList.add('on');
   }
 
-=======
-  const onHdBtnClick = () => {
-    headerBtnRef.current.classList.toggle('on');
-  }
->>>>>>> 4bfbd931d9fca2f85587761bb3fc7363f37da022
   const onMenuClick = () => {
     headerBtnRef.current.classList.remove('on');
     const inVisibleNav = props.inVisibleNav;
@@ -36,10 +30,7 @@ function Header(props) {
 
   return (
     <div className='header_container'> 
-<<<<<<< HEAD
       <div className='header_outside' ref={headerOutRef} onClick={onHdOutClick}></div>
-=======
->>>>>>> 4bfbd931d9fca2f85587761bb3fc7363f37da022
       <div className='header_text'>
         <Link to={'/'} onClick={onMenuClick}><h1>PORTFOLIO</h1></Link>
         <p>BY HYUNWOONG CHO</p>
