@@ -133,6 +133,7 @@
             font-size: calc(14px + 0.6vw);
             color: #F9D949;
           }
+<<<<<<< HEAD
           .ad_education {
             position: relative;
             margin-top: 20px;
@@ -146,12 +147,18 @@
               background-color: #111;
             }
           }
+=======
+>>>>>>> 4bfbd931d9fca2f85587761bb3fc7363f37da022
           .ad_skills {
             position: absolute;
             display: flex;
             flex-wrap: wrap;
             gap: 5px;
+<<<<<<< HEAD
             // bottom: 0;
+=======
+            left: 5.5%;
+>>>>>>> 4bfbd931d9fca2f85587761bb3fc7363f37da022
             margin-top: 20px;
             padding: 20px 20px 10px 20px;
             border: 3px solid;
@@ -170,7 +177,11 @@
             }
             .ability_title {
               position: absolute;
+<<<<<<< HEAD
               top: -18px;
+=======
+              top: -15px;
+>>>>>>> 4bfbd931d9fca2f85587761bb3fc7363f37da022
               padding: 0 10px;
               background-color: #111;
             }

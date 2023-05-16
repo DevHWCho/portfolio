@@ -2,7 +2,10 @@ import React, { useRef, useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 import Validator from './Validator'
 import { FaPowerOff } from 'react-icons/fa';
+<<<<<<< HEAD
 import video from '../videos/cjone_pc.mp4';
+=======
+>>>>>>> 4bfbd931d9fca2f85587761bb3fc7363f37da022
 
 function Cjone() {
   const [openValidator, setOpenValidator] = useState(false);
@@ -37,6 +40,7 @@ function Cjone() {
       )}
 
       <div className='projects_background bg_cjone'></div>
+<<<<<<< HEAD
       <div className='projects_video'>
         <div className='video_mockup'>
           <img src={require('../images/mockup/iMac.png')} alt=''></img>
@@ -47,6 +51,9 @@ function Cjone() {
           </div>
         </div>
       </div>
+=======
+      <div className='projects_video'></div>
+>>>>>>> 4bfbd931d9fca2f85587761bb3fc7363f37da022
       <div className='projects_inner'>
         <div className='pj_inner_header'>
           <ul>

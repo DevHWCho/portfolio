@@ -3,7 +3,10 @@ import { useNavigate } from 'react-router-dom';
 import 'styles/Cover.scss';
 
 function Cover() {
+<<<<<<< HEAD
   
+=======
+>>>>>>> 4bfbd931d9fca2f85587761bb3fc7363f37da022
   const navigate = useNavigate(null);
   const coverRef = useRef();
   const ca01Ref = useRef();
