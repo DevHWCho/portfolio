@@ -4,7 +4,7 @@
   left: 40px;
   // width: 390px;
   width: 20.42%;
-  height: 300px;
+  height: 400px;
   // border: 2px solid #fff;
   border-top-left-radius: 20px;
   border-bottom-left-radius: 20px;
@@ -18,7 +18,7 @@
     border-top-left-radius: 20px;
     border-bottom-left-radius: 20px;
     box-sizing: border-box;
-    &.on, &.active {
+    &.active {
       border: 2px solid #fff;
       border-right: 0;
       background-color: #111;

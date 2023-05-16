@@ -7,6 +7,7 @@ import Main from 'routes/Main';
 import AboutMe from 'routes/AboutMe';
 import Project from 'routes/Project';
 import Other from 'routes/Other';
+import Contact from 'components/Contact';
 import Davich from 'components/Davich';
 import SamsungEm from 'components/SamsungEm';
 import Cjone from 'components/Cjone';
@@ -46,6 +47,7 @@ function App() {
             <Route path='movie' element={<MovieApp />} />
           </Route>
           <Route path='/other' element={<Other visibleNav={visibleNav} />} />
+          <Route path='/contact' element={<Contact visibleNav={visibleNav} />} />
         </>
       </Routes>
     </>

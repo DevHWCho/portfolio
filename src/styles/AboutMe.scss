@@ -44,16 +44,7 @@
         margin-right: 5.5%;
         background-color: #ccc;
         cursor: pointer;
-        animation: barcode_ani 0.8s linear 0s infinite alternate-reverse;
-        p.barcode_click {
-          position: absolute;
-          top: 50%;
-          left: -80px;
-          font-family: 'League Gothic', sans-serif;
-          font-size: 20px;
-          color: #F9D949;
-          transform: translateY(-50%);
-        }
+        
         p.left_caution {
           position: absolute;
           top: 50%;
@@ -62,11 +53,7 @@
           color: #000;
           transform: translateY(-50%);
         }
-        @keyframes barcode_ani {
-          0%{opacity: 0.5;}
-          100%{opacity: 1;}
-        }
-     
+        
         p.barcode {
           position: relative;
           width: 200px;

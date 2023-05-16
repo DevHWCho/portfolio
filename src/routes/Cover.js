@@ -159,6 +159,7 @@ function Cover() {
             <span className='cover_span'>Portfolio</span>
           </div>
         </div>
+        <div className='cover_scroll_down_btn'><span>Scroll Down</span></div>
       </div>
     </div>
     </>

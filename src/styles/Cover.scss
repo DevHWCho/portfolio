@@ -3,6 +3,7 @@ $ca01color: #222831;
 $ca02color: #FFB400;
 $ca03color: #FF7315;
 $ca04color: #DC3535;
+$titleFontSize: calc(200px + 18vw);
 
 .ca_char_container {
   z-index: 32;
@@ -16,7 +17,7 @@ $ca04color: #DC3535;
     position: absolute;
     top: 50%;
     width: 100%;
-    height: calc(250px + 18vw);
+    height: $titleFontSize;
     box-sizing: border-box;
     transform: translateY(-50%);
     // border: 10px solid red;
@@ -36,7 +37,7 @@ $ca04color: #DC3535;
         top: 50%;
         left: 50%;
         font-family: 'League Gothic', sans-serif;
-        font-size: calc(250px + 18vw);
+        font-size: $titleFontSize;
         color: #fff;
         letter-spacing: -10px;
         transform: translateX(-50%) translateY(-50%);
@@ -143,15 +144,76 @@ $ca04color: #DC3535;
   transition: transform 2s ease;
 
   .cover_inner {
+    position: absolute;
     width: 100%;
     height: 100%;
+    box-sizing: border-box;
+    // border: 10px solid red;
+    .cover_scroll_down_btn {
+      position: absolute;
+      bottom: 10px;
+      left: 50%;
+      width: 100px;
+      height: 90px;
+      // border: 1px solid #fff;
+      transform: translateX(-50%);
+      animation: scroll_ani 0.5s linear 0s infinite alternate-reverse;
+
+      @keyframes scroll_ani {
+        0% {bottom: 5px;}
+        100% {bottom: 10px;}
+      }
+      &::before {
+        position: absolute;
+        left: 50%;
+        width: 30px;
+        height: 50px;
+        border-radius: 20px;
+        border: 1px solid #fff;
+        content: '';
+        filter: blur(0.6px);
+        transform: translateX(-50%);
+      }
+      &::after {
+        position: absolute;
+        top: 5px;
+        left: 50%;
+        width: 6px;
+        height: 12px;
+        border-radius: 3px;
+        background-color: #fff;
+        content: '';
+        filter: blur(0.6px);
+        transform: translateX(-50%);
+      }
+      span {
+        position: absolute;
+        bottom: 95px;
+        left: 50%;
+        width: 100px;
+        font-family: 'League Gothic', sans-serif;
+        font-size: 18px;
+        color: #fff;
+        text-align: center;
+        transform: translateX(-50%);
+        &::after {
+          position: absolute;
+          bottom: -80px;
+          left: 50%;
+          content: '∨';
+          filter: blur(0.5px);
+          transform: translateX(-50%);
+        }
+      }
+    }
+
     .cover_title {
       position: absolute;
       top: 50%;
       left: 50%;
       font-family: 'League Gothic', sans-serif;
       // font-size: 600px;
-      font-size: calc(250px + 18vw);
+      font-size: $titleFontSize;
       color: #fff;
       letter-spacing: -10px;
       transform: translateX(-50%) translateY(-50%);
@@ -159,13 +221,14 @@ $ca04color: #DC3535;
         position: absolute;
         bottom: 0;
         left: 50%;
-        width: 100%;
+        width: 350px;
         font-family: 'IBM Plex Sans KR', sans-serif;
         font-size: 20px;
         font-weight: 400;
         text-align: center;
         letter-spacing: 0px;
         transform: translateX(-50%);
+        // border: 1px solid red;
       }
       .circle_icon {
         position: absolute;
@@ -202,15 +265,80 @@ $ca04color: #DC3535;
   }
 }
 
-@media screen and (max-width: 800px) {
+
+$titleFontSizeSM: calc(160px + 18vw);
+@media screen and (max-width: 1200px) {
+  .cover_char {
+    height: $titleFontSizeSM !important;
+  }
+  .unit_char {
+    font-size: $titleFontSizeSM !important;
+  }
+  .cover_title {
+    font-size: $titleFontSizeSM !important;
+  }
   .circle_icon {
-    top: -25% !important;
-    left: 50% !important;
+    left: 95% !important;
+  }
+  .cover_p {
+    bottom: -50px !important;
+  }
+  .circle_icon {
+    top: 60% !important;
+    left: 85% !important;
+  }
+}
+
+$titleFontSizeSSM: calc(90px + 18vw);
+@media screen and (max-width: 800px) {
+  .cover_char {
+    height: $titleFontSizeSSM !important;
+  }
+  .unit_char {
+    font-size: $titleFontSizeSSM !important;
+  }
+  .cover_title {
+    font-size: $titleFontSizeSSM !important;
+  }
+
+  .circle_icon {
+    top: -48% !important;
+    left: 70% !important;
   }
   .cover_p {
     bottom: -50px !important;
   }
 }
+
+$titleFontSizeXSM: calc(80px + 18vw);
+@media screen and (max-width: 560px) {
+  .cover_char {
+    height: $titleFontSizeXSM !important;
+  }
+  .unit_char {
+    font-size: $titleFontSizeXSM !important;
+  }
+  .cover_title {
+    font-size: $titleFontSizeXSM !important;
+  }
+  .circle_icon {
+    top: -40% !important;
+    left: 60% !important;
+    width: 150px !important;
+    height: 150px !important;
+    img {
+      width: 150px;
+      height: 150px;
+    }
+    .cover_span {
+      font-size: 30px !important;
+    }
+  }
+  .cover_p {
+    bottom: -50px !important;
+  }
+}
+
 
 @media screen and (max-height: 800px) {
   .cover_container {

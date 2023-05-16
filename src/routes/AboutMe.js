@@ -6,10 +6,7 @@ import TypingText from "components/TypingText";
 
 function AboutMe(props) {
   const [openContact, setOpenContact] = useState(false);
-  const contactClick = () => {
-    setOpenContact(true);
-  }
-
+ 
   useEffect(() => {
     const visibleNav = props.visibleNav;
     visibleNav();
@@ -22,8 +19,7 @@ function AboutMe(props) {
         <div className='header_sub'>
           <p className='headline'>Developer who</p>
           <p className="contact_btn"></p>
-          <div className='barcode_container' onClick={contactClick}>
-            <p className="barcode_click">CONTACT →</p>
+          <div className='barcode_container'>
             <p className='left_caution'>
               <FaExclamationTriangle />
             </p>
