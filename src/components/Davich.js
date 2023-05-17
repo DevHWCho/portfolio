@@ -79,18 +79,26 @@ function Davich() {
               <li><Link target={'_blank'} to={'https://devhwcho.github.io/davich/'}>GitHub Page</Link></li>
             </ul>
           </div>
-          <h3 className='pj_h3'># 프로젝트 개요</h3>
-          <p className='pjc_text'>기존 페이지가 반응형으로 제작되어 있지 않아 <strong>자체적으로 반응형 웹 페이지로 변경/제작</strong></p>
-          <h3 className='pj_h3'># 주요 업무</h3>
-          <p className='pjc_text'>CSS의 <strong>Flexible Box</strong> 기능을 통한 <strong>자동 변경 레이아웃</strong> 구현</p>
-          <p className='pjc_text'>
-            Flexible Box의 부족한 부분은 <strong>Media Query</strong>를 통해 세부 설정<br/>
-            (해상도가 변경되었을 때 레이아웃이 깨지지 않도록 <strong>부드러운 화면 전환 구현 목표</strong>)
-          </p>
-          <p className='pjc_text'>해상도 변경에 맞는 Header의 <strong>주 메뉴 모양 변경</strong>과 그에 맞는 <strong>별도의 JavaScript 구현</strong></p>
-          <p className='pjc_text'>JavaScript 기능을 활용하여 <strong>메인 배너 영상 길이에 맞춰 자동으로 다음 영상이 재생</strong>되도록 구현</p>
-          <p className='pjc_text'>기존 페이지가 PC페이지와 모바일 페이지를 각각 제작하여 운영하는 반면, <strong>반응형 웹페이지로 제작</strong>하여 별도로 제작/운영하지 않아 리소스 절감 가능</p>
-          <p className='pjc_text'><strong>웹 표준, 웹 접근성 준수</strong>하여 제작, HTML/CSS/W3C 유효성 검사 통과 완료 </p>
+          <h3 className='pj_h3'># 제작목표</h3>
+          <ul className='pjc_text'>
+            <li>해상도 변경 시에도 레이아웃이 깨지지 않는 부드러운 화면 전환 구현 목표</li>
+            <li>기존 다비치 안경 사이트는 반응형 웹으로 만들지 않아 직접 반응형 웹으로 제작하여 차별화를 둠 (모바일 웹과 PC 웹을 별도로 제작하지 않아 리소스 절감 가능)
+            </li>
+          </ul>
+          <h3 className='pj_h3'># 주요기술</h3>
+          <ul className='pjc_text'>
+            <li>CSS의 Flexible Box 기능을 통한 자동 변경 레이아웃 구현</li>
+            <li>Media Query를 통해 디테일 설정</li>
+            <li>해상도 변경에 맞게 Header의 주 메뉴 모양 변경과 그에 맞는 별도의 JavaScript 구현 (별도의 모바일 메뉴 없이 주 메뉴를 그대로 사용함)
+            </li>
+            <li>JavaScript로 메인 배너 영상 길이에 맞춰 프로세스바가 작동하며 자동으로 다음 영상 재생되는 오토 배너 구현</li>
+            <li>AJAX를 통해 header, footer, main 등으로 html 파일을 나눠 각 페이지에 연결시킴</li>
+          </ul>
+          <h3 className='pj_h3'># 웹 표준 준수</h3>
+          <ul className='pjc_text'>
+            <li>웹 접근성 준수하여 제작</li>
+            <li>HTML/CSS/W3C 유효성 검사 통과 완료</li>
+          </ul>
         </div>
       </div>
     </div>

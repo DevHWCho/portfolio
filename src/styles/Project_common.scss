@@ -116,6 +116,8 @@ $textColor: #333;
     position: relative;
     flex: 1;
     top: 100px;
+    width: 100%;
+    height: 100%;
     min-width: 600px;
     min-height: 600px;
 
@@ -146,7 +148,7 @@ $textColor: #333;
     position: relative;
     flex: 1;
     min-width: 500px;
-    height: 90vh;
+    height: 130vh;
     margin-top: 100px;
     padding: 30px;
     border: 3px solid #fff;
@@ -166,7 +168,7 @@ $textColor: #333;
         justify-content: center;
         align-items: center;
         position: absolute;
-        bottom: 50px;
+        top: 0px;
         padding: 5px;
         border: 3px solid;
         border-image-slice: 1;
@@ -184,7 +186,7 @@ $textColor: #333;
         }
 
         &.pj_2row_icons {
-          height: 160px;
+          height: 100px;
         }
         img {
           width: 70px;
@@ -300,7 +302,7 @@ $textColor: #333;
         font-family: 'IBM Plex Sans KR', sans-serif;
         font-weight: 800;
         color: $h3Color;
-        &:nth-of-type(2) {
+        &:nth-of-type(2), &:nth-of-type(3) {
           margin-top: 20px;
         }
       }
@@ -309,7 +311,23 @@ $textColor: #333;
         font-size: calc(10px + 0.5vw);
         font-family: 'IBM Plex Sans KR', sans-serif;
         color: $textColor;
+        text-indent: calc(5px + 0.7vw);
         word-break: keep-all;
+        li {
+          position: relative;
+          &::before {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: calc(3px + 0.4vw);
+            height: calc(3px + 0.38vw);
+            margin-top: calc(3px + 0.6vw);
+            border-radius: 50%;
+            background-color: #EA047E;
+            transform: translateY(-50%);
+            content: '';
+          }
+        }
         strong {
           color: $strongColor;
         }
@@ -322,6 +340,9 @@ $textColor: #333;
   .sem_title {
     font-size: calc(40px + 0.8vw) !important;
   }
+  .msg_inner, .movie_inner {
+    height: 150vh !important;
+  }
 }
 
 @media screen and (max-width: 1140px) {
@@ -331,6 +352,9 @@ $textColor: #333;
 }
 
 @media screen and (max-width: 715px) {
+  .projects_inner {
+    height: 100vh !important;
+  }
   .sem_title {
     font-size: calc(40px + 0.8vw) !important;
   }
@@ -350,6 +374,19 @@ $textColor: #333;
     img {
       width: 40px !important;
     }
+  }
+  .pj_2row_icons {
+    height: 80px !important;
+  }
+  .pjc_text {
+    li {
+      &::before {
+        margin-top: calc(5px + 0.8vw) !important;
+      }
+    }
+  }
+  .msg_inner, .movie_inner {
+    height: 110vh !important;
   }
 }
 
