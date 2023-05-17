@@ -1,6 +1,7 @@
-import React, { useRef } from 'react'
+import React, { useRef } from 'react';
 import { FaPowerOff, FaStepBackward, FaStepForward } from 'react-icons/fa';
-import { Link, useNavigate } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom';
+import video from '../videos/messenger.mp4';
 
 function Messenger() {
   const navigate = useNavigate();
@@ -31,7 +32,16 @@ function Messenger() {
       </div>
 
       <div className='projects_background bg_messenger'></div>
-      <div className='projects_video'></div>
+      <div className='projects_video mobile_version'>
+        <div className='video_mockup'>
+          <img src={require('../images/mockup/8plus.png')} alt='' />
+          <div className='mobile_screen'>
+            <video autoPlay muted loop preload>
+              <source src={video}></source>
+            </video>
+          </div>
+        </div>
+      </div>
       <div className='projects_inner msg_inner'>
         <div className='pj_top'>
           <div className='pj_icons pj_2row_icons'>
@@ -56,7 +66,7 @@ function Messenger() {
         <div className='pj_content_container'>
           <div className='pj_content_header'>
             <ul>
-              <li><Link target={'_blank'} to={'https://devhwcho.github.io/davich/'}>GitHub Page</Link></li>
+              <li><Link target={'_blank'} to={'https://devhwcho.github.io/kakao_2023/'}>GitHub Page</Link></li>
             </ul>
           </div>
           <h3 className='pj_h3'># 제작목표</h3>

@@ -8,10 +8,14 @@ import video from '../videos/sem_pc.mp4';
 function SamsungEm() {
   const [openValidator, setOpenValidator] = useState(false);
 
-  const body = document.querySelector('body');
+  const piRef = useRef();
   const onValidClick = () => {
     setOpenValidator(true);
-    body.style.overflowY = `hidden`;
+    document.body.style.overflowY = `hidden`;
+    window.scroll({
+      top: piRef.current.scrollTop,
+      behavior: 'smooth'
+    })
   }
 
   const valid_sem = "valid_sem";
@@ -19,6 +23,7 @@ function SamsungEm() {
   const navigate = useNavigate();
   const pcRef = useRef();
   const onCloseClick = () => {
+    document.body.style.overflowY = `auto`;
     pcRef.current.style.animationName = `frame_ani2`;
     pcRef.current.style.animationDuration = `1s`;
     pcRef.current.style.animationTimingFunction = `ease`;
@@ -57,7 +62,7 @@ function SamsungEm() {
           </div>
         </div>
       </div>
-      <div className='projects_inner'>
+      <div className='projects_inner' ref={piRef}>
         <div className='pj_top'>
           <div className='pj_icons'>
             <img src={require('../images/icon_html5.png')} className='pj_img' alt='' />
@@ -80,7 +85,7 @@ function SamsungEm() {
         < div className='pj_content_header'>
             <ul>
               <li onClick={onValidClick}>유효성 검사</li>
-              <li><Link target={'_blank'} to={'https://devhwcho.github.io/davich/'}>GitHub Page</Link></li>
+              <li><Link target={'_blank'} to={'https://devhwcho.github.io/samsung_electric_renewal/'}>GitHub Page</Link></li>
             </ul>
           </div>
           <h3 className='pj_h3'># 제작목표</h3>

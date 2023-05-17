@@ -8,10 +8,14 @@ import video from '../videos/davich_pc.mp4';
 function Davich() {
   const [openValidator, setOpenValidator] = useState(false);
 
+  const piRef = useRef();
   const onValidClick = () => {
     setOpenValidator(true);
-    // body.style.overflowY = `hidden`;
-    // pcRef.current.style.overflow = `hidden`;
+    document.body.style.overflowY = `hidden`;
+    window.scroll({
+      top: piRef.current.scrollTop,
+      behavior: 'smooth'
+    })
   }
 
   const valid_davich = "valid_davich";
@@ -19,6 +23,7 @@ function Davich() {
   const navigate = useNavigate();
   const pcRef = useRef();
   const onCloseClick = () => {
+    document.body.style.overflowY = `auto`;
     pcRef.current.style.animationName = `frame_ani2`;
     pcRef.current.style.animationDuration = `1s`;
     pcRef.current.style.animationTimingFunction = `ease`;
@@ -53,7 +58,7 @@ function Davich() {
           </div>
         </div>
       </div>
-      <div className='projects_inner'>
+      <div className='projects_inner' ref={piRef}>
         <div className='pj_top'>
           <div className='pj_icons'>
             <img src={require('../images/icon_html5.png')} className='pj_img' alt='' />
