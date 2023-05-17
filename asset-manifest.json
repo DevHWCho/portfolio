@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/portfolio/static/css/main.10c0c5a2.css",
-    "main.js": "/portfolio/static/js/main.99ac9a4b.js",
+    "main.css": "/portfolio/static/css/main.58082853.css",
+    "main.js": "/portfolio/static/js/main.ab599ae1.js",
     "static/media/davich_pc.mp4": "/portfolio/static/media/davich_pc.f6566747e2cc3d3f1a16.mp4",
     "static/media/back_davich.png": "/portfolio/static/media/back_davich.28ff2ed81d9943fd06e6.png",
     "static/media/sem_pc.mp4": "/portfolio/static/media/sem_pc.2fa6c0e65240737cc8df.mp4",
@@ -9,6 +9,7 @@
     "static/media/cjone_pc.mp4": "/portfolio/static/media/cjone_pc.4a7e5e2cf6ae637ed957.mp4",
     "static/media/back_cjone.png": "/portfolio/static/media/back_cjone.daa74049e5c3b49bcc0d.png",
     "static/media/project_movie.png": "/portfolio/static/media/project_movie.a37541c5a5c15b1e25b1.png",
+    "static/media/messenger.mp4": "/portfolio/static/media/messenger.43a9d71a5885cc99874d.mp4",
     "static/media/back_sem.png": "/portfolio/static/media/back_sem.ca09283dc99b62a37091.png",
     "static/media/project_davich.png": "/portfolio/static/media/project_davich.5ec1b203416ded4e1af5.png",
     "static/media/project_sem.png": "/portfolio/static/media/project_sem.2cc43abe82b2345db2d4.png",
@@ -17,6 +18,7 @@
     "static/media/doraemon.png": "/portfolio/static/media/doraemon.8a3137cd01757df5fbc6.png",
     "static/media/back_messenger.png": "/portfolio/static/media/back_messenger.351218669726f1f01305.png",
     "static/media/project_messenger.png": "/portfolio/static/media/project_messenger.a3f1d6f50d0d6b798f82.png",
+    "static/media/8plus.png": "/portfolio/static/media/8plus.d32b7acb44e1556b96ab.png",
     "static/media/emoji.png": "/portfolio/static/media/emoji.64fcf11b9c32a8952e0b.png",
     "static/media/sem_W3C-CSS-test.png": "/portfolio/static/media/sem_W3C-CSS-test.c039c990076b0adfcf0b.png",
     "static/media/davich_W3C-CSS-test.png": "/portfolio/static/media/davich_W3C-CSS-test.bf6376d7a0ac74ade797.png",
@@ -30,11 +32,11 @@
     "static/media/cjone_web_accessibility_test.png": "/portfolio/static/media/cjone_web_accessibility_test.98810d16da4f6682eaf1.png",
     "index.html": "/portfolio/index.html",
     "static/media/menu.svg": "/portfolio/static/media/menu.6fc022ef74b588ecf753.svg",
-    "main.10c0c5a2.css.map": "/portfolio/static/css/main.10c0c5a2.css.map",
-    "main.99ac9a4b.js.map": "/portfolio/static/js/main.99ac9a4b.js.map"
+    "main.58082853.css.map": "/portfolio/static/css/main.58082853.css.map",
+    "main.ab599ae1.js.map": "/portfolio/static/js/main.ab599ae1.js.map"
   },
   "entrypoints": [
-    "static/css/main.10c0c5a2.css",
-    "static/js/main.99ac9a4b.js"
+    "static/css/main.58082853.css",
+    "static/js/main.ab599ae1.js"
   ]
 }
