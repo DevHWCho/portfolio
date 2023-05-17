@@ -27,13 +27,13 @@ function Other(props) {
             <h3 className='od_h3'>도라에몽</h3>
             <p className='od_p'>Pure CSS + Animation</p>
             <button type='button' className='od_button'><Link target={'_blank'} to={'https://devhwcho.github.io/doraemon/'}>DETAIL</Link></button>
-            <span className='od_period'>2023-00 → 2023-00</span>
+            <span className='od_period'>2023-01</span>
           </div>
           <div className='other_detail'>
             <h3 className='od_h3'>Facebook Emoji</h3>
             <p className='od_p'>Pure CSS + Animation</p>
             <button type='button' className='od_button'><Link target={'_blank'} to={'https://devhwcho.github.io/facebook_emoji/'}>DETAIL</Link></button>
-            <span className='od_period'>2023-00 → 2023-00</span>
+            <span className='od_period'>2023-01</span>
           </div>
         </div>
       </div>

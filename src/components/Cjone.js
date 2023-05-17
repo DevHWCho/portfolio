@@ -1,7 +1,8 @@
 import React, { useRef, useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 import Validator from './Validator'
-import { FaPowerOff } from 'react-icons/fa';
+import { FaPowerOff, FaStepBackward, FaStepForward } from 'react-icons/fa';
+import video from '../videos/cjone_pc.mp4';
 
 function Cjone() {
   const [openValidator, setOpenValidator] = useState(false);
@@ -30,20 +31,33 @@ function Cjone() {
         <FaPowerOff />
         <span>Power Off</span>
       </div>
+      <div className='pc_slide_btn'>
+        <div className='pc_bck_btn'>
+          <Link to={'/project/sem'}><FaStepBackward /></Link>
+          <span>Prev</span>
+        </div>
+        <div className='pc_fwd_btn'>
+          <Link to={'/project/messenger'}><FaStepForward /></Link>
+          <span>Next</span>
+        </div>
+      </div>
 
       {openValidator && (
         <Validator setOpenValidator={setOpenValidator} className={valid_cjone} />
       )}
 
       <div className='projects_background bg_cjone'></div>
-      <div className='projects_video'></div>
-      <div className='projects_inner'>
-        <div className='pj_inner_header'>
-          <ul>
-          <li onClick={onValidClick}>유효성 검사</li>
-            <li><Link target={'_blank'} to={'https://devhwcho.github.io/cjone/'}>GitHub Page</Link></li>
-          </ul>
+      <div className='projects_video'>
+        <div className='video_mockup'>
+          <img src={require('../images/mockup/iMac.png')} alt=''></img>
+          <div className='video_screen'>
+            <video autoPlay muted loop preload>
+              <source src={video}></source>
+            </video>
+          </div>
         </div>
+      </div>
+      <div className='projects_inner'>
         <div className='pj_top'>
           <div className='pj_icons'>
             <img src={require('../images/icon_html5.png')} className='pj_img' alt='' />
@@ -63,6 +77,12 @@ function Cjone() {
           </div>
         </div>
         <div className='pj_content_container'>
+          <div className='pj_content_header'>
+            <ul>
+              <li onClick={onValidClick}>유효성 검사</li>
+              <li><Link target={'_blank'} to={'https://devhwcho.github.io/davich/'}>GitHub Page</Link></li>
+            </ul>
+          </div>
           <h3 className='pj_h3'># 프로젝트 개요</h3>
           <p className='pjc_text'>CJ ONE 홈페이지의 주요 기능들을 구현하고, <strong>PC/Tablet/Mobile 환경에 맞는 반응형 웹 페이지</strong> 제작</p>
           <h3 className='pj_h3'># 주요 업무</h3>

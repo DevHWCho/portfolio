@@ -32,7 +32,7 @@ function Contact(props) {
         <h2 className='contact_title'>CONTACT</h2>
         <div className='contact_cont_container'>
           <div className='contact_detail'>
-            <h3 className='cd_h3'>GITHUB</h3>
+            <h3 className='cd_h3'>GitHub</h3>
             <span className='cd_text'><Link target={'_blank'} to={'https://github.com/DevHWCho'}>https://github.com/DevHWCho</Link></span>
           </div>
           <div className='contact_detail'>

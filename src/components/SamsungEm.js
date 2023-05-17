@@ -2,7 +2,8 @@ import React, { useRef, useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import 'styles/Project_common.scss';
 import Validator from './Validator';
-import { FaPowerOff } from 'react-icons/fa';
+import { FaPowerOff, FaStepBackward, FaStepForward } from 'react-icons/fa';
+import video from '../videos/sem_pc.mp4';
 
 function SamsungEm() {
   const [openValidator, setOpenValidator] = useState(false);
@@ -31,19 +32,32 @@ function SamsungEm() {
         <FaPowerOff />
         <span>Power Off</span>
       </div>
+      <div className='pc_slide_btn'>
+        <div className='pc_bck_btn'>
+          <Link to={'/project/davich'}><FaStepBackward /></Link>
+          <span>Prev</span>
+        </div>
+        <div className='pc_fwd_btn'>
+          <Link to={'/project/cjone'}><FaStepForward /></Link>
+          <span>Next</span>
+        </div>
+      </div>
       
       {openValidator && (
         <Validator setOpenValidator={setOpenValidator} className={valid_sem} />
       )}
       <div className='projects_background bg_sem'></div>
-      <div className='projects_video'></div>
-      <div className='projects_inner'>
-        <div className='pj_inner_header'>
-          <ul>
-            <li onClick={onValidClick}>유효성 검사</li>
-            <li><Link target={'_blank'} to={'https://devhwcho.github.io/samsung_electric_renewal/'}>GitHub Page</Link></li>
-          </ul>
+      <div className='projects_video'>
+        <div className='video_mockup'>
+          <img src={require('../images/mockup/iMac.png')} alt=''></img>
+          <div className='video_screen'>
+            <video autoPlay muted loop preload>
+              <source src={video}></source>
+            </video>
+          </div>
         </div>
+      </div>
+      <div className='projects_inner'>
         <div className='pj_top'>
           <div className='pj_icons'>
             <img src={require('../images/icon_html5.png')} className='pj_img' alt='' />
@@ -63,6 +77,12 @@ function SamsungEm() {
           </div>
         </div>
         <div className='pj_content_container'>
+        < div className='pj_content_header'>
+            <ul>
+              <li onClick={onValidClick}>유효성 검사</li>
+              <li><Link target={'_blank'} to={'https://devhwcho.github.io/davich/'}>GitHub Page</Link></li>
+            </ul>
+          </div>
           <h3 className='pj_h3'># 프로젝트 개요</h3>
           <p className='pjc_text'><strong>웹 컨텐츠 접근성 및 웹 표준을 준수</strong>하여 제작하는 것을 목표로 진행</p>
           <h3 className='pj_h3'># 주요 업무</h3>

@@ -1,5 +1,5 @@
 import React, { useRef } from 'react';
-import { FaPowerOff } from 'react-icons/fa';
+import { FaPowerOff, FaStepBackward } from 'react-icons/fa';
 import { Link, useNavigate } from 'react-router-dom';
 import 'styles/Project_common.scss';
 
@@ -20,14 +20,16 @@ function MovieApp() {
         <FaPowerOff />
         <span>Power Off</span>
       </div>
+      <div className='pc_slide_btn'>
+        <div className='pc_bck_btn'>
+          <Link to={'/project/messenger'}><FaStepBackward /></Link>
+          <span>Prev</span>
+        </div>
+      </div>
+
       <div className='projects_background bg_movie'></div>
       <div className='projects_video'></div>
       <div className='projects_inner'>
-        <div className='pj_inner_header'>
-          <ul>
-            <li><Link target={'_blank'} to={'https://devhwcho.github.io/mv_app/'}>GitHub Page</Link></li>
-          </ul>
-        </div>
         <div className='pj_top'>
           <div className='pj_icons pj_2row_icons'>
             <img src={require('../images/icon_html5.png')} className='pj_img' alt='' />
@@ -44,11 +46,16 @@ function MovieApp() {
             <ul>
               <li>작업기간 : <span className='pj_span'>2023-04 → 2023-05</span></li>
               <li>기여도 : <span className='pj_span'>100%</span></li>
-              <li>사용기술 : <span className='pj_span'>HTML5(JSX)</span>, <span className='pj_span'>Sass</span>, <span className='pj_span'>Styled Components</span>, <span className='pj_span'>React</span>, <span className='pj_span'>Firebase</span>,  <span className='pj_span'>Github Pages</span>, <span className='pj_span'>Axios</span></li>
+              <li>사용기술 : <span className='pj_span'>JSX</span>, <span className='pj_span'>Sass</span>, <span className='pj_span'>Styled Components</span>, <span className='pj_span'>React</span>, <span className='pj_span'>Firebase</span>,  <span className='pj_span'>Github Pages</span>, <span className='pj_span'>Axios</span></li>
             </ul>
           </div>
         </div>
         <div className='pj_content_container ma_container'>
+          <div className='pj_content_header'>
+            <ul>
+              <li><Link target={'_blank'} to={'https://devhwcho.github.io/davich/'}>GitHub Page</Link></li>
+            </ul>
+          </div>
           <h3 className='pj_h3'># 프로젝트 개요</h3>
           <p className='pjc_text'>TMDB의 <strong>API 데이터를 추출</strong>하여 영화 정보를 보여주고, <strong>Firebase</strong>를 활용하여 로그인 페이지 및 프로필 페이지 구현 </p>
           <h3 className='pj_h3'># 주요 업무</h3>

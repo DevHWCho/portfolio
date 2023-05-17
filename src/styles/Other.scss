@@ -151,8 +151,10 @@
           position: absolute;
           left: 1.65vw;
           bottom: 20px;
-          font-size: 20px;
+          font-size: 24px;
           font-family: 'League Gothic', sans-serif;
+          text-shadow: 1px 1px 1px #fff, 2px 2px 3px #000;
+          letter-spacing: 1px;
         }
       }
     }

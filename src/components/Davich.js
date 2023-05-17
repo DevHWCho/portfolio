@@ -1,16 +1,17 @@
 import React, { useRef, useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import Validator from './Validator';
-import { FaPowerOff } from 'react-icons/fa';
+import { FaPowerOff, FaStepForward } from 'react-icons/fa';
 import 'styles/Project_common.scss';
+import video from '../videos/davich_pc.mp4';
 
 function Davich() {
   const [openValidator, setOpenValidator] = useState(false);
 
-  const body = document.querySelector('body');
   const onValidClick = () => {
     setOpenValidator(true);
-    body.style.overflowY = `hidden`;
+    // body.style.overflowY = `hidden`;
+    // pcRef.current.style.overflow = `hidden`;
   }
 
   const valid_davich = "valid_davich";
@@ -31,23 +32,28 @@ function Davich() {
         <FaPowerOff />
         <span>Power Off</span>
       </div>
+      <div className='pc_slide_btn'>
+        <div className='pc_fwd_btn'>
+          <Link to={'/project/sem'}><FaStepForward /></Link>
+          <span>Next</span>
+        </div>
+      </div>
       {openValidator && (
         <Validator setOpenValidator={setOpenValidator} className={valid_davich} />
       )}
 
       <div className='projects_background bg_davich'></div>
       <div className='projects_video'>
-        <video autoplay loop muted preload>
-          
-        </video>
+        <div className='video_mockup'>
+          <img src={require('../images/mockup/iMac.png')} alt=''></img>
+          <div className='video_screen'>
+            <video autoPlay muted loop preload>
+              <source src={video}></source>
+            </video>
+          </div>
+        </div>
       </div>
       <div className='projects_inner'>
-        <div className='pj_inner_header'>
-          <ul>
-            <li onClick={onValidClick}>유효성 검사</li>
-            <li><Link target={'_blank'} to={'https://devhwcho.github.io/davich/'}>GitHub Page</Link></li>
-          </ul>
-        </div>
         <div className='pj_top'>
           <div className='pj_icons'>
             <img src={require('../images/icon_html5.png')} className='pj_img' alt='' />
@@ -67,6 +73,12 @@ function Davich() {
           </div>
         </div>
         <div className='pj_content_container'>
+          <div className='pj_content_header'>
+            <ul>
+              <li onClick={onValidClick}>유효성 검사</li>
+              <li><Link target={'_blank'} to={'https://devhwcho.github.io/davich/'}>GitHub Page</Link></li>
+            </ul>
+          </div>
           <h3 className='pj_h3'># 프로젝트 개요</h3>
           <p className='pjc_text'>기존 페이지가 반응형으로 제작되어 있지 않아 <strong>자체적으로 반응형 웹 페이지로 변경/제작</strong></p>
           <h3 className='pj_h3'># 주요 업무</h3>

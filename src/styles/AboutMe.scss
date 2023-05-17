@@ -133,12 +133,28 @@
             font-size: calc(14px + 0.6vw);
             color: #F9D949;
           }
+          em {
+            color: #47B5FF;
+          }
+          .ad_education {
+            position: relative;
+            margin-top: 20px;
+            padding: 20px 20px 10px 20px;
+            border: 3px solid;
+            box-sizing: border-box;
+            h3 {
+              position: absolute;
+              top: -18px;
+              padding: 0 10px;
+              background-color: #111;
+            }
+          }
           .ad_skills {
             position: absolute;
             display: flex;
             flex-wrap: wrap;
             gap: 5px;
-            left: 5.5%;
+            // bottom: 0;
             margin-top: 20px;
             padding: 20px 20px 10px 20px;
             border: 3px solid;
@@ -157,7 +173,7 @@
             }
             .ability_title {
               position: absolute;
-              top: -15px;
+              top: -18px;
               padding: 0 10px;
               background-color: #111;
             }

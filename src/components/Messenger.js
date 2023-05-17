@@ -1,5 +1,5 @@
 import React, { useRef } from 'react'
-import { FaPowerOff } from 'react-icons/fa';
+import { FaPowerOff, FaStepBackward, FaStepForward } from 'react-icons/fa';
 import { Link, useNavigate } from 'react-router-dom'
 
 function Messenger() {
@@ -19,14 +19,20 @@ function Messenger() {
         <FaPowerOff />
         <span>Power Off</span>
       </div>
+      <div className='pc_slide_btn'>
+        <div className='pc_bck_btn'>
+          <Link to={'/project/cjone'}><FaStepBackward /></Link>
+          <span>Prev</span>
+        </div>
+        <div className='pc_fwd_btn'>
+          <Link to={'/project/movie'}><FaStepForward /></Link>
+          <span>Next</span>
+        </div>
+      </div>
+
       <div className='projects_background bg_messenger'></div>
       <div className='projects_video'></div>
       <div className='projects_inner'>
-        <div className='pj_inner_header'>
-          <ul>
-            <li><Link target={'_blank'} to={'https://devhwcho.github.io/kakao_2023/'}>GitHub Page</Link></li>
-          </ul>
-        </div>
         <div className='pj_top'>
           <div className='pj_icons pj_2row_icons'>
             <img src={require('../images/icon_html5.png')} className='pj_img' alt='' />
@@ -43,11 +49,16 @@ function Messenger() {
             <ul>
               <li>작업기간 : <span className='pj_span'>2023-03 → 2023-04</span></li>
               <li>기여도 : <span className='pj_span'>100%</span></li>
-              <li>사용기술 : <span className='pj_span'>HTML5(JSX)</span>, <span className='pj_span'>Sass</span>, <span className='pj_span'>React</span>, <span className='pj_span'>Firebase</span>, <span className='pj_span'>Axios</span>, <span className='pj_span'>Gihub Pages</span></li>
+              <li>사용기술 : <span className='pj_span'>JSX</span>, <span className='pj_span'>Sass</span>, <span className='pj_span'>React</span>, <span className='pj_span'>Firebase</span>, <span className='pj_span'>Axios</span>, <span className='pj_span'>Gihub Pages</span></li>
             </ul>
           </div>
         </div>
         <div className='pj_content_container'>
+          <div className='pj_content_header'>
+            <ul>
+              <li><Link target={'_blank'} to={'https://devhwcho.github.io/davich/'}>GitHub Page</Link></li>
+            </ul>
+          </div>
           <h3 className='pj_h3'># 프로젝트 개요</h3>
           <p className='pjc_text'><strong>React 및 Firebase</strong>를 통해 각 페이지 구현 및 CRUD 가능한 <strong>서버리스 시스템</strong> 구축</p>
           <h3 className='pj_h3'># 주요 업무</h3>
