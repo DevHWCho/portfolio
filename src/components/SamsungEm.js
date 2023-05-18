@@ -56,7 +56,7 @@ function SamsungEm() {
         <div className='video_mockup'>
           <img src={require('../images/mockup/iMac.png')} alt=''></img>
           <div className='video_screen'>
-            <video autoPlay loop preload='true' playsInline muted>
+            <video autoPlay loop preload='true' playsInline webkit-playsinline muted>
               <source src={video}></source>
             </video>
           </div>
