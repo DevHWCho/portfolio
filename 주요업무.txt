@@ -1,0 +1,99 @@
+<다비치>
+
+pj_h3 제작목표 
+pjc_text 
+해상도 변경 시에도 레이아웃이 깨지지 않는 부드러운 화면 전환 구현 목표
+기존 다비치 안경 사이트는 반응형 웹으로 만들지 않아 직접 반응형 웹으로 제작하여 차별화를 둠
+(모바일 웹과 PC 웹을 별도로 제작하지 않아 리소스 절감 가능)
+
+주요기술
+CSS의 Flexible Box 기능을 통한 자동 변경 레이아웃 구현
+Media Query를 통해 디테일 설정
+해상도 변경에 맞게 Header의 주 메뉴 모양 변경과 그에 맞는 별도의 JavaScript 구현
+(별도의 모바일 메뉴 없이 주 메뉴를 그대로 사용함)
+JavaScript로 메인 배너 영상 길이에 맞춰 프로세스바가 작동하며 자동으로 다음 영상 재생되는 오토 배너 구현
+AJAX를 통해 header, footer, main 등으로 html 파일을 나눠 각 페이지에 연결시킴
+
+웹 표준 준수
+웹 접근성 준수하여 제작
+HTML/CSS/W3C 유효성 검사 통과 완료
+
+
+<삼성>
+
+제작목표
+웹 컨텐츠 접근성 및 웹 표준을 준수하여 제작하는 것을 목표로 진행
+
+주요기술
+CSS의 Hover, 가상요소를 활용한 이미지 추가, Transition 이용한 애니메이션 효과 구현
+JavaScript로 메인 배너 영상 재생, 모달창 토글, 주 메뉴 작동, Top 버튼 작동,
+JS + CSS 조합으로 스크롤 값에 맞춰 해당 위치의 컨텐츠에 애니메이션이 작동하도록 구현
+
+웹 표준 준수
+웹 접근성 준수하여 제작
+HTML/CSS/W3C 유효성 검사 통과 완료
+
+
+<CJ>
+
+제작목표
+CJ ONE 홈페이지의 주요 기능들을 구현하고, PC/Tablet/Mobile 환경에 맞는 반응형 웹 페이지 제작 목표
+
+주요기술
+CSS의 Media Query 기능을 활용하여 각 기기에 맞는 반응형 웹 페이지 구현
+CSS의 Hover, Transition 기능 등을 활용하여 역동적인 화면 구현
+JS + CSS 조합으로 자연스러운 애니메이션 적용된 아이콘 구현, 
+스크롤 값에 따라 자동으로 따라오는 도너츠 모양 배경 이미지 구현
+JavaScript로 오토 배너, 모달창 토글, TOP 버튼, Hover 시 작동되는 설명 문구 구현
+Switch Case문을 사용하여 각 카테고리에 맞게 분류되어 해당되는 내용만 표현되는 기능 추가
+
+웹 표준 준수
+웹 접근성 준수하여 제작
+HTML/CSS/W3C 유효성 검사 통과 완료
+
+
+<메신져>
+
+제작목표
+React와 Firebase를 통해 메신져 형태의 CRUD 가능한 어플리케이션 제작
+
+주요기술
+React의 Router-Dom 기능을 활용한 SPA(Single Page Application) 제작
+JSX 문법 및 SCSS(SASS) 기능을 활용하여 반응형 어플리케이션 디자인
+React의 Axios 라이브러리를 활용하여 FakeAPI 불러오기
+Firebase 인증 서비스를 활용하여 이메일 및 소셜 로그인 기능 구현
+로그인 시 조건에 따라 에러 메시지가 표시되도록 구현
+Firebase와 연동하여 React 앱 내에서 로그인/로그아웃, 채팅방 내 대화 보내기/수정/삭제 기능 추가
+개인 닉네임, 프로필 사진 및 배경 사진 수정/삭제 기능 구현
+Hook 함수(useEffect/useState/useLocation/useNavigate 등) 및 props 기능을 활용하여 
+각 채팅방과 각 프로필에 맞는 데이터를 불러오고 표현되도록 구현
+(현재 로그인한 아이디의 데이터만 표시되도록 구현)
+
+useEffect는 화면을 구현하고 데이터를 유지할 때 주로 사용
+useState는 데이터의 변환되는 값들을 전달할 때 주로 사용
+useLocation 및 useNavigate는 주소값을 불러와 전달할 때 주로 사용
+props를 활용하여 받은 데이터를 다른 컴포넌트 등으로 전달함
+
+
+
+<무비앱>
+
+제작목표
+React를 활용해 TMDB의 API 데이터를 추출하고 필요한 영화 정보들을 표시, Firebase를 활용하여 로그인 및 프로필 기능 추가
+
+주요기술
+React의 Router-Dom 기능을 활용한 SPA(Single Page Application) 제작
+JSX 문법 및 SCSS(SASS) 기능을 활용하여 반응형 어플리케이션 디자인
+React의 Axios를 instance화 하고, 해당 Axios를 연결해 TMDB의 API 데이터 불러오기
+React의 Swipe 라이브러리를 활용아여 이미지 배너에 Swipe 기능 추가
+Firebase 인증 서비스를 활용하여 이메일 및 소셜 로그인 기능 구현
+로그인 시 조건에 따라 에러 메시지가 표시되도록 구현
+Hook 함수(useEffect/useState/useLocation/useNavigate 등) 및 props 기능을 활용하여
+영화 데이터를 전달하고 관리
+
+useEffect는 화면을 구현하고 데이터를 유지할 때 주로 사용
+useState는 데이터의 변환되는 값들을 전달할 때 주로 사용
+useLocation 및 useNavigate는 주소값을 불러와 전달할 때 주로 사용
+props를 활용하여 받은 데이터를 다른 컴포넌트 등으로 전달함
+URLSearchParams 를 통해 params 값을 불러와 주소창 내 입력된 검색어(params값)를 통해
+해당 내용과 일치하는 api 데이터를 영화 검색 결과로 표현함
