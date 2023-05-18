@@ -19,6 +19,14 @@ function Cover() {
   console.log(caChar04Ref)
 
   const caCharConRef = useRef();
+  const onScrollBtnClick = () => {
+    if (coverRef.current) {
+      coverRef.current.style.transform = `translateY(-100vh)`;
+      setTimeout(function() {
+        navigate('/about_me');
+      }, 2000);
+    }
+  }
 
   useEffect(() => {
     const handleWheel = (e) => {
@@ -160,7 +168,7 @@ function Cover() {
             <span className='cover_span'>Portfolio</span>
           </div>
         </div>
-        <div className='cover_scroll_down_btn'><span>Scroll Down</span></div>
+        <div className='cover_scroll_down_btn' onClick={onScrollBtnClick}><span>Scroll Down</span></div>
       </div>
     </div>
     </>

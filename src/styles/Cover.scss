@@ -158,6 +158,7 @@ $titleFontSize: calc(200px + 18vw);
       // border: 1px solid #fff;
       transform: translateX(-50%);
       animation: scroll_ani 0.5s linear 0s infinite alternate-reverse;
+      cursor: pointer;
 
       @keyframes scroll_ani {
         0% {bottom: 5px;}
