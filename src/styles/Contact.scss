@@ -160,6 +160,13 @@ $spanShadow: 0px 0px 2px #fff;
         box-sizing: border-box;
         box-shadow: inset 1px 1px 5px rgba(0,0,0,0.5);
         transition: all .3s ease 0s;
+        .cd_title {
+          display: flex;
+          align-items: center;
+          gap: 7px;
+          font-size: 25px;
+        }
+
         &:hover {
           background-color: #eee;
           color: #333;
@@ -403,8 +410,19 @@ $spanShadow: 0px 0px 2px #fff;
   }
 }
 
-@media screen and (max-height: 760px) {
+// mobile version
+@media screen and (max-width: 490px) {
   .contact_container {
-    min-height: 700px !important;
+    right: 20px;
+  }
+  div.barcode_container {
+    left: 0 !important;
+  }
+}
+
+// min-height
+@media screen and (max-height: 850px) {
+  .contact_container {
+    min-height: 750px !important;
   }
 }

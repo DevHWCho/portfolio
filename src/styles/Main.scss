@@ -26,6 +26,7 @@ $backgroundColor: yellowgreen;
       // border: 1px solid #fff;
       transform: translateX(-50%);
       animation: scroll_ani 0.5s linear 0s infinite alternate-reverse;
+      cursor: pointer;
 
       @keyframes scroll_ani {
         0% {bottom: 5px;}
@@ -140,6 +141,14 @@ $backgroundColor: yellowgreen;
   }
 }
 
+// mobile_version
+@media (orientation: landscape) {
+  .main_container {
+    height: 189vh !important;
+  }
+}
+
+// min-height
 @media screen and (max-height: 800px) {
   .main_inner {
     min-height: 710px !important;

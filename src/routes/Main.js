@@ -7,6 +7,15 @@ function Main(props) {
   const mcRef = useRef();
   const navigate = useNavigate(null);
 
+  const onScrollUpClick = () => {
+    if (mcRef.current) {
+      mcRef.current.style.transform = `translateY(100vh)`;
+      setTimeout(() => {
+        navigate('/portfolio');
+      }, 500);
+      }
+    }
+
   useEffect(() => {
     const inVisibleNav = props.inVisibleNav;
     inVisibleNav();
@@ -32,12 +41,12 @@ function Main(props) {
       window.removeEventListener('wheel', handWheel);
     }
 
-  },[])
+  })
 
   return (
     <div className='main_container' ref={mcRef}>
       <div className='main_inner'>
-        <div className='main_scroll_up_btn'><span>Scroll Up</span></div>
+        <div className='main_scroll_up_btn' onClick={onScrollUpClick}><span>Scroll Up or Click</span></div>
         <div className='article_container'>
           <article>
             <h2>Introduction</h2>

@@ -346,6 +346,9 @@ $btnHoverColor: #FF165D;
         right: 10px !important;
         bottom: 10px !important;
       }
+      button.pd_button {
+        bottom: 10px !important;
+      }
     }
   }
   div.barcode_container {
@@ -378,8 +381,19 @@ $btnHoverColor: #FF165D;
   }
 }
 
-@media screen and (max-height: 800px) {
-  .about_container {
-    min-height: 710px !important;
+// mobile version
+@media screen and (max-width: 490px) {
+  .project_container {
+    right: 20px;
+  }
+  div.barcode_container {
+    left: 0 !important;
+  }
+}
+
+// min-height
+@media screen and (max-height: 850px) {
+  .project_container {
+    min-height: 750px !important;
   }
 }

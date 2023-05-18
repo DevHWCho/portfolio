@@ -19,18 +19,20 @@ function Header(props) {
 
   const onMenuClick = () => {
     headerBtnRef.current.classList.remove('on');
+    headerOutRef.current.classList.add('on');
     const inVisibleNav = props.inVisibleNav;
     inVisibleNav();
   }
   const onNavVisibleClick = () => {
     headerBtnRef.current.classList.remove('on');
+    headerOutRef.current.classList.add('on');
     const visibleNav = props.visibleNav;
     visibleNav();
   }
 
   return (
     <div className='header_container'> 
-      <div className='header_outside' ref={headerOutRef} onClick={onHdOutClick}></div>
+      <div className='header_outside on' ref={headerOutRef} onClick={onHdOutClick}></div>
       <div className='header_text'>
         <Link to={'/'} onClick={onMenuClick}><h1>PORTFOLIO</h1></Link>
         <p>BY HYUNWOONG CHO</p>

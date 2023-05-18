@@ -2,16 +2,20 @@ import React, { useRef, useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import 'styles/Project_common.scss';
 import Validator from './Validator';
-import { FaPowerOff } from 'react-icons/fa';
+import { FaPowerOff, FaStepBackward, FaStepForward } from 'react-icons/fa';
 import video from '../videos/sem_pc.mp4';
 
 function SamsungEm() {
   const [openValidator, setOpenValidator] = useState(false);
 
-  const body = document.querySelector('body');
+  const piRef = useRef();
   const onValidClick = () => {
     setOpenValidator(true);
-    body.style.overflowY = `hidden`;
+    document.body.style.overflowY = `hidden`;
+    window.scroll({
+      top: piRef.current.scrollTop,
+      behavior: 'smooth'
+    })
   }
 
   const valid_sem = "valid_sem";
@@ -19,6 +23,7 @@ function SamsungEm() {
   const navigate = useNavigate();
   const pcRef = useRef();
   const onCloseClick = () => {
+    document.body.style.overflowY = `auto`;
     pcRef.current.style.animationName = `frame_ani2`;
     pcRef.current.style.animationDuration = `1s`;
     pcRef.current.style.animationTimingFunction = `ease`;
@@ -32,30 +37,34 @@ function SamsungEm() {
         <FaPowerOff />
         <span>Power Off</span>
       </div>
+      <div className='pc_slide_btn'>
+        <div className='pc_bck_btn'>
+          <Link to={'/project/davich'}><FaStepBackward /></Link>
+          <span>Prev</span>
+        </div>
+        <div className='pc_fwd_btn'>
+          <Link to={'/project/cjone'}><FaStepForward /></Link>
+          <span>Next</span>
+        </div>
+      </div>
       
       {openValidator && (
         <Validator setOpenValidator={setOpenValidator} className={valid_sem} />
       )}
       <div className='projects_background bg_sem'></div>
-      <div className='projects_video'>
+      <div className='projects_video sem_video'>
         <div className='video_mockup'>
           <img src={require('../images/mockup/iMac.png')} alt=''></img>
           <div className='video_screen'>
-            <video autoPlay muted loop preload>
+            <video autoPlay loop preload='true' playsInline webkit-playsinline='true' muted>
               <source src={video}></source>
             </video>
           </div>
         </div>
       </div>
-      <div className='projects_inner'>
-        <div className='pj_inner_header'>
-          <ul>
-            <li onClick={onValidClick}>유효성 검사</li>
-            <li><Link target={'_blank'} to={'https://devhwcho.github.io/samsung_electric_renewal/'}>GitHub Page</Link></li>
-          </ul>
-        </div>
+      <div className='projects_inner sem_inner' ref={piRef}>
         <div className='pj_top'>
-          <div className='pj_icons'>
+          <div className='pj_icons sem_icons'>
             <img src={require('../images/icon_html5.png')} className='pj_img' alt='' />
             <img src={require('../images/icon_css3.png')} className='pj_img' alt='' />
             <img src={require('../images/icon_js.png')} className='pj_img' alt='' />
@@ -73,13 +82,28 @@ function SamsungEm() {
           </div>
         </div>
         <div className='pj_content_container'>
-          <h3 className='pj_h3'># 프로젝트 개요</h3>
-          <p className='pjc_text'><strong>웹 컨텐츠 접근성 및 웹 표준을 준수</strong>하여 제작하는 것을 목표로 진행</p>
-          <h3 className='pj_h3'># 주요 업무</h3>
-          <p className='pjc_text'>CSS 기능을 통하여 <strong>리뉴얼 된 삼성전기 홈페이지</strong> 디자인 구현</p>
-          <p className='pjc_text'><strong>CSS의 Hover, Transition</strong> 등 각종 Effect를 활용하여 역동적인 화면 구현</p>
-          <p className='pjc_text'><strong>JavaScript</strong>를 활용하여 <strong>메인 배너 영상 재생, 모달창 토글, Top 버튼</strong> 등 다양한 기능 구현</p>
-          <p className='pjc_text'>웹 표준, 웹 접근성 준수하여 제작, <strong>Html/CSS/W3C 유효성 검사 통과 완료</strong> </p>
+        < div className='pj_content_header'>
+            <ul>
+              <li onClick={onValidClick}>유효성 검사</li>
+              <li><Link target={'_blank'} to={'https://devhwcho.github.io/samsung_electric_renewal/'}>GitHub Page</Link></li>
+            </ul>
+          </div>
+          <h3 className='pj_h3'># 제작목표</h3>
+          <ul className='pjc_text'>
+            <li>웹 컨텐츠 접근성 및 웹 표준을 준수하여 제작하는 것을 목표로 진행</li>
+          </ul>
+          <h3 className='pj_h3'># 주요기술</h3>
+          <ul className='pjc_text'>
+            <li>CSS의 Hover, 가상요소를 활용한 이미지 추가, Transition 이용한 애니메이션 효과 구현</li>
+            <li>JavaScript로 메인 배너 영상 재생, 모달창 토글, 주 메뉴 작동, Top 버튼 작동</li>
+            <li>JS + CSS 조합으로 스크롤 값에 맞춰 해당 위치의 컨텐츠에 애니메이션이 작동하도록 구현</li>
+            <li>AJAX를 통해 header, footer, main 등으로 html 파일을 나눠 각 페이지에 연결시킴</li>
+          </ul>
+          <h3 className='pj_h3'># 웹 표준 준수</h3>
+          <ul className='pjc_text'>
+            <li>웹 접근성 준수하여 제작</li>
+            <li>HTML/CSS/W3C 유효성 검사 통과 완료</li>
+          </ul>
         </div>
       </div>
     </div>

@@ -158,6 +158,7 @@ $titleFontSize: calc(200px + 18vw);
       // border: 1px solid #fff;
       transform: translateX(-50%);
       animation: scroll_ani 0.5s linear 0s infinite alternate-reverse;
+      cursor: pointer;
 
       @keyframes scroll_ani {
         0% {bottom: 5px;}
@@ -339,7 +340,20 @@ $titleFontSizeXSM: calc(80px + 18vw);
   }
 }
 
+// mobile_version
+@media (orientation: landscape) {
+  .cover_container {
+    height: 240vh !important;
+  }
+  .ca_container {
+    height: 240vh !important;
+  }
+  .ca_char_container {
+    height: 240vh !important;
+  }
+}
 
+// min-height
 @media screen and (max-height: 800px) {
   .cover_container {
     min-height: 800px;

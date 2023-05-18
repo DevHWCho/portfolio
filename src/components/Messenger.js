@@ -1,6 +1,7 @@
-import React, { useRef } from 'react'
-import { FaPowerOff } from 'react-icons/fa';
-import { Link, useNavigate } from 'react-router-dom'
+import React, { useRef } from 'react';
+import { FaPowerOff, FaStepBackward, FaStepForward } from 'react-icons/fa';
+import { Link, useNavigate } from 'react-router-dom';
+import video from '../videos/messenger.mp4';
 
 function Messenger() {
   const navigate = useNavigate();
@@ -19,14 +20,29 @@ function Messenger() {
         <FaPowerOff />
         <span>Power Off</span>
       </div>
-      <div className='projects_background bg_messenger'></div>
-      <div className='projects_video'></div>
-      <div className='projects_inner'>
-        <div className='pj_inner_header'>
-          <ul>
-            <li><Link target={'_blank'} to={'https://devhwcho.github.io/kakao_2023/'}>GitHub Page</Link></li>
-          </ul>
+      <div className='pc_slide_btn'>
+        <div className='pc_bck_btn'>
+          <Link to={'/project/cjone'}><FaStepBackward /></Link>
+          <span>Prev</span>
         </div>
+        <div className='pc_fwd_btn'>
+          <Link to={'/project/movie'}><FaStepForward /></Link>
+          <span>Next</span>
+        </div>
+      </div>
+
+      <div className='projects_background bg_messenger'></div>
+      <div className='projects_video mobile_version'>
+        <div className='video_mockup'>
+          <img src={require('../images/mockup/8plus.png')} alt='' />
+          <div className='mobile_only_screen'>
+            <video autoPlay loop preload='true' playsInline webkit-playsinline='true' muted>
+              <source src={video}></source>
+            </video>
+          </div>
+        </div>
+      </div>
+      <div className='projects_inner msg_inner'>
         <div className='pj_top'>
           <div className='pj_icons pj_2row_icons'>
             <img src={require('../images/icon_html5.png')} className='pj_img' alt='' />
@@ -48,18 +64,30 @@ function Messenger() {
           </div>
         </div>
         <div className='pj_content_container'>
-          <h3 className='pj_h3'># 프로젝트 개요</h3>
-          <p className='pjc_text'><strong>React 및 Firebase</strong>를 통해 각 페이지 구현 및 CRUD 가능한 <strong>서버리스 시스템</strong> 구축</p>
-          <h3 className='pj_h3'># 주요 업무</h3>
-          <p className='pjc_text'>React의 Router-Dom 기능을 활용한 <strong>SPA(Single Page Application)</strong> 제작</p>
-          <p className='pjc_text'>React의 <strong>JSX 문법 및 SCSS(SASS) 기능</strong>을 활용한 메신져 어플리케이션 디자인</p>
-          <p className='pjc_text'>React의 <strong>Axios 라이브러리</strong>를 활용하여 fakeAPI 불러오기</p>
-          <p className='pjc_text'><strong>Firebase 인증 서비스</strong>를 활용한 <strong>이메일 및 소셜 로그인 기능</strong> 구현</p>
-          <p className='pjc_text'>
-            Firebase와 연동하여 <strong>로그인 페이지</strong>부터 <strong>로그아웃</strong> 기능, <strong>각 채팅창 내 대화 보내기 및 삭제</strong>
-            <br />
-            <strong>개인 닉네임, 프로필 사진 및 문구 수정/삭제</strong> 등 CRUD 구현</p>
-          <p className='pjc_text'><strong>Hook 함수</strong>(useEffect/useState/useLocation/useNavigate 등) 를 사용해 <strong>데이터 전달 및 관리</strong></p>
+          <div className='pj_content_header'>
+            <ul>
+              <li><Link target={'_blank'} to={'https://devhwcho.github.io/kakao_2023/'}>GitHub Page</Link></li>
+            </ul>
+          </div>
+          <h3 className='pj_h3'># 제작목표</h3>
+          <ul className='pjc_text'>
+            <li>React와 Firebase를 통해 메신져 형태의 CRUD 가능한 어플리케이션 제작</li>
+          </ul>
+          <h3 className='pj_h3'># 주요기술</h3>
+          <ul className='pjc_text'>
+            <li>React의 Router-Dom 기능을 활용한 SPA(Single Page Application) 제작</li>
+            <li>JSX 문법 및 SCSS(SASS) 기능을 활용하여 반응형 어플리케이션 디자인</li>
+            <li>React의 Axios 라이브러리를 활용하여 FakeAPI 불러오기</li>
+            <li>Firebase 인증 서비스를 활용하여 이메일 및 소셜 로그인 기능 구현</li>
+            <li>로그인 시 조건에 따라 에러 메시지가 표시되도록 구현</li>
+            <li>Firebase와 연동하여 React 앱 내에서 로그인/로그아웃, 채팅방 내 대화 보내기/수정/삭제 기능 추가</li>
+            <li>개인 닉네임, 프로필 사진 및 배경 사진 수정/삭제 기능 구현</li>
+            <li>현재 로그인한 아이디 데이터만 표시 / 각 채팅방과 각 프로필에 맞는 데이터만 표현되도록 구현</li>
+            <li>useEffect는 화면을 구현하고 데이터를 유지할 때 주로 사용</li>
+            <li>useState는 데이터의 변환되는 값들을 전달할 때 주로 사용</li>
+            <li>useLocation 및 useNavigate는 주소값을 불러와 전달할 때 주로 사용</li>
+            <li>props를 활용하여 받은 데이터를 다른 컴포넌트 등으로 전달함</li>
+          </ul>
         </div>
       </div>
     </div>
