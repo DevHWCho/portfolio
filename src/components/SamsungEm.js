@@ -52,19 +52,19 @@ function SamsungEm() {
         <Validator setOpenValidator={setOpenValidator} className={valid_sem} />
       )}
       <div className='projects_background bg_sem'></div>
-      <div className='projects_video'>
+      <div className='projects_video sem_video'>
         <div className='video_mockup'>
           <img src={require('../images/mockup/iMac.png')} alt=''></img>
           <div className='video_screen'>
-            <video autoPlay muted loop preload>
+            <video autoPlay muted loop preload='true'>
               <source src={video}></source>
             </video>
           </div>
         </div>
       </div>
-      <div className='projects_inner' ref={piRef}>
+      <div className='projects_inner sem_inner' ref={piRef}>
         <div className='pj_top'>
-          <div className='pj_icons'>
+          <div className='pj_icons sem_icons'>
             <img src={require('../images/icon_html5.png')} className='pj_img' alt='' />
             <img src={require('../images/icon_css3.png')} className='pj_img' alt='' />
             <img src={require('../images/icon_js.png')} className='pj_img' alt='' />

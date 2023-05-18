@@ -2,6 +2,7 @@ import React, { useRef } from 'react';
 import { FaPowerOff, FaStepBackward } from 'react-icons/fa';
 import { Link, useNavigate } from 'react-router-dom';
 import 'styles/Project_common.scss';
+// import video from '../videos/movie.mp4';
 
 function MovieApp() {
   const navigate = useNavigate();
@@ -28,7 +29,16 @@ function MovieApp() {
       </div>
 
       <div className='projects_background bg_movie'></div>
-      <div className='projects_video'></div>
+      <div className='projects_video mobile_version'>
+        <div className='video_mockup'>
+          <img src={require('../images/mockup/8plus.png')} alt='' />
+          <div className='mobile_only_screen'>
+            <video autoPlay muted loop preload='true'>
+              {/* <source src={video}></source> */}
+            </video>
+          </div>
+        </div>
+      </div>
       <div className='projects_inner movie_inner'>
         <div className='pj_top'>
           <div className='pj_icons pj_2row_icons'>

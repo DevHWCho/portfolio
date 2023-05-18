@@ -9,6 +9,7 @@
   border-top-left-radius: 20px;
   border-bottom-left-radius: 20px;
   background-color: #333;
+  box-shadow: 1px 2px 10px #000;
   .nav_btn {
     z-index: 1;
     position: relative;
@@ -90,5 +91,12 @@
       word-break: break-all;
       transform: translateX(-28px) rotate(-180deg);
     }
+  }
+}
+
+// mobile version
+@media screen and (max-width: 490px) {
+  .nav {
+    left: 20px;
   }
 }

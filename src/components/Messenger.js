@@ -35,8 +35,8 @@ function Messenger() {
       <div className='projects_video mobile_version'>
         <div className='video_mockup'>
           <img src={require('../images/mockup/8plus.png')} alt='' />
-          <div className='mobile_screen'>
-            <video autoPlay muted loop preload>
+          <div className='mobile_only_screen'>
+            <video autoPlay muted loop preload='true'>
               <source src={video}></source>
             </video>
           </div>

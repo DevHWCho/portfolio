@@ -4,6 +4,8 @@ import Validator from './Validator';
 import { FaPowerOff, FaStepForward } from 'react-icons/fa';
 import 'styles/Project_common.scss';
 import video from '../videos/davich_pc.mp4';
+import video_tablet from '../videos/davich_tablet.mp4';
+import video_mobile from '../videos/davich_mobile.mp4';
 
 function Davich() {
   const [openValidator, setOpenValidator] = useState(false);
@@ -52,8 +54,24 @@ function Davich() {
         <div className='video_mockup'>
           <img src={require('../images/mockup/iMac.png')} alt=''></img>
           <div className='video_screen'>
-            <video autoPlay muted loop preload>
+            <video autoPlay muted loop preload='true'>
               <source src={video}></source>
+            </video>
+          </div>
+        </div>
+        <div className='tablet_mockup'>
+          <img src={require('../images/mockup/iPad_pro_12.png')} alt=''></img>
+          <div className='tablet_screen'>
+            <video autoPlay muted loop preload='true'>
+              <source src={video_tablet}></source>
+            </video>
+          </div>
+        </div>
+        <div className='mobile_mockup'>
+          <img src={require('../images/mockup/8plus.png')} alt=''></img>
+          <div className='mobile_screen'>
+            <video autoPlay muted loop preload='true'>
+              <source src={video_mobile}></source>
             </video>
           </div>
         </div>
