@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import 'styles/Navigation.scss';
 
@@ -9,6 +9,20 @@ function Navigation() {
   const otherRef = useRef(null);
   const contactRef = useRef(null);
   console.log("pathname",location)
+
+  // mobile - landscape mode
+  const [isLandscape, setIsLandscape] = useState(false);
+  useEffect(() => {
+    const mediaQuery = window.matchMedia('(orientation: landscape)');
+    const handleOrientationChange = (event) => {
+      setIsLandscape(event.matches);
+    };
+    setIsLandscape(mediaQuery.matches);
+    mediaQuery.addEventListener('change', handleOrientationChange);
+    return () => {
+      mediaQuery.removeEventListener('change', handleOrientationChange);
+    };
+  }, []);
 
   useEffect(() => {
     const pathname = location.pathname;
@@ -42,7 +56,7 @@ function Navigation() {
   
 
   return (
-    <div className='nav'>
+    <div className={isLandscape ? 'nav landscape-mode' : 'nav'}>
       <div className='nav_btn' ref={aboutRef}><Link to={'/about_me'}><p>ABOUT ME</p></Link></div>
       <div className='nav_btn' ref={projectRef}><Link to={'/project'}><p>PROJECT</p></Link></div>
       <div className='nav_btn' ref={otherRef}><Link to={'/other'}><p>OTHER</p></Link></div>

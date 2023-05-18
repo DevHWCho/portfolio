@@ -96,12 +96,15 @@
 
 // mobile version
 @media (orientation: landscape) {
-  .nav_btn {
-    p {
-      transform: translateX(-8px) !important;
+  .landscape-mode {
+    .nav_btn {
+      p {
+        transform: translateX(-8px);
+      }
     }
   }
-}
+  }
+  
 @media screen and (max-width: 490px) {
   .nav {
     left: 20px;

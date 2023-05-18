@@ -3,7 +3,8 @@ import { useNavigate } from 'react-router-dom';
 import 'styles/Cover.scss';
 
 function Cover() {
-  const navigate = useNavigate();
+  
+  const navigate = useNavigate(null);
   const coverRef = useRef();
   const ca01Ref = useRef();
   const ca02Ref = useRef();
@@ -113,7 +114,7 @@ function Cover() {
       clearTimeout(charDisplay02);
       clearTimeout(charDisplay01);
     };
-  }, [coverRef, navigate]);
+  }, [coverRef]);
 
   return (
     <>
@@ -167,7 +168,7 @@ function Cover() {
             <span className='cover_span'>Portfolio</span>
           </div>
         </div>
-        <div className='cover_scroll_down_btn' onClick={onScrollBtnClick}><span>Scroll Down or Click</span></div>
+        <div className='cover_scroll_down_btn' onClick={onScrollBtnClick}><span>Scroll Down</span></div>
       </div>
     </div>
     </>

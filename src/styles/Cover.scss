@@ -340,20 +340,7 @@ $titleFontSizeXSM: calc(80px + 18vw);
   }
 }
 
-// mobile_version
-@media (orientation: landscape) {
-  .cover_container {
-    height: 240vh !important;
-  }
-  .ca_container {
-    height: 240vh !important;
-  }
-  .ca_char_container {
-    height: 240vh !important;
-  }
-}
 
-// min-height
 @media screen and (max-height: 800px) {
   .cover_container {
     min-height: 800px;

@@ -541,14 +541,14 @@ $textColor: #333;
 
 // mobile_version {
 @media (orientation: landscape) {
-  .projects_inner {
-    height: 230vh !important;
-  }
   .mobile_version {
     height: 260vh !important;
   }
+  .projects_inner {
+    height: 230vh !important;
+  }
 }
-
+  
 @media screen and (max-width: 490px) {
   .projects_container {
     .projects_video {
