@@ -2,9 +2,9 @@ import React, { useRef } from 'react';
 import { FaPowerOff, FaStepBackward } from 'react-icons/fa';
 import { Link, useNavigate } from 'react-router-dom';
 import 'styles/Project_common.scss';
-// import video from '../videos/movie.mp4';
-// import video_tablet from '../videos/movie_tablet.mp4';
-// import video_mobile from '../videos/movie_mobile.mp4';
+import video from '../videos/movie.mp4';
+import video_tablet from '../videos/movie_tablet.mp4';
+import video_mobile from '../videos/movie_mobile.mp4';
 
 function MovieApp() {
   const navigate = useNavigate();
@@ -35,7 +35,7 @@ function MovieApp() {
           <img src={require('../images/mockup/iMac.png')} alt=''></img>
           <div className='video_screen'>
             <video autoPlay muted loop preload='true'>
-              {/* <source src={video}></source> */}
+              <source src={video}></source>
             </video>
           </div>
         </div>
@@ -43,7 +43,7 @@ function MovieApp() {
           <img src={require('../images/mockup/iPad_pro_12.png')} alt=''></img>
           <div className='tablet_screen'>
             <video autoPlay muted loop preload='true'>
-              {/* <source src={video_tablet}></source> */}
+              <source src={video_tablet}></source>
             </video>
           </div>
         </div>
@@ -51,7 +51,7 @@ function MovieApp() {
           <img src={require('../images/mockup/8plus.png')} alt=''></img>
           <div className='mobile_screen'>
             <video autoPlay muted loop preload='true'>
-              {/* <source src={video_mobile}></source> */}
+              <source src={video_mobile}></source>
             </video>
           </div>
         </div>
