@@ -144,7 +144,20 @@ $backgroundColor: yellowgreen;
 // mobile_version - landscape-mode
 @media (orientation: landscape) {
   .landscape-mode {
-    height: 187vh !important;
+    height: 176vh !important;
+  }
+  .article_container {
+    article {
+      width: 320px !important;
+      height: 100px !important;
+    
+      span {
+        font-size: 50px !important;
+        &.art_text {
+          left: 70% !important;
+        }
+      }
+    }
   }
 }
 

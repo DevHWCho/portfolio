@@ -343,10 +343,13 @@ $titleFontSizeXSM: calc(70px + 18vw);
 // mobile_version - landscape-mode
 @media (orientation: landscape) {
   .ca_char-landscape-mode {
-    height: 215vh !important;
+    height: 200vh !important;
   }
   .ca-landscape-mode {
-    height: 215vh !important;
+    height: 200vh !important;
+  }
+  .cover-landscape-mode {
+    height: 200vh !important;
   }
 }
 

@@ -13,6 +13,7 @@ function Main(props) {
       setTimeout(() => {
         navigate('/portfolio');
       }, 500);
+      window.scrollTo({top: 0, behavior: 'smooth'});
       }
     }
 
