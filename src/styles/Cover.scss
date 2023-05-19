@@ -358,6 +358,16 @@ $landscapeTitle: calc(80px + 15vw);
     top: 3% !important;
     transform: scale(0.8);
   }
+  $coverLandscapeTitle: calc(40px + 16vw);
+  .cover_title {
+    font-size: $coverLandscapeTitle !important;
+  }
+  .cover_char {
+    font-size: $coverLandscapeTitle !important;
+  }
+  .unit_char {
+    font-size: $coverLandscapeTitle !important;
+  }
   .cover_p {
     font-size: 16px !important;
     line-height: 1;
