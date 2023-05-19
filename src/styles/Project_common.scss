@@ -570,7 +570,6 @@ $textColor: #333;
     } 
     .projects_inner {
       min-width: 300px !important;
-      height: 127vh !important;
     }
     .pj_icons {
       top: 190px !important;
@@ -579,17 +578,34 @@ $textColor: #333;
         width: 30px !important;
       }
     }
-    .sem_video {
-      min-height: fit-content;
-    }
     .sem_title {
       line-height: 0.93;
     }
     .msg_inner, .movie_inner {
-      height: 157vh !important;
+      height: 118vh !important;
     }
     .pj_2row_icons {
       top: 220px !important;
+    }
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .projects_container {
+    .mobile_version {
+      min-height: 660px !important;
+    }
+    .projects_video {
+ 
+    }
+    .projects_inner {
+      height: 150vh !important;
+    }
+    .msg_inner, .movie_inner {
+      height: 150vh !important;
+    }
+    .sem_video {
+      min-height: 530px !important;
     }
   }
 }
