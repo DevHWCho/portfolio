@@ -38,8 +38,10 @@ $titleFontSize: calc(200px + 18vw);
         left: 50%;
         font-family: 'League Gothic', sans-serif;
         font-size: $titleFontSize;
+        text-align: center;
         color: #fff;
-        letter-spacing: -10px;
+        letter-spacing: -8px;
+        text-indent: -8px;
         transform: translateX(-50%) translateY(-50%);
         .char_inner {
           display: flex;
@@ -214,7 +216,9 @@ $titleFontSize: calc(200px + 18vw);
       font-family: 'League Gothic', sans-serif;
       font-size: $titleFontSize;
       color: #fff;
-      letter-spacing: -10px;
+      text-align: center;
+      letter-spacing: -8px;
+      text-indent: -8px;
       transform: translateX(-50%) translateY(-50%);
       .cover_p {
         position: absolute;
