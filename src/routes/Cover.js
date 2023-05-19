@@ -116,23 +116,25 @@ function Cover() {
     };
   }, [navigate]);
 
-  // mobile - landscape mode
-  const [isLandscape, setIsLandscape] = useState(false);
+  // 휴대폰 landscape 모드
+  const [isLandscape, setIsLandscape] = useState(window.orientation === 90 || window.orientation === -90);
   useEffect(() => {
-    const mediaQuery = window.matchMedia('(orientation: landscape)');
-    const handleOrientationChange = (event) => {
-      setIsLandscape(event.matches);
+    const handleResize = () => {
+      setIsLandscape(window.orientation === 90 || window.orientation === -90);
     };
-    setIsLandscape(mediaQuery.matches);
-    mediaQuery.addEventListener('change', handleOrientationChange);
+    handleResize();
+    window.addEventListener('resize', handleResize);
     return () => {
-      mediaQuery.removeEventListener('change', handleOrientationChange);
+      window.removeEventListener('resize', handleResize);
     };
   }, []);
 
   return (
     <>
-    <div className={isLandscape ? 'ca_char_container ca_char-landscape-mode' : 'ca_char_container'} ref={caCharConRef}>
+    <div 
+      className={`ca_char_container ${isLandscape ? 'landscape-mode' : ''}`}
+      ref={caCharConRef}
+    >
       <div className='cover_char'>
         <div className='cc_unit caChar01'>
           <span className='unit_char' ref={caChar01Ref}>CHO</span>
@@ -161,16 +163,20 @@ function Cover() {
       </div>
     </div>
 
-    <div className={isLandscape ? 'ca_container ca-landscape-mode' : 'ca_container'} ref={caConRef}>
+    <div 
+      className={`ca_container ${isLandscape ? 'landscape-mode' : ''}`}
+      ref={caConRef}
+    >
       <div className='cover_animation ca01' ref={ca01Ref}></div>
       <div className='cover_animation ca02' ref={ca02Ref}></div>
       <div className='cover_animation ca03' ref={ca03Ref}></div>
       <div className='cover_animation ca04' ref={ca04Ref}></div>
     </div>
 
-    
-    
-    <div className={isLandscape ? 'cover_container cover-landscape-mode' : 'cover_container'} ref={coverRef}>
+    <div 
+      className={`cover_container ${isLandscape ? 'landscape-mode' : ''}`} 
+      ref={coverRef}
+    >
       <div className='cover_inner'>
         <div className='cover_title'>CHO
           <p className='cover_p'>

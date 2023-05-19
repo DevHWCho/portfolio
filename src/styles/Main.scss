@@ -142,19 +142,21 @@ $backgroundColor: yellowgreen;
 }
 
 // mobile_version - landscape-mode
-@media (orientation: landscape) {
-  .main-landscape-mode {
-    height: 100% !important;
+@media screen and (max-width: 896px) and (orientation: landscape) {
+  .main_container {
+    height: 100%;
   }
   .article_container {
     article {
       width: 400px !important;
-      height: 100px !important;
-    
+      height: 120px !important;
       span {
-        font-size: 50px !important;
+        font-size: 60px !important;
+        &.art_arrow {
+          left: 1% !important;
+        }
         &.art_text {
-          left: 75% !important;
+          left: 70% !important;
         }
       }
     }
@@ -164,6 +166,6 @@ $backgroundColor: yellowgreen;
 // min-height
 @media screen and (max-height: 800px) {
   .main_inner {
-    min-height: 667px !important;
+    min-height: 710px !important;
   }
 }
