@@ -59,7 +59,7 @@ function Main(props) {
   }, []);
 
   return (
-    <div className={isLandscape ? 'main_container landscape-mode' : 'main_container'} ref={mcRef}>
+    <div className={isLandscape ? 'main_container main-landscape-mode' : 'main_container'} ref={mcRef}>
       <div className='main_inner'>
         <div className='main_scroll_up_btn' onClick={onScrollUpClick}><span>Scroll Up or Click</span></div>
         <div className='article_container'>
