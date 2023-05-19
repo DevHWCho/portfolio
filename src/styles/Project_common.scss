@@ -113,7 +113,7 @@ $textColor: #333;
     }
   }
   .projects_video {
-    // overflow: hidden;
+    overflow: hidden;
     display: flex;
     justify-content: center;
     position: relative;
@@ -540,6 +540,18 @@ $textColor: #333;
 }
 
 // mobile_version {
+@media (orientation: landscape) {
+  .mobile_version {
+    height: 260vh !important;
+  }
+  .projects_inner {
+    height: 230vh !important;
+  }
+  .pj_icons {
+    bottom: 8px !important;
+  }
+}
+  
 @media screen and (max-width: 490px) {
   .projects_container {
     .projects_video {

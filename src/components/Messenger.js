@@ -1,4 +1,4 @@
-import React, { useRef } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { FaPowerOff, FaStepBackward, FaStepForward } from 'react-icons/fa';
 import { Link, useNavigate } from 'react-router-dom';
 import video from '../videos/messenger.mp4';
@@ -14,8 +14,22 @@ function Messenger() {
     navigate('/project');
   }
 
+  // mobile - landscape mode
+  const [isLandscape, setIsLandscape] = useState(false);
+  useEffect(() => {
+    const mediaQuery = window.matchMedia('(orientation: landscape)');
+    const handleOrientationChange = (event) => {
+      setIsLandscape(event.matches);
+    };
+    setIsLandscape(mediaQuery.matches);
+    mediaQuery.addEventListener('change', handleOrientationChange);
+    return () => {
+      mediaQuery.removeEventListener('change', handleOrientationChange);
+    };
+  }, []);
+
   return (
-    <div className='projects_container' ref={pcRef}>
+    <div className={isLandscape ? 'projects_container landscape-mode' : 'projects_container'} ref={pcRef}>
       <div className='pc_close_btn' onClick={onCloseClick}>
         <FaPowerOff />
         <span>Power Off</span>
@@ -36,7 +50,7 @@ function Messenger() {
         <div className='video_mockup'>
           <img src={require('../images/mockup/8plus.png')} alt='' />
           <div className='mobile_only_screen'>
-            <video autoPlay loop preload='true' playsInline webkit-playsinline muted>
+            <video autoPlay loop preload='true' playsInline webkit-playsinline='true' muted>
               <source src={video}></source>
             </video>
           </div>
