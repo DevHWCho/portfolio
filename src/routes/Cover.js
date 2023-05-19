@@ -127,12 +127,12 @@ function Cover() {
     return () => {
       window.removeEventListener('resize', handleResize);
     };
-  }, []);
+  }, [isLandscape]);
 
   return (
     <>
     <div 
-      className={`ca_char_container ${isLandscape ? 'landscape-mode' : ''}`}
+      className={`ca_char_container ${isLandscape ? 'cover-landscape-mode' : ''}`}
       ref={caCharConRef}
     >
       <div className='cover_char'>
@@ -164,7 +164,7 @@ function Cover() {
     </div>
 
     <div 
-      className={`ca_container ${isLandscape ? 'landscape-mode' : ''}`}
+      className={`ca_container ${isLandscape ? 'cover-landscape-mode' : ''}`}
       ref={caConRef}
     >
       <div className='cover_animation ca01' ref={ca01Ref}></div>
@@ -174,7 +174,7 @@ function Cover() {
     </div>
 
     <div 
-      className={`cover_container ${isLandscape ? 'landscape-mode' : ''}`} 
+      className={`cover_container ${isLandscape ? 'cover-landscape-mode' : ''}`} 
       ref={coverRef}
     >
       <div className='cover_inner'>
