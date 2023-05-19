@@ -97,10 +97,10 @@ function Messenger() {
             <li>Firebase와 연동하여 React 앱 내에서 로그인/로그아웃, 채팅방 내 대화 보내기/수정/삭제 기능 추가</li>
             <li>개인 닉네임, 프로필 사진 및 배경 사진 수정/삭제 기능 구현</li>
             <li>현재 로그인한 아이디 데이터만 표시 / 각 채팅방과 각 프로필에 맞는 데이터만 표현되도록 구현</li>
-            <li>useEffect는 화면을 구현하고 데이터를 유지할 때 주로 사용</li>
-            <li>useState는 데이터의 변환되는 값들을 전달할 때 주로 사용</li>
-            <li>useLocation 및 useNavigate는 주소값을 불러와 전달할 때 주로 사용</li>
-            <li>props를 활용하여 받은 데이터를 다른 컴포넌트 등으로 전달함</li>
+            <li>→ useEffect는 화면을 구현하고 데이터를 유지할 때 주로 사용</li>
+            <li>→ useState는 데이터의 변환되는 값들을 전달할 때 주로 사용</li>
+            <li>→ useLocation 및 useNavigate는 주소값을 불러와 전달할 때 주로 사용</li>
+            <li>→ props를 활용하여 받은 데이터를 다른 컴포넌트 등으로 전달함</li>
           </ul>
         </div>
       </div>

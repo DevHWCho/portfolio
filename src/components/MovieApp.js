@@ -109,11 +109,11 @@ function MovieApp() {
             <li>Firebase 인증 서비스를 활용하여 이메일 및 소셜 로그인 기능 구현</li>
             <li>로그인 시 조건에 따라 에러 메시지가 표시되도록 구현</li>
             <li>React의 Swipe 라이브러리를 활용아여 이미지 배너에 Swipe 기능 추가</li>
-            <li>Hook 함수(useEffect/useState/useLocation/useNavigate 등) 및 props 기능을 활용하여 영화 데이터를 전달하고 관리</li>
-            <li>useEffect는 화면을 구현하고 데이터를 유지할 때 주로 사용</li>
-            <li>useState는 데이터의 변환되는 값들을 전달할 때 주로 사용</li>
-            <li>useLocation 및 useNavigate는 주소값을 불러와 전달할 때 주로 사용</li>
-            <li>props를 활용하여 받은 데이터를 다른 컴포넌트 등으로 전달함</li>
+            <li>Hook 함수 및 props 기능을 활용하여 영화 데이터를 전달하고 관리</li>
+            <li>→ useEffect는 화면을 구현하고 데이터를 유지할 때 주로 사용</li>
+            <li>→ useState는 데이터의 변환되는 값들을 전달할 때 주로 사용</li>
+            <li>→ useLocation 및 useNavigate는 주소값을 불러와 전달할 때 주로 사용</li>
+            <li>→ props를 활용하여 받은 데이터를 다른 컴포넌트 등으로 전달함</li>
           </ul>
         </div>
       </div>
