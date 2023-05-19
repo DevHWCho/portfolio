@@ -141,8 +141,16 @@ $backgroundColor: yellowgreen;
   }
 }
 
+// mobile_version - landscape-mode
+@media (orientation: landscape) {
+  .landscape-mode {
+    height: 187vh !important;
+  }
+}
+
+// min-height
 @media screen and (max-height: 800px) {
   .main_inner {
-    min-height: 710px !important;
+    min-height: 667px !important;
   }
 }

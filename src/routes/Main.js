@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { FaExternalLinkSquareAlt } from 'react-icons/fa';
 import { Link, useNavigate } from 'react-router-dom';
 import 'styles/Main.scss';
@@ -43,8 +43,22 @@ function Main(props) {
 
   })
 
+  // mobile - landscape mode
+  const [isLandscape, setIsLandscape] = useState(false);
+  useEffect(() => {
+    const mediaQuery = window.matchMedia('(orientation: landscape)');
+    const handleOrientationChange = (event) => {
+      setIsLandscape(event.matches);
+    };
+    setIsLandscape(mediaQuery.matches);
+    mediaQuery.addEventListener('change', handleOrientationChange);
+    return () => {
+      mediaQuery.removeEventListener('change', handleOrientationChange);
+    };
+  }, []);
+
   return (
-    <div className='main_container' ref={mcRef}>
+    <div className={isLandscape ? 'main_container landscape-mode' : 'main_container'} ref={mcRef}>
       <div className='main_inner'>
         <div className='main_scroll_up_btn' onClick={onScrollUpClick}><span>Scroll Up or Click</span></div>
         <div className='article_container'>

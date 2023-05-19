@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import 'styles/Cover.scss';
 
@@ -116,9 +116,23 @@ function Cover() {
     };
   }, [navigate]);
 
+  // mobile - landscape mode
+  const [isLandscape, setIsLandscape] = useState(false);
+  useEffect(() => {
+    const mediaQuery = window.matchMedia('(orientation: landscape)');
+    const handleOrientationChange = (event) => {
+      setIsLandscape(event.matches);
+    };
+    setIsLandscape(mediaQuery.matches);
+    mediaQuery.addEventListener('change', handleOrientationChange);
+    return () => {
+      mediaQuery.removeEventListener('change', handleOrientationChange);
+    };
+  }, []);
+
   return (
     <>
-    <div className='ca_char_container' ref={caCharConRef}>
+    <div className={isLandscape ? 'ca_char_container ca_char-landscape-mode' : 'ca_char_container'} ref={caCharConRef}>
       <div className='cover_char'>
         <div className='cc_unit caChar01'>
           <span className='unit_char' ref={caChar01Ref}>CHO</span>
@@ -147,7 +161,7 @@ function Cover() {
       </div>
     </div>
 
-    <div className='ca_container' ref={caConRef}>
+    <div className={isLandscape ? 'ca_container ca-landscape-mode' : 'ca_container'} ref={caConRef}>
       <div className='cover_animation ca01' ref={ca01Ref}></div>
       <div className='cover_animation ca02' ref={ca02Ref}></div>
       <div className='cover_animation ca03' ref={ca03Ref}></div>
@@ -156,7 +170,7 @@ function Cover() {
 
     
     
-    <div className='cover_container' ref={coverRef}>
+    <div className={isLandscape ? 'cover_container cover-landscape-mode' : 'cover_container'} ref={coverRef}>
       <div className='cover_inner'>
         <div className='cover_title'>CHO
           <p className='cover_p'>

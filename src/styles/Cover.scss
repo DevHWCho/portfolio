@@ -311,7 +311,7 @@ $titleFontSizeSSM: calc(90px + 18vw);
   }
 }
 
-$titleFontSizeXSM: calc(80px + 18vw);
+$titleFontSizeXSM: calc(70px + 18vw);
 @media screen and (max-width: 560px) {
   .cover_char {
     height: $titleFontSizeXSM !important;
@@ -340,12 +340,22 @@ $titleFontSizeXSM: calc(80px + 18vw);
   }
 }
 
+// mobile_version - landscape-mode
+@media (orientation: landscape) {
+  .ca_char-landscape-mode {
+    height: 215vh !important;
+  }
+  .ca-landscape-mode {
+    height: 215vh !important;
+  }
+}
 
+// min-height
 @media screen and (max-height: 800px) {
   .cover_container {
-    min-height: 800px;
+    min-height: 667px;
   }
   .ca_char_container {
-    min-height: 800px;
+    min-height: 667px;
   }
 }
