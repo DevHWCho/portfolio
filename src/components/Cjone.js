@@ -47,7 +47,10 @@ useEffect(() => {
 }, []);
 
 return (
-  <div className={isLandscape ? 'projects_container landscape-mode' : 'projects_container'} ref={pcRef}>
+    <div 
+      className={`projects_container ${isLandscape ? 'project-landscape-mode' : ''}`} 
+      ref={pcRef}
+    >
       <div className='pc_close_btn' onClick={onCloseClick}>
         <FaPowerOff />
         <span>Power Off</span>

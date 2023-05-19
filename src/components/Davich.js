@@ -33,22 +33,24 @@ function Davich() {
     navigate('/project');
   }
 
-  // mobile - landscape mode
-  const [isLandscape, setIsLandscape] = useState(false);
+  // 휴대폰 landscape 모드
+  const [isLandscape, setIsLandscape] = useState(window.orientation === 90 || window.orientation === -90);
   useEffect(() => {
-    const mediaQuery = window.matchMedia('(orientation: landscape)');
-    const handleOrientationChange = (event) => {
-      setIsLandscape(event.matches);
+    const handleResize = () => {
+      setIsLandscape(window.orientation === 90 || window.orientation === -90);
     };
-    setIsLandscape(mediaQuery.matches);
-    mediaQuery.addEventListener('change', handleOrientationChange);
+    handleResize();
+    window.addEventListener('resize', handleResize);
     return () => {
-      mediaQuery.removeEventListener('change', handleOrientationChange);
+      window.removeEventListener('resize', handleResize);
     };
-  }, []);
+  }, [isLandscape]);
 
   return (
-    <div className={isLandscape ? 'projects_container landscape-mode' : 'projects_container'} ref={pcRef}>
+    <div 
+      className={`projects_container ${isLandscape ? 'project-landscape-mode' : ''}`} 
+      ref={pcRef}
+    >
       <div className='pc_close_btn' onClick={onCloseClick}>
         <FaPowerOff />
         <span>Power Off</span>

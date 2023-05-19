@@ -549,18 +549,16 @@ $textColor: #333;
   }
 }
 
-// mobile_version {
-@media (orientation: landscape) {
-  .mobile_version {
-    height: 260vh !important;
-  }
-  .projects_inner {
-    height: 230vh !important;
+// mobile_version - landscape-mode
+.project-landscape-mode {
+  .projects_video {
+    height: 180vh !important;
   }
   .pj_icons {
-    bottom: 8px !important;
+    bottom: 5px !important;
   }
 }
+
   
 @media screen and (max-width: 490px) {
   .projects_container {
@@ -596,6 +594,6 @@ $textColor: #333;
 // min-height
 @media screen and (max-height: 850px) {
   .projects_inner {
-    min-height: 850px !important;
+    min-height: 880px !important;
   }
 }
