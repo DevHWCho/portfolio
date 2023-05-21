@@ -21,6 +21,7 @@ function Cjone() {
 
   const valid_cjone = "valid_cjone";
 
+  let timeoutId;
   const navigate = useNavigate();
   const pcRef = useRef();
   const onCloseClick = () => {
@@ -29,22 +30,24 @@ function Cjone() {
     pcRef.current.style.animationDuration = `1s`;
     pcRef.current.style.animationTimingFunction = `ease`;
     pcRef.current.style.animationDelay = `0s`;
-    navigate('/project');
+    clearTimeout(timeoutId);
+    timeoutId = setTimeout(()=>{
+      navigate('/project');
+    },1000);
   }
 
-// mobile - landscape mode
-const [isLandscape, setIsLandscape] = useState(false);
+// 휴대폰 landscape 모드
+const [isLandscape, setIsLandscape] = useState(window.orientation === 90 || window.orientation === -90);
 useEffect(() => {
-  const mediaQuery = window.matchMedia('(orientation: landscape)');
-  const handleOrientationChange = (event) => {
-    setIsLandscape(event.matches);
+  const handleResize = () => {
+    setIsLandscape(window.orientation === 90 || window.orientation === -90);
   };
-  setIsLandscape(mediaQuery.matches);
-  mediaQuery.addEventListener('change', handleOrientationChange);
+  handleResize();
+  window.addEventListener('resize', handleResize);
   return () => {
-    mediaQuery.removeEventListener('change', handleOrientationChange);
+    window.removeEventListener('resize', handleResize);
   };
-}, []);
+}, [isLandscape]);
 
 return (
     <div 
@@ -99,11 +102,6 @@ return (
       </div>
       <div className='projects_inner' ref={piRef}>
         <div className='pj_top'>
-          <div className='pj_icons'>
-            <img src={require('../images/icon_html5.png')} className='pj_img' alt='' />
-            <img src={require('../images/icon_css3.png')} className='pj_img' alt='' />
-            <img src={require('../images/icon_js.png')} className='pj_img' alt='' />
-          </div>
           <div className='pj_header'>
             <p className='pj_headline'>Responsive Web</p>
             <h2 className='pj_h2'>CJ ONE</h2>
@@ -114,6 +112,11 @@ return (
               <li>기여도 : <span className='pj_span'>100%</span></li>
               <li>사용언어 : <span className='pj_span'>HTML5</span>, <span className='pj_span'>CSS3</span>, <span className='pj_span'>JavaScript</span></li>
             </ul>
+            <div className='pj_icons'>
+              <img src={require('../images/icon_html5.png')} className='pj_img' alt='' />
+              <img src={require('../images/icon_css3.png')} className='pj_img' alt='' />
+              <img src={require('../images/icon_js.png')} className='pj_img' alt='' />
+            </div>
           </div>
         </div>
         <div className='pj_content_container'>

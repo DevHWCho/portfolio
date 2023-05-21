@@ -3,7 +3,7 @@ import { FaExternalLinkSquareAlt } from 'react-icons/fa';
 import { Link, useNavigate } from 'react-router-dom';
 import 'styles/Main.scss';
 
-function Main(props) {
+function Main({inVisibleNav}) {
   const mcRef = useRef();
   const navigate = useNavigate(null);
 
@@ -17,7 +17,6 @@ function Main(props) {
     }
 
   useEffect(() => {
-    const inVisibleNav = props.inVisibleNav;
     inVisibleNav();
     mcRef.current.style.animationName = `main_fade`;
     mcRef.current.style.animationDuration = `1s`;

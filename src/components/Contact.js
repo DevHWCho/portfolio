@@ -3,11 +3,10 @@ import { FaExclamationTriangle, FaGithub, FaMailBulk, FaMobile } from 'react-ico
 import { Link } from 'react-router-dom';
 import 'styles/Contact.scss';
 
-function Contact(props) {
+function Contact({visibleNav}) {
   useEffect(() => {
-    const visibleNav = props.visibleNav;
     visibleNav();
-  });
+  },[visibleNav]);
 
   return (
     <div className='contact_container'>

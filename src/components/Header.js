@@ -1,4 +1,4 @@
-import React, { useRef } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { Link } from 'react-router-dom';
 import 'styles/Header.scss';
 
@@ -30,6 +30,19 @@ function Header(props) {
     visibleNav();
   }
 
+  // 휴대폰 landscape 모드
+  const [isLandscape, setIsLandscape] = useState(window.orientation === 90 || window.orientation === -90);
+  useEffect(() => {
+    const handleResize = () => {
+      setIsLandscape(window.orientation === 90 || window.orientation === -90);
+    };
+    handleResize();
+    window.addEventListener('resize', handleResize);
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, [isLandscape]);
+
   return (
     <div className='header_container'> 
       <div className='header_outside on' ref={headerOutRef} onClick={onHdOutClick}></div>
@@ -37,7 +50,7 @@ function Header(props) {
         <Link to={'/'} onClick={onMenuClick}><h1>PORTFOLIO</h1></Link>
         <p>BY HYUNWOONG CHO</p>
       </div>
-      <div className='gnb' ref={headerBtnRef}>
+      <div className={`gnb ${isLandscape ? 'gnb-landscape-mode' : ''}`} ref={headerBtnRef}>
         <div className='gnb_container'>
           <ul>
             <li className='gnb_main'><h2>INTRO</h2>

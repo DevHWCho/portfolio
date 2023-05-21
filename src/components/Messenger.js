@@ -4,29 +4,34 @@ import { Link, useNavigate } from 'react-router-dom';
 import video from '../videos/messenger.mp4';
 
 function Messenger() {
+  
+  let timeoutId;
   const navigate = useNavigate();
   const pcRef = useRef();
   const onCloseClick = () => {
+    document.body.style.overflowY = `auto`;
     pcRef.current.style.animationName = `frame_ani2`;
     pcRef.current.style.animationDuration = `1s`;
     pcRef.current.style.animationTimingFunction = `ease`;
     pcRef.current.style.animationDelay = `0s`;
-    navigate('/project');
+    clearTimeout(timeoutId);
+    timeoutId = setTimeout(()=>{
+      navigate('/project');
+    },1000);
   }
 
-  // mobile - landscape mode
-  const [isLandscape, setIsLandscape] = useState(false);
+  // 휴대폰 landscape 모드
+  const [isLandscape, setIsLandscape] = useState(window.orientation === 90 || window.orientation === -90);
   useEffect(() => {
-    const mediaQuery = window.matchMedia('(orientation: landscape)');
-    const handleOrientationChange = (event) => {
-      setIsLandscape(event.matches);
+    const handleResize = () => {
+      setIsLandscape(window.orientation === 90 || window.orientation === -90);
     };
-    setIsLandscape(mediaQuery.matches);
-    mediaQuery.addEventListener('change', handleOrientationChange);
+    handleResize();
+    window.addEventListener('resize', handleResize);
     return () => {
-      mediaQuery.removeEventListener('change', handleOrientationChange);
+      window.removeEventListener('resize', handleResize);
     };
-  }, []);
+  }, [isLandscape]);
 
   return (
     <div 
@@ -61,13 +66,6 @@ function Messenger() {
       </div>
       <div className='projects_inner msg_inner'>
         <div className='pj_top'>
-          <div className='pj_icons pj_2row_icons'>
-            <img src={require('../images/icon_html5.png')} className='pj_img' alt='' />
-            <img src={require('../images/icon_sass.png')} className='pj_img' alt='' />
-            <img src={require('../images/icon_react.png')} className='pj_img' alt='' />
-            <img src={require('../images/icon_firebase.png')} className='pj_img' alt='' />
-            <img src={require('../images/icon_github_white.png')} className='pj_img' alt='' />
-          </div>
           <div className='pj_header'>
             <p className='pj_headline'>React Project</p>
             <h2 className='pj_h2'>MESSENGER</h2>
@@ -78,6 +76,13 @@ function Messenger() {
               <li>기여도 : <span className='pj_span'>100%</span></li>
               <li>사용기술 : <span className='pj_span'>JSX</span>, <span className='pj_span'>Sass</span>, <span className='pj_span'>React</span>, <span className='pj_span'>Firebase</span>, <span className='pj_span'>Axios</span>, <span className='pj_span'>Gihub Pages</span></li>
             </ul>
+            <div className='pj_icons pj_2row_icons'>
+              <img src={require('../images/icon_html5.png')} className='pj_img' alt='' />
+              <img src={require('../images/icon_sass.png')} className='pj_img' alt='' />
+              <img src={require('../images/icon_react.png')} className='pj_img' alt='' />
+              <img src={require('../images/icon_firebase.png')} className='pj_img' alt='' />
+              <img src={require('../images/icon_github_white.png')} className='pj_img' alt='' />
+            </div>
           </div>
         </div>
         <div className='pj_content_container'>

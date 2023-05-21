@@ -4,13 +4,12 @@ import 'styles/AboutMe.scss';
 import Contact from "components/Contact";
 import TypingText from "components/TypingText";
 
-function AboutMe(props) {
+function AboutMe({visibleNav}) {
   const [openContact, setOpenContact] = useState(false);
  
   useEffect(() => {
-    const visibleNav = props.visibleNav;
     visibleNav();
-  },[]);
+  },[visibleNav]);
 
   return (
     <>
