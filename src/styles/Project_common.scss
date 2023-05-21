@@ -558,12 +558,21 @@ $textColor: #333;
   .projects_container {
     .projects_video {
       min-width: 300px !important;
+    }
+    .mobile_version {
+      min-height: 90vh !important;
+    }
+    .sem_video {
+      height: 50vh !important;
     } 
     .projects_inner {
       min-width: 300px !important;
     }
     .sem_title {
       line-height: 0.93;
+    }
+    .sem_inner {
+      height: 80vh !important;
     }
     .msg_inner, .movie_inner {
       height: 118vh !important;
