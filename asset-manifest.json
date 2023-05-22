@@ -1,12 +1,10 @@
 {
   "files": {
-    "main.css": "/portfolio/static/css/main.46f5a07c.css",
-    "main.js": "/portfolio/static/js/main.2fb12002.js",
+    "main.css": "/portfolio/static/css/main.ee4aa7cc.css",
+    "main.js": "/portfolio/static/js/main.7addc67e.js",
     "static/media/movie.mp4": "/portfolio/static/media/movie.44cf3077aa634fe80825.mp4",
     "static/media/davich_pc.mp4": "/portfolio/static/media/davich_pc.f6566747e2cc3d3f1a16.mp4",
-    "static/media/back_davich.png": "/portfolio/static/media/back_davich.28ff2ed81d9943fd06e6.png",
     "static/media/sem_pc.mp4": "/portfolio/static/media/sem_pc.2fa6c0e65240737cc8df.mp4",
-    "static/media/back_movie.png": "/portfolio/static/media/back_movie.0a7ce3384f79db50d1bf.png",
     "static/media/iPad_pro_12.png": "/portfolio/static/media/iPad_pro_12.26a82fae1c5d3cf93c7f.png",
     "static/media/davich_mobile.mp4": "/portfolio/static/media/davich_mobile.8a7423b9f7010396da5e.mp4",
     "static/media/davich_tablet.mp4": "/portfolio/static/media/davich_tablet.69c13108f1b2b303cf77.mp4",
@@ -14,17 +12,15 @@
     "static/media/movie_tablet.mp4": "/portfolio/static/media/movie_tablet.6eb01081ec165d11afaa.mp4",
     "static/media/cjone_mobile.mp4": "/portfolio/static/media/cjone_mobile.8c067096f32f277261d6.mp4",
     "static/media/movie_mobile.mp4": "/portfolio/static/media/movie_mobile.625ca01b6a8d4b2c9342.mp4",
-    "static/media/back_cjone.png": "/portfolio/static/media/back_cjone.daa74049e5c3b49bcc0d.png",
     "static/media/project_movie.png": "/portfolio/static/media/project_movie.a37541c5a5c15b1e25b1.png",
     "static/media/messenger.mp4": "/portfolio/static/media/messenger.43a9d71a5885cc99874d.mp4",
-    "static/media/back_sem.png": "/portfolio/static/media/back_sem.ca09283dc99b62a37091.png",
     "static/media/project_davich.png": "/portfolio/static/media/project_davich.5ec1b203416ded4e1af5.png",
     "static/media/cjone_tablet.mp4": "/portfolio/static/media/cjone_tablet.7e10909958eccc0f7e2b.mp4",
     "static/media/project_sem.png": "/portfolio/static/media/project_sem.2cc43abe82b2345db2d4.png",
     "static/media/project_cjone.png": "/portfolio/static/media/project_cjone.bd04febf95cb739ca706.png",
     "static/media/dog-g155fc11f1_1920.jpg": "/portfolio/static/media/dog-g155fc11f1_1920.b60cac1130e3ca05db25.jpg",
+    "static/media/iMac.png": "/portfolio/static/media/iMac.d2aba3b7908ac93a5fcd.png",
     "static/media/doraemon.png": "/portfolio/static/media/doraemon.8a3137cd01757df5fbc6.png",
-    "static/media/back_messenger.png": "/portfolio/static/media/back_messenger.351218669726f1f01305.png",
     "static/media/project_messenger.png": "/portfolio/static/media/project_messenger.a3f1d6f50d0d6b798f82.png",
     "static/media/8plus.png": "/portfolio/static/media/8plus.d32b7acb44e1556b96ab.png",
     "static/media/emoji.png": "/portfolio/static/media/emoji.64fcf11b9c32a8952e0b.png",
@@ -34,17 +30,16 @@
     "static/media/cjone_html_test.png": "/portfolio/static/media/cjone_html_test.60e7ded37dc30700c29b.png",
     "static/media/davich_html_test.png": "/portfolio/static/media/davich_html_test.41170196ecbb379a8181.png",
     "static/media/cjone_W3C-CSS-test.png": "/portfolio/static/media/cjone_W3C-CSS-test.f379ec4df778daaae8f8.png",
-    "static/media/iMac.png": "/portfolio/static/media/iMac.56d538a7a9bdd0eb0892.png",
     "static/media/sem_web_accessibility_test.png": "/portfolio/static/media/sem_web_accessibility_test.5a324b7d1c175874dec6.png",
     "static/media/davich_web_accessibility_test.png": "/portfolio/static/media/davich_web_accessibility_test.c6c012eb5ef0546fed82.png",
     "static/media/cjone_web_accessibility_test.png": "/portfolio/static/media/cjone_web_accessibility_test.98810d16da4f6682eaf1.png",
     "index.html": "/portfolio/index.html",
     "static/media/menu.svg": "/portfolio/static/media/menu.6fc022ef74b588ecf753.svg",
-    "main.46f5a07c.css.map": "/portfolio/static/css/main.46f5a07c.css.map",
-    "main.2fb12002.js.map": "/portfolio/static/js/main.2fb12002.js.map"
+    "main.ee4aa7cc.css.map": "/portfolio/static/css/main.ee4aa7cc.css.map",
+    "main.7addc67e.js.map": "/portfolio/static/js/main.7addc67e.js.map"
   },
   "entrypoints": [
-    "static/css/main.46f5a07c.css",
-    "static/js/main.2fb12002.js"
+    "static/css/main.ee4aa7cc.css",
+    "static/js/main.7addc67e.js"
   ]
 }
