@@ -104,8 +104,8 @@ function SamsungEm() {
         <div className='pj_content_container'>
         < div className='pj_content_header'>
             <ul>
-              <li onClick={onValidClick}>유효성 검사</li>
-              <li><Link target={'_blank'} to={'https://devhwcho.github.io/samsung_electric_renewal/'}>GitHub Page</Link></li>
+              <li onClick={onValidClick}>유효성/접근성 검사</li>
+              <li><Link target={'_blank'} to={'https://devhwcho.github.io/samsung_electric_renewal/'}>Site Link</Link></li>
             </ul>
           </div>
           <h3 className='pj_h3'># 제작목표</h3>

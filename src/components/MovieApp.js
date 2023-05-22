@@ -102,7 +102,7 @@ function MovieApp() {
         <div className='pj_content_container ma_container'>
           <div className='pj_content_header'>
             <ul>
-              <li><Link target={'_blank'} to={'https://devhwcho.github.io/mv_app/'}>GitHub Page</Link></li>
+              <li><Link target={'_blank'} to={'https://devhwcho.github.io/mv_app/'}>Site Link</Link></li>
             </ul>
           </div>
           <h3 className='pj_h3'># 제작목표</h3>

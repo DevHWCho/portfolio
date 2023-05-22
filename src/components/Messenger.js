@@ -88,7 +88,7 @@ function Messenger() {
         <div className='pj_content_container'>
           <div className='pj_content_header'>
             <ul>
-              <li><Link target={'_blank'} to={'https://devhwcho.github.io/kakao_2023/'}>GitHub Page</Link></li>
+              <li><Link target={'_blank'} to={'https://devhwcho.github.io/kakao_2023/'}>Site Link</Link></li>
             </ul>
           </div>
           <h3 className='pj_h3'># 제작목표</h3>
