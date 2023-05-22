@@ -28,7 +28,9 @@ function AboutMe({visibleNav}) {
         <h2 className="about_title">성장하고 소통하는 Front-End 개발자</h2>
         <div className='about_cont_container'>
           {/* <button className="btn_contact" onClick={contactClick}>Contact</button> */}
-          <div className='about_picture'></div>
+          <div className='about_picture'>
+            <img src={require('../images/profile/profile.png')} alt="my profile"/>
+          </div>
           <div className='about_detail'>
             <h3 className="ad_h3"><TypingText /></h3>
             <div className="ad_p">

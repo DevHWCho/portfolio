@@ -92,12 +92,18 @@
       border-top: 2px solid #fff;
       transform: translateX(-50%);
       .about_picture {
+        overflow: hidden;
         width: 30%;
         height: 90%;
         border: 2px solid #fff;
         border-top: 0;
-        background: url(../images/dog-g155fc11f1_1920.jpg) no-repeat 50% 0;
-        background-size: cover;
+        // background: url(../images/profile/profile.png) no-repeat 50% 0;
+        // background-size: cover;
+        img {
+          width: 100%;
+          height: 120%;
+          object-fit: cover;
+        }
       }
       .about_detail {
         position: relative;
@@ -272,8 +278,19 @@
     height: 70% !important;
   
     .about_picture {
-      width: 100% !important;
-      box-sizing: border-box !important;
+      display: flex;
+      justify-content: center;
+      width: auto !important;
+      box-sizing: border-box;
+      img {
+        width: auto !important;
+        object-fit: contain !important;
+        background-color: #fff;
+      }
+      // background-position: 50% 10% !important;
+      // background-size: contain !important;
+      // background-color: #fff !important;
+      // box-sizing: border-box !important;
     }
     .about_detail {
       width: 100% !important;
