@@ -246,6 +246,22 @@ $textColor: #333;
     box-shadow: inset 1px 1px 10px #222;
     box-sizing: border-box;
 
+    .pj_logo {
+      overflow: hidden;
+      width: calc(100px + 5vw);
+      // border: 1px solid red;
+      img {
+        height: calc(20px + 1vw); 
+        object-fit: contain;
+        transform: translateX(-50%);
+      }
+      &.logo_sem, &.logo_cjone {
+        img {
+          transform: translateX(0);
+        }
+      }
+    }
+
     .pj_top {
       position: relative;
       height: 35%;
@@ -579,6 +595,9 @@ $textColor: #333;
 // min-height
 @media screen and (max-height: 850px) {
   .projects_inner {
-    min-height: 880px !important;
+    min-height: 900px !important;
+  }
+  .movie_inner {
+    min-height: 930px !important;
   }
 }

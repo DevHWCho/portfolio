@@ -97,6 +97,9 @@ function Davich() {
         </div>
       </div>
       <div className='projects_inner' ref={piRef}>
+        <div className='pj_logo logo_davich'>
+          <img src={require('../images/logo_davich.png')} alt='davich logo' />
+        </div>
         <div className='pj_top'>
           <div className='pj_header'>
             <p className='pj_headline'>Responsive Web</p>

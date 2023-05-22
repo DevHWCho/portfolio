@@ -83,6 +83,9 @@ function SamsungEm() {
         </div>
       </div>
       <div className='projects_inner sem_inner' ref={piRef}>
+        <div className='pj_logo logo_sem'>
+          <img src={require('../images/logo_sem.png')} alt='sem logo' />
+        </div>
         <div className='pj_top'>
           <div className='pj_header'>
             <p className='pj_headline'>Web Accessibillity & Standard</p>

@@ -10,7 +10,7 @@ function AboutMe({visibleNav}) {
   useEffect(() => {
     visibleNav();
   },[visibleNav]);
-
+  
   return (
     <>
     <div className='about_container'>

@@ -101,6 +101,9 @@ return (
         </div>
       </div>
       <div className='projects_inner' ref={piRef}>
+        <div className='pj_logo logo_cjone'>
+          <img src={require('../images/logo_cjone.png')} alt='cjone logo' />
+        </div>
         <div className='pj_top'>
           <div className='pj_header'>
             <p className='pj_headline'>Responsive Web</p>
