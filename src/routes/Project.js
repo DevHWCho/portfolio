@@ -3,35 +3,25 @@ import Davich from 'components/Davich';
 import Messenger from 'components/Messenger';
 import MovieApp from 'components/MovieApp';
 import SamsungEm from 'components/SamsungEm';
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect } from 'react';
 import { FaExclamationTriangle } from 'react-icons/fa';
-import { Link, Route, Routes, useLocation } from 'react-router-dom';
-import { CSSTransition, TransitionGroup } from 'react-transition-group';
+import { Link, Route, Routes } from 'react-router-dom';
 import 'styles/Project.scss';
 
-function Project(props) {
-  const nodeRef = useRef(null);
-
+function Project({visibleNav}) {
   useEffect(() => {
-    const visibleNav = props.visibleNav;
     visibleNav();
-  });
-
-  const location = useLocation();
+  },[visibleNav]);
 
   return (
     <>
-    <TransitionGroup className='transition-group'>
-      <CSSTransition key={location.pathname} classNames='fade' timeout={900} nodeRef={nodeRef}>
-        <Routes location={location}>
-          <Route path='/davich' element={<Davich />} />
-          <Route path='/sem' element={<SamsungEm />} />
-          <Route path='/cjone' element={<Cjone />} />
-          <Route path='/messenger' element={<Messenger />} />
-          <Route path='/movie' element={<MovieApp />} />
-        </Routes>
-      </CSSTransition>
-    </TransitionGroup>
+      <Routes>
+        <Route path='/davich' element={<Davich />} />
+        <Route path='/sem' element={<SamsungEm />} />
+        <Route path='/cjone' element={<Cjone />} />
+        <Route path='/messenger' element={<Messenger />} />
+        <Route path='/movie' element={<MovieApp />} />
+      </Routes>
     
     <div className='project_container'>
       <div className='project_header'>

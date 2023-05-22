@@ -35,8 +35,8 @@ function App() {
 
       <Routes>
         <>
-          <Route path='/portfolio' element={<Cover />} />
-          <Route exact path='/' element={<Main inVisibleNav={inVisibleNav} />} />
+          <Route exact path='/' element={<Cover />} />
+          <Route path='/index' element={<Main inVisibleNav={inVisibleNav} />} />
           
           <Route path='/about_me' element={<AboutMe visibleNav={visibleNav} />} />
           <Route path='/project/*' element={<Project visibleNav={visibleNav} />}>

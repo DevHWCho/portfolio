@@ -152,7 +152,7 @@ $spanShadow: 0px 0px 2px #fff;
       transform: translateX(-50%);
       .contact_detail {
         position: relative;
-        height: 33.33%;
+        height: 25%;
         // background-color: #555;
         padding: 15px 20px 20px;
         border-bottom: 2px solid #efefef;
@@ -160,6 +160,7 @@ $spanShadow: 0px 0px 2px #fff;
         box-sizing: border-box;
         box-shadow: inset 1px 1px 5px rgba(0,0,0,0.5);
         transition: all .3s ease 0s;
+      
         .cd_title {
           display: flex;
           align-items: center;
@@ -177,15 +178,16 @@ $spanShadow: 0px 0px 2px #fff;
             color: #743ad5;
           }
         }
-
         &:nth-of-type(1) {
           width: 100%;
         }
         &:nth-of-type(2) {
           width: 100%;
-         
         }
         &:nth-of-type(3) {
+          width: 100%;
+        }
+        &:nth-of-type(4) {
           width: 100%;
           border-bottom: 0;
         }
@@ -200,52 +202,14 @@ $spanShadow: 0px 0px 2px #fff;
           word-break: keep-all;
           letter-spacing: -0.5px;
         }
-        p.cd_p {
-          padding: 0 1.65vw 10px 0;
-          // font-size: 30px;
-          font-size: calc(12px + 0.1vw);
-          font-weight: 400;
-          letter-spacing: -0.5px;
+        &:nth-child(4) > span.cd_text {
+          top: 0;
+          left: -50%;
+          padding: 20px;
+          padding-top: 24px;
+          font-size: calc(12px + 0.4vw);
+          letter-spacing: 1px;
         }
-        button.cd_button {
-          position: absolute;
-          left: 20px;
-          margin-top: 10px;
-          padding: 5px;
-          border: 0;
-          border-radius: 5px;
-          background-color: #fff;
-          box-shadow: 1px 1px 5px rgba(0,0,0,0.3);
-          text-shadow: -1px -1px 0 #aaa;
-          cursor: pointer;
-          transition: all .25s ease 0s;
-          &:hover {
-            margin-top: 14px;
-            background-color: #00D7FF;
-            color: #fff;
-          }
-          .cd_btn_span {
-            position: absolute;
-            top: 50%;
-            left: 60px;
-            width: 65px;
-            font-family: 'League Gothic', sans-serif;
-            font-size: 20px;
-            font-weight: 600;
-            color: $clickColor;
-            // border: 1px solid #fff;
-            text-shadow: $spanShadow;
-            letter-spacing: 1px;
-            transform: translateY(-50%);
-            animation: arrow_ani 1s linear 0s infinite alternate-reverse;
-          }
-          @keyframes arrow_ani {
-            0% {left: 57px;}
-            50% {left: 60px;}
-            100% {left: 57px;}
-          }
-        }
-
         span.cd_text {
           opacity: 1;
           position: absolute;
@@ -272,18 +236,9 @@ $spanShadow: 0px 0px 2px #fff;
   }
 }
 
-@media screen and (max-width: 1600px) {
-  .contact_toggle {
-    bottom: -90px !important;
-  }
-}
-
 @media screen and (max-width: 1500px) {
   .contact_cont_container {
     height: 62% !important;
-  }
-  .contact_toggle {
-    bottom: -80px !important;
   }
 }
 
@@ -295,9 +250,6 @@ $spanShadow: 0px 0px 2px #fff;
   }
   .contact_cont_container {
     height: 65% !important;
-  }
-  .contact_toggle {
-    bottom: -100px !important;
   }
 }
 
@@ -338,20 +290,14 @@ $spanShadow: 0px 0px 2px #fff;
   .cd_h3 {
     font-size: calc(14px + 0.5vw) !important;
   }
-  .contact_toggle {
-    bottom: -90px !important;
-  }
 }
 
 @media screen and (max-width: 660px) {
   h2.contact_title {
     font-size: 60px !important;
   }
-  .cd_period {
-    font-size: 16px !important;
-  }
-  .contact_toggle {
-    bottom: -70px !important;
+  .contact_cont_container {
+    height: 76% !important;
   }
 }
 
@@ -365,7 +311,7 @@ $spanShadow: 0px 0px 2px #fff;
     height: 75% !important;
     .contact_detail {
       width: 100% !important;
-      height: 20% !important;
+      height: 25% !important;
       // border-left: 2px solid #fff;
      
       span.cd_period {
@@ -378,9 +324,6 @@ $spanShadow: 0px 0px 2px #fff;
     top: 15px !important;
     right: -30px !important;
     transform: scale(0.6);
-  }
-  .contact_toggle {
-    bottom: -100px !important;
   }
 }
 
@@ -396,7 +339,7 @@ $spanShadow: 0px 0px 2px #fff;
   .contact_cont_container {
     height: 83% !important;
     .contact_detail {
-      height: 33.333% !important;
+      height: 25% !important;
     }
   }
   div.barcode_container {
@@ -404,9 +347,6 @@ $spanShadow: 0px 0px 2px #fff;
     right: -50px !important;
     width: 250px !important;
     transform: scale(0.6);
-  }
-  .contact_toggle {
-    bottom: -65px !important;
   }
 }
 

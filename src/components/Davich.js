@@ -22,6 +22,7 @@ function Davich() {
 
   const valid_davich = "valid_davich";
 
+  let timeoutId;
   const navigate = useNavigate();
   const pcRef = useRef();
   const onCloseClick = () => {
@@ -30,7 +31,10 @@ function Davich() {
     pcRef.current.style.animationDuration = `1s`;
     pcRef.current.style.animationTimingFunction = `ease`;
     pcRef.current.style.animationDelay = `0s`;
-    navigate('/project');
+    clearTimeout(timeoutId);
+    timeoutId = setTimeout(()=>{
+      navigate('/project');
+    },1000);
   }
 
   // 휴대폰 landscape 모드
@@ -94,11 +98,6 @@ function Davich() {
       </div>
       <div className='projects_inner' ref={piRef}>
         <div className='pj_top'>
-          <div className='pj_icons'>
-            <img src={require('../images/icon_html5.png')} className='pj_img' alt='' />
-            <img src={require('../images/icon_css3.png')} className='pj_img' alt='' />
-            <img src={require('../images/icon_js.png')} className='pj_img' alt='' />
-          </div>
           <div className='pj_header'>
             <p className='pj_headline'>Responsive Web</p>
             <h2 className='pj_h2'>DAVICH</h2>
@@ -109,6 +108,11 @@ function Davich() {
               <li>기여도 : <span className='pj_span'>100%</span></li>
               <li>사용언어 : <span className='pj_span'>HTML5</span>, <span className='pj_span'>CSS3</span>, <span className='pj_span'>JavaScript</span></li>
             </ul>
+            <div className='pj_icons'>
+              <img src={require('../images/icon_html5.png')} className='pj_img' alt='' />
+              <img src={require('../images/icon_css3.png')} className='pj_img' alt='' />
+              <img src={require('../images/icon_js.png')} className='pj_img' alt='' />
+            </div>
           </div>
         </div>
         <div className='pj_content_container'>

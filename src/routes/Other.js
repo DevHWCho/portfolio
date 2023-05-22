@@ -3,11 +3,10 @@ import { FaExclamationTriangle } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
 import 'styles/Other.scss';
 
-function Other(props) {
+function Other({visibleNav}) {
   useEffect(() => {
-    const visibleNav = props.visibleNav;
     visibleNav();
-  },[])
+  },[visibleNav])
 
   return (
     <div className='other_container'>
