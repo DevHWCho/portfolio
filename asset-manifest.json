@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/portfolio/static/css/main.838d33a5.css",
-    "main.js": "/portfolio/static/js/main.7addc67e.js",
+    "main.css": "/portfolio/static/css/main.99f27c7e.css",
+    "main.js": "/portfolio/static/js/main.414ff81e.js",
     "static/media/movie.mp4": "/portfolio/static/media/movie.44cf3077aa634fe80825.mp4",
     "static/media/davich_pc.mp4": "/portfolio/static/media/davich_pc.f6566747e2cc3d3f1a16.mp4",
     "static/media/sem_pc.mp4": "/portfolio/static/media/sem_pc.2fa6c0e65240737cc8df.mp4",
@@ -18,9 +18,9 @@
     "static/media/cjone_tablet.mp4": "/portfolio/static/media/cjone_tablet.7e10909958eccc0f7e2b.mp4",
     "static/media/project_sem.png": "/portfolio/static/media/project_sem.2cc43abe82b2345db2d4.png",
     "static/media/project_cjone.png": "/portfolio/static/media/project_cjone.bd04febf95cb739ca706.png",
-    "static/media/dog-g155fc11f1_1920.jpg": "/portfolio/static/media/dog-g155fc11f1_1920.b60cac1130e3ca05db25.jpg",
     "static/media/iMac.png": "/portfolio/static/media/iMac.d2aba3b7908ac93a5fcd.png",
     "static/media/doraemon.png": "/portfolio/static/media/doraemon.8a3137cd01757df5fbc6.png",
+    "static/media/profile.png": "/portfolio/static/media/profile.1980c1f3c34f9cffdf62.png",
     "static/media/project_messenger.png": "/portfolio/static/media/project_messenger.a3f1d6f50d0d6b798f82.png",
     "static/media/8plus.png": "/portfolio/static/media/8plus.d32b7acb44e1556b96ab.png",
     "static/media/emoji.png": "/portfolio/static/media/emoji.64fcf11b9c32a8952e0b.png",
@@ -35,11 +35,11 @@
     "static/media/cjone_web_accessibility_test.png": "/portfolio/static/media/cjone_web_accessibility_test.98810d16da4f6682eaf1.png",
     "index.html": "/portfolio/index.html",
     "static/media/menu.svg": "/portfolio/static/media/menu.6fc022ef74b588ecf753.svg",
-    "main.838d33a5.css.map": "/portfolio/static/css/main.838d33a5.css.map",
-    "main.7addc67e.js.map": "/portfolio/static/js/main.7addc67e.js.map"
+    "main.99f27c7e.css.map": "/portfolio/static/css/main.99f27c7e.css.map",
+    "main.414ff81e.js.map": "/portfolio/static/js/main.414ff81e.js.map"
   },
   "entrypoints": [
-    "static/css/main.838d33a5.css",
-    "static/js/main.7addc67e.js"
+    "static/css/main.99f27c7e.css",
+    "static/js/main.414ff81e.js"
   ]
 }
