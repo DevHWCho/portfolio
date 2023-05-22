@@ -97,8 +97,8 @@
         height: 90%;
         border: 2px solid #fff;
         border-top: 0;
-        // background: url(../images/profile/profile.png) no-repeat 50% 0;
-        // background-size: cover;
+        filter: blur(0.5px);
+       
         img {
           width: 100%;
           height: 120%;
