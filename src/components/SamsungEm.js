@@ -50,7 +50,7 @@ function SamsungEm() {
 
   return (
     <div 
-      className={`projects_container ${isLandscape ? 'project-landscape-mode' : ''}`} 
+      className={`projects_container container_sem ${isLandscape ? 'project-landscape-mode' : ''}`} 
       ref={pcRef}
     >
       <div className='pc_close_btn' onClick={onCloseClick}>

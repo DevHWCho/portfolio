@@ -38,7 +38,7 @@ function MovieApp() {
 
   return (
     <div 
-      className={`projects_container ${isLandscape ? 'project-landscape-mode' : ''}`} 
+      className={`projects_container container_movie ${isLandscape ? 'project-landscape-mode' : ''}`} 
       ref={pcRef}
     >
       <div className='pc_close_btn' onClick={onCloseClick}>
@@ -84,7 +84,7 @@ function MovieApp() {
             <p className='pj_headline'>React Project</p>
             <h2 className='pj_h2 ma_title'>MOVIE APP</h2>
           </div>
-          <div className='pj_items'>
+          <div className='pj_items movie_items'>
             <ul>
               <li>작업기간 : <span className='pj_span'>2023-04 → 2023-05</span></li>
               <li>기여도 : <span className='pj_span'>100%</span></li>
