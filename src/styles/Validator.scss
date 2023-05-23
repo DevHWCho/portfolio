@@ -13,54 +13,47 @@
     position: relative;
     width: 100vw;
     height: 100%;
-    padding-top: 100px;
+    padding-top: 100px !important;
+    padding: 30px;
     background-color: rgba(0,0,0,0.5);
     box-sizing: border-box;
-    .valid_img {
+    .valid_section {
       display: flex;
-      // flex-wrap: wrap;
-      flex-direction: column;
       justify-content: center;
-      align-items: center;
+      gap: 80px;
+      width: 100%;
       padding: 20px;
       box-sizing: border-box;
       perspective: 1000px;
-      & img {
-        padding: 10px;
-        box-sizing: border-box;
-        object-fit: cover;
-        transform: scale(1);
-        transition: transform .5s ease;
-        background-color: #fff;
-        box-shadow: 1px 1px 5px rgba(0,0,0,0.5);
-        cursor: pointer;
-        &:nth-child(1) {
-          width: 50%; 
-          height: 33.333%;
-          &:hover {
-            transform: translate3d(0px,20px,150px);
-          }
+      .valid_group {
+        display: flex;
+        flex: 1;
+        flex-direction: column;
+        color: #fff;
+        h3 {
+          height: 40px;
+          letter-spacing: -2px;
         }
-        &:nth-child(2) {
-          width: 50%; 
-          height: 33.333%;
-          &:hover {
-            transform: translate3d(0px,0px,150px);
-          }
+        p {
+          height: 80px;
+          letter-spacing: -2px;
+          // border: 1px solid red;
         }
-        &:nth-child(3) {
-          width: 50%; 
-          height: 33.333%;
+        img {
+          width: 100%;
+          margin-bottom: 20px;
+          border-radius: 10px;
+          transition: transform .5s ease;
           &:hover {
-            transform: translate3d(0px,-50px,150px);
+            transform: scale(1.3);
           }
         }
       }
     }
     .valid_close_btn {
       position: absolute;
-      top: 50px;
-      right: 30px;
+      top: 15px;
+      right: 25px;
       font-size: 40px;
       color: #eee;
       cursor: pointer;
@@ -73,25 +66,16 @@
 }
 
 @media screen and (max-width: 1000px) {
-  .validator_container {
-    overflow-x: hidden !important;
+  .valid_section {
+    flex-direction: column;
   }
-  .valid_img {
-    & img {
-      &:nth-child(1) {
-        width: 100% !important;
-        &:hover {
-          transform: translate3d(0px,20px,200px) !important;
-        }
-      }
-      &:nth-child(2) {
-        width: 100% !important;
-        &:hover {
-          transform: translate3d(0px,0px,200px) !important;
-        }
-      }
-      &:nth-child(3) {
-        width: 100% !important;
+}
+
+@media screen and (max-width: 500px) {
+  .valid_group {
+    img {
+      &:hover {
+        transform: scale(1.5) !important;
       }
     }
   }
